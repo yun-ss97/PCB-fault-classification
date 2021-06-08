@@ -1,0 +1,52 @@
+2021-06-08 11:14:12,034 : START
+2021-06-08 11:14:12,052 : Global Device: cuda:0
+2021-06-08 11:14:12,052 : Parsed Args: Namespace(base_dir='/home/ys/repo/dacon_cv2-master', base_model='plain_resnet50', batch_size=16, ckpt_path='/home/ys/repo/dacon_cv2-master/ckpt', cuda=True, data_type='original', device_index=0, epochs=100, fold_k=5, label_dir='/home/ys/repo/dacon_cv2-master/label.csv', learning_rate=0.0029, mode='test', model_index=1, patience=10, pretrained=False, pretrained_weights_dir='/home/ys/repo/dacon_cv2-master/pretrained_model', seed=227182, threshold=0.0, tta=False, val_ratio=0.1, verbose=100, voting='soft')
+2021-06-08 11:14:12,059 : Trainset length: 1600, Valset length: 400
+2021-06-08 11:14:12,376 : Not using pretrained model.
+2021-06-08 11:14:57,508 : START
+2021-06-08 11:14:57,531 : Global Device: cuda:0
+2021-06-08 11:14:57,531 : Parsed Args: Namespace(base_dir='/home/ys/repo/dacon_cv2-master', base_model='plain_resnet50', batch_size=16, ckpt_path='/home/ys/repo/dacon_cv2-master/ckpt', cuda=True, data_type='original', device_index=0, epochs=100, fold_k=5, label_dir='/home/ys/repo/dacon_cv2-master/label.csv', learning_rate=0.0029, mode='test', model_index=1, patience=10, pretrained=False, pretrained_weights_dir='/home/ys/repo/dacon_cv2-master/pretrained_model', seed=227182, threshold=0.0, tta=False, val_ratio=0.1, verbose=100, voting='soft')
+2021-06-08 11:14:57,539 : Trainset length: 1600, Valset length: 400
+2021-06-08 11:14:57,874 : Not using pretrained model.
+2021-06-08 11:15:00,649 : Inference using model of fold (1/5)
+2021-06-08 11:15:00,755 : Inference on test_loader (1/1)
+2021-06-08 11:15:35,165 : START
+2021-06-08 11:15:35,183 : Global Device: cuda:0
+2021-06-08 11:15:35,183 : Parsed Args: Namespace(base_dir='/home/ys/repo/dacon_cv2-master', base_model='plain_resnet50', batch_size=16, ckpt_path='/home/ys/repo/dacon_cv2-master/ckpt', cuda=True, data_type='original', device_index=0, epochs=100, fold_k=1, label_dir='/home/ys/repo/dacon_cv2-master/label.csv', learning_rate=0.0029, mode='test', model_index=1, patience=10, pretrained=False, pretrained_weights_dir='/home/ys/repo/dacon_cv2-master/pretrained_model', seed=227182, threshold=0.0, tta=False, val_ratio=0.1, verbose=100, voting='soft')
+2021-06-08 11:15:35,214 : Trainset length: 1800, Valset length: 200
+2021-06-08 11:15:35,530 : Not using pretrained model.
+2021-06-08 11:15:37,973 : Inference using model of fold (1/1)
+2021-06-08 11:15:38,072 : Inference on test_loader (1/1)
+2021-06-08 11:17:47,657 : START
+2021-06-08 11:17:47,675 : Global Device: cuda:0
+2021-06-08 11:17:47,675 : Parsed Args: Namespace(base_dir='/home/ys/repo/dacon_cv2-master', base_model='plain_resnet50', batch_size=16, ckpt_path='/home/ys/repo/dacon_cv2-master/ckpt', cuda=True, data_type='original', device_index=0, epochs=100, fold_k=1, label_dir='/home/ys/repo/dacon_cv2-master/label.csv', learning_rate=0.0029, mode='test', model_index=1, patience=10, pretrained=False, pretrained_weights_dir='/home/ys/repo/dacon_cv2-master/pretrained_model', seed=227182, threshold=0.0, tta=False, val_ratio=0.1, verbose=100, voting='soft')
+2021-06-08 11:17:47,709 : Trainset length: 1800, Valset length: 200
+2021-06-08 11:17:48,029 : Not using pretrained model.
+2021-06-08 11:17:50,383 : Inference using model of fold (1/1)
+2021-06-08 11:17:50,462 : Inference on test_loader (1/1)
+2021-06-08 11:19:05,773 : START
+2021-06-08 11:19:05,790 : Global Device: cuda:0
+2021-06-08 11:19:05,791 : Parsed Args: Namespace(base_dir='/home/ys/repo/dacon_cv2-master', base_model='plain_resnet50', batch_size=16, ckpt_path='/home/ys/repo/dacon_cv2-master/ckpt', cuda=True, data_type='original', device_index=0, epochs=100, fold_k=1, label_dir='/home/ys/repo/dacon_cv2-master/label.csv', learning_rate=0.0029, mode='test', model_index=1, patience=10, pretrained=False, pretrained_weights_dir='/home/ys/repo/dacon_cv2-master/pretrained_model', seed=227182, threshold=0.0, tta=False, val_ratio=0.1, verbose=100, voting='soft')
+2021-06-08 11:19:05,821 : Trainset length: 1800, Valset length: 200
+2021-06-08 11:19:06,140 : Not using pretrained model.
+2021-06-08 11:19:28,078 : START
+2021-06-08 11:19:28,098 : Global Device: cuda:0
+2021-06-08 11:19:28,098 : Parsed Args: Namespace(base_dir='/home/ys/repo/dacon_cv2-master', base_model='plain_resnet50', batch_size=16, ckpt_path='/home/ys/repo/dacon_cv2-master/ckpt', cuda=True, data_type='original', device_index=0, epochs=100, fold_k=1, label_dir='/home/ys/repo/dacon_cv2-master/label.csv', learning_rate=0.0029, mode='test', model_index=1, patience=10, pretrained=False, pretrained_weights_dir='/home/ys/repo/dacon_cv2-master/pretrained_model', seed=227182, threshold=0.0, tta=False, val_ratio=0.1, verbose=100, voting='soft')
+2021-06-08 11:19:28,134 : Trainset length: 1800, Valset length: 200
+2021-06-08 11:22:30,202 : START
+2021-06-08 11:22:30,221 : Global Device: cuda:0
+2021-06-08 11:22:30,221 : Parsed Args: Namespace(base_dir='/home/ys/repo/dacon_cv2-master', base_model='plain_resnet50', batch_size=16, ckpt_path='/home/ys/repo/dacon_cv2-master/ckpt', cuda=True, data_type='original', device_index=0, epochs=100, fold_k=1, label_dir='/home/ys/repo/dacon_cv2-master/label.csv', learning_rate=0.0029, mode='test', model_index=1, patience=10, pretrained=False, pretrained_weights_dir='/home/ys/repo/dacon_cv2-master/pretrained_model', seed=227182, threshold=0.0, tta=False, val_ratio=0.1, verbose=100, voting='soft')
+2021-06-08 11:22:30,252 : Trainset length: 1800, Valset length: 200
+2021-06-08 11:22:30,569 : Not using pretrained model.
+2021-06-08 11:24:02,923 : START
+2021-06-08 11:24:02,940 : Global Device: cuda:0
+2021-06-08 11:24:02,940 : Parsed Args: Namespace(base_dir='/home/ys/repo/dacon_cv2-master', base_model='plain_resnet50', batch_size=16, ckpt_path='/home/ys/repo/dacon_cv2-master/ckpt', cuda=True, data_type='original', device_index=0, epochs=100, fold_k=1, label_dir='/home/ys/repo/dacon_cv2-master/label.csv', learning_rate=0.0029, mode='test', model_index=1, patience=10, pretrained=False, pretrained_weights_dir='/home/ys/repo/dacon_cv2-master/pretrained_model', seed=227182, threshold=0.0, tta=False, val_ratio=0.1, verbose=100, voting='soft')
+2021-06-08 11:24:02,971 : Trainset length: 1800, Valset length: 200
+2021-06-08 11:24:03,307 : Not using pretrained model.
+2021-06-08 11:24:05,680 : Inference using model of fold (1/1)
+2021-06-08 11:24:05,759 : Inference on test_loader (1/1)
+2021-06-08 11:25:54,844 : START
+2021-06-08 11:25:54,859 : Global Device: cuda:0
+2021-06-08 11:25:54,859 : Parsed Args: Namespace(base_dir='/home/ys/repo/dacon_cv2-master', base_model='plain_resnet50', batch_size=16, ckpt_path='/home/ys/repo/dacon_cv2-master/ckpt', cuda=True, data_type='original', device_index=0, epochs=100, fold_k=1, label_dir='/home/ys/repo/dacon_cv2-master/label.csv', learning_rate=0.0029, mode='test', model_index=1, patience=10, pretrained=False, pretrained_weights_dir='/home/ys/repo/dacon_cv2-master/pretrained_model', seed=227182, threshold=0.0, tta=False, val_ratio=0.1, verbose=100, voting='soft')
+2021-06-08 11:25:54,891 : Trainset length: 1800, Valset length: 200
+2021-06-08 11:25:55,204 : Not using pretrained model.
