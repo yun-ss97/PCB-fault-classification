@@ -1,8 +1,3 @@
----
-noteId: "99dc28a0bfaa11eb815795926522bc80"
-tags: []
-
----
 # PCB-fault-classification
 Multi-label Classification of PCB Faults by Image Processing
 
@@ -16,13 +11,13 @@ Multi-label Classification of PCB Faults by Image Processing
 ```bash
 ├── dataset                    
     ├── group00041  
-    |   ├──00041                  
-    │   |   ├── 000410000_temp.jpg  - image with fault
-    │   |   └── 000410000_test.jpg  - image w/o fault
-    │   |
-    |   └── 00041_not              
-    |        └──000410000.txt       - label
-    |
+    │   ├──00041                  
+    │   │   ├── 000410000_temp.jpg  - image with fault
+    │   │   └── 000410000_test.jpg  - image w/o fault
+    │   │
+    │   └── 00041_not              
+    │        └──000410000.txt       - label
+    │
     └──  group12000
 ```
 
