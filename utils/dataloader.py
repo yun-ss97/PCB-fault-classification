@@ -27,7 +27,7 @@ class CustomDataLoader():
 
         self.img_dir = df['file_name']
         self.label_index = label_df.index[row_index]
-        IPython.embed();exit(1);
+        # IPython.embed();exit(1);
         self.label_values = label_df.iloc[row_index, 1:-1].values
         
         # Transformation
@@ -52,8 +52,9 @@ class CustomDataLoader():
         """
         idx = item_index
         label = self.label_values[idx]
+        # IPython.embed();exit(1);
         
-        image_path = self.img_dir[idx]
+        image_path = self.img_dir.iloc[idx]
         assert os.path.exists(image_path), f"Given image path not exists: {image_path}"
         
         pil_image = Image.open(image_path).convert('RGB')

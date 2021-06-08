@@ -96,7 +96,8 @@ def load_dataset(train_df, test_df, mode='train', **kwargs):
                 train=False,
                 row_index=test_index,
                 device=device)
-            tmp_test_loader = torch.utils.data.DataLoader(tmp_test_set, batch_size=128, shuffle=False)
+            tmp_test_loader = torch.utils.data.DataLoader(tmp_test_set, batch_size=16, shuffle=False)
+            # IPython.embed();exit(1);
             test_loader = [tmp_test_loader]
         
         else:
@@ -111,7 +112,7 @@ def load_dataset(train_df, test_df, mode='train', **kwargs):
                     tta=True,
                     angle=angle)
                 
-                tmp_test_loader = torch.utils.data.DataLoader(tmp_test_set, batch_size=128, shuffle=False)
+                tmp_test_loader = torch.utils.data.DataLoader(tmp_test_set, batch_size=16, shuffle=False)
                 test_loader.append(tmp_test_loader)
 
         #test_loader = torch.utils.data.DataLoader(test_set, batch_size=32, shuffle=False)
@@ -138,7 +139,7 @@ def make_inference(args, model, test_loader):
     total_set = []
     for idx, single_test_loader in enumerate(test_loader):
         logger.info(f"Inference on test_loader ({idx+1}/{len(test_loader)})")
-        
+        # IPython.embed();exit(1);
         fin_labels = []
         for _, (test_X, test_Y) in enumerate(single_test_loader):
             
@@ -157,6 +158,8 @@ def make_inference(args, model, test_loader):
         logger.info("Done.")
         total_set.append(np.concatenate(fin_labels))
     
+    # IPython.embed();exit(1);
+
     #IPython.embed(); exit(1)
     if args.voting == 'soft':
         fin_total_set = np.mean(total_set, axis=0)
@@ -168,14 +171,11 @@ def make_inference(args, model, test_loader):
     
 def aggregate_submit(args, predictions):
     
-    submission_file = pd.read_csv(os.path.join(args.base_dir, 'dataset/sample_submission.csv'))
+    # IPython.embed();exit(1);
 
     # Aggregation(voting)
     agg = np.where(np.mean(predictions, axis=0) >= 0.5, 1, 0)
-    
-    # Predictions / Submit
-    submission_file.iloc[:, 1:] = agg
-
+    submission_file = pd.DataFrame(agg)
     save_path = os.path.join(args.base_dir, f'submit/submission_model_{args.model_index}.csv')
 
     submission_file.to_csv(save_path, index=False)
