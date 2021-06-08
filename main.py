@@ -17,7 +17,6 @@ import torch.optim as optim
 from torch import nn
 from torch.utils.data import Dataset, DataLoader
 from torchvision import transforms
-#from torchvision.models import resnet50
 
 from warmup_scheduler import GradualWarmupScheduler
 
@@ -45,7 +44,7 @@ def split_index(total_index, val_ratio):
     return train_sampled, val_sampled
 
 
-def split_kfold(k, train_len=50000):    
+def split_kfold(k, train_len=2000):    
     kfold = KFold(n_splits=k, shuffle=True)
     splitted = kfold.split(range(train_len))
     return splitted
@@ -97,7 +96,6 @@ def load_dataset(train_df, test_df, mode='train', **kwargs):
                 row_index=test_index,
                 device=device)
             tmp_test_loader = torch.utils.data.DataLoader(tmp_test_set, batch_size=16, shuffle=False)
-            # IPython.embed();exit(1);
             test_loader = [tmp_test_loader]
         
         else:
@@ -137,9 +135,16 @@ def load_trained_weight(model_input=None, model_index=0, model_type='early', fol
 def make_inference(args, model, test_loader):
     
     total_set = []
+    test_tot_num = 1000
+
+    # IPython.embed();exit(1);
+    test_corrects_sum = 0
+    test_loss_sum = 0.0
+
+
     for idx, single_test_loader in enumerate(test_loader):
         logger.info(f"Inference on test_loader ({idx+1}/{len(test_loader)})")
-        # IPython.embed();exit(1);
+
         fin_labels = []
         for _, (test_X, test_Y) in enumerate(single_test_loader):
             
@@ -147,20 +152,32 @@ def make_inference(args, model, test_loader):
             with torch.no_grad():
                 pred = model(test_X)
             
-            if args.voting == 'soft':
-                pred_label = torch.sigmoid(pred).detach().to('cpu').numpy()
-            else:
-                pred_label = ((pred > args.threshold)*1).detach().to('cpu').numpy()
-                
+            # if args.voting == 'soft':
+            #     pred_label = torch.sigmoid(pred).detach().to('cpu').numpy()
+            # else:
+            #     # pred_label = ((pred > args.threshold)*1).detach().to('cpu').numpy()
+            #     pred_label = pred > args.threshold
+        
+            pred_label = pred > args.threshold
+            test_corrects = (pred_label == test_Y).sum()
+            test_corrects_sum += test_corrects.item()
+
+            pred_label = pred_label.detach().to('cpu').numpy()
             fin_labels.append(pred_label)
             torch.cuda.empty_cache()
+        
+        test_acc = test_corrects_sum/(test_tot_num*6)*100
+        
+        logger.info(f"""
+---------------------------------------------------------------------------
+    SUMMARY
+        Test Acc        : {test_acc:.4f}%
+===========================================================================\n""")
+
         
         logger.info("Done.")
         total_set.append(np.concatenate(fin_labels))
     
-    # IPython.embed();exit(1);
-
-    #IPython.embed(); exit(1)
     if args.voting == 'soft':
         fin_total_set = np.mean(total_set, axis=0)
     else:
@@ -170,9 +187,6 @@ def make_inference(args, model, test_loader):
  
     
 def aggregate_submit(args, predictions):
-    
-    # IPython.embed();exit(1);
-
     # Aggregation(voting)
     agg = np.where(np.mean(predictions, axis=0) >= 0.5, 1, 0)
     submission_file = pd.DataFrame(agg)
@@ -188,27 +202,27 @@ if __name__ == "__main__":
     # ARGUMENTS PARSER
     parser = argparse.ArgumentParser()
     parser.add_argument("--model_index", type=int, default=0, help='My model index. Integer type, and should be greater than 0')
-    parser.add_argument("--base_dir", type=str, default="/home/ys/repo/dacon_cv2-master", help='Base PATH of your work')
-    parser.add_argument("--label_dir", type=str, default="/home/ys/repo/dacon_cv2-master/label.csv", help='label PATH')
+    parser.add_argument("--base_dir", type=str, default="/home/ys/repo/PCB-fault-classification", help='Base PATH of your work')
+    parser.add_argument("--label_dir", type=str, default="/home/ys/repo/PCB-fault-classification/label.csv", help='label PATH')
     parser.add_argument("--mode", type=str, default="train", help='[train | test]')
     parser.add_argument("--data_type", type=str, default="original", help='[original | denoised]: default=denoised')
-    parser.add_argument("--ckpt_path", type=str, default="/home/ys/repo/dacon_cv2-master/ckpt", help='PATH to weights of ckpts.')
+    parser.add_argument("--ckpt_path", type=str, default="/home/ys/repo/PCB-fault-classification/ckpt", help='PATH to weights of ckpts.')
     parser.add_argument("--base_model", type=str, default="plain_resnet50", help="[plain_resnet50, custom_resnet50, plain_efficientnetb4]")
     parser.add_argument("--pretrained", dest='pretrained', action='store_true', help='Default is false, so specify this argument to use pretrained model')
-    parser.add_argument("--pretrained_weights_dir", type=str, default="/home/ys/repo/dacon_cv2-master/pretrained_model", help='PATH to weights of pretrained model')
+    parser.add_argument("--pretrained_weights_dir", type=str, default="/home/ys/repo/PCB-fault-classification/pretrained_model", help='PATH to weights of pretrained model')
     parser.add_argument("--cuda", dest='cuda', action='store_false', help='Whether to use CUDA: defuault is True, so specify this argument not to use CUDA')
     parser.add_argument("--device_index", type=int, default=0, help='Cuda device to use. Used for multiple gpu environment')
-    parser.add_argument("--batch_size", type=int, default=16, help='Batch size for train-loader for training phase')
+    parser.add_argument("--batch_size", type=int, default=4, help='Batch size for train-loader for training phase')
     parser.add_argument("--val_ratio", type=float, default=0.1, help='Ratio for validation set: default=0.1')
-    parser.add_argument("--epochs", type=int, default=100, help='Epochs for training: default=100')
+    parser.add_argument("--epochs", type=int, default=3, help='Epochs for training: default=100')
     parser.add_argument("--learning_rate", type=float, default=0.0029, help='Learning rate for training: default=0.0029')
-    parser.add_argument("--patience", type=int, default=10, help='Patience of the earlystopper: default=10')
+    parser.add_argument("--patience", type=int, default=2, help='Patience of the earlystopper: default=10')
     parser.add_argument("--verbose", type=int, default=100, help='Between batch range to print train accuracy: default=100')
     parser.add_argument("--threshold", type=float, default=0.0, help='Threshold used for predicting 0/1')
     parser.add_argument("--seed", type=int, default=227182, help='Seed used for reproduction')
     parser.add_argument("--fold_k", type=int, default=1, help='Number of fold for k-fold split. If k=1, standard train/val splitting is done.')
     parser.add_argument("--tta", dest='tta', action='store_true', help='Whether to use TTA on inference. Specify this argument to use TTA.')
-    parser.add_argument("--voting", type=str, default='soft', help='Choosing soft voting or hard voting at inference')
+    parser.add_argument("--voting", type=str, default='hard', help='Choosing soft voting or hard voting at inference')
     args = parser.parse_args()
     
     
@@ -261,7 +275,6 @@ if __name__ == "__main__":
 
     train_df = label_df.iloc[:2000,:] # 2000 for train
     test_df = label_df.iloc[2000:,:] # 1000 for test
-
 
 
     if args.fold_k == 1:

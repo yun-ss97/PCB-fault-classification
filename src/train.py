@@ -120,11 +120,12 @@ def train_model(input_model, fold_k, model_save_path, args, logger, *loaders):
     warmup_epochs = int(args.epochs * 0.15)
     
     # EF-b5
-    #warmup_epochs = 10
+    warmup_epochs = 10
     lr_warmup = GradualWarmupScheduler(optimizer, multiplier=1, total_epoch=warmup_epochs, after_scheduler=lr_scheduler)
     
     train_tot_num = train_loader.dataset.__len__()
     val_tot_num = val_loader.dataset.__len__()
+    # IPython.embed();exit(1);
     
     train_corrects_sum = 0
     train_loss_sum = 0.0
@@ -157,7 +158,6 @@ def train_model(input_model, fold_k, model_save_path, args, logger, *loaders):
         train_tmp_num = 0
         train_tmp_corrects_sum = 0
         train_tmp_loss_sum = 0.0
-        # IPython.embed(); exit(1)
         for idx, (train_X, train_Y) in enumerate(train_loader):
 
             train_tmp_num += len(train_Y)
@@ -166,7 +166,6 @@ def train_model(input_model, fold_k, model_save_path, args, logger, *loaders):
             
             with amp.autocast():
                 train_pred = model(train_X)
-                # IPython.embed();exit(1);
                 train_loss = loss_function(train_pred, train_Y)
             
             scaler.scale(train_loss).backward()
@@ -189,7 +188,7 @@ def train_model(input_model, fold_k, model_save_path, args, logger, *loaders):
             verbose = args.verbose
             
             if (idx+1) % verbose == 0:
-                print(f"-- ({str((idx+1)).zfill(4)} / {str(len(train_loader)).zfill(4)}) Train Loss: {train_tmp_loss_sum/train_tmp_num:.6f} | Train Acc: {train_tmp_corrects_sum/(train_tmp_num*26)*100:.4f}%")
+                print(f"-- ({str((idx+1)).zfill(4)} / {str(len(train_loader)).zfill(4)}) Train Loss: {train_tmp_loss_sum/train_tmp_num:.6f} | Train Acc: {train_tmp_corrects_sum/(train_tmp_num*6)*100:.4f}%")
                 
                 # initialization
                 train_tmp_num = 0
@@ -211,10 +210,10 @@ def train_model(input_model, fold_k, model_save_path, args, logger, *loaders):
                 
                 val_loss_sum += val_loss.item()
                 
-        train_acc = train_corrects_sum/(train_tot_num*26)*100
+        train_acc = train_corrects_sum/(train_tot_num*6)*100
         train_loss = train_loss_sum/train_tot_num
         
-        val_acc = val_corrects_sum/(val_tot_num*26)*100
+        val_acc = val_corrects_sum/(val_tot_num*6)*100
         val_loss = val_loss_sum/val_tot_num
         
         time_end = time()
