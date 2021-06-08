@@ -13,7 +13,8 @@ Multi-label Classification of PCB Faults by Image Processing
 - dataset 폴더에 DeepPCB 데이터셋 폴더 그대로 이동
 
 (예시) 
-├── dataset <br>                    
+```bash
+├── dataset                    
     ├── group00041  
     |   ├──00041                  
     │   |   ├── 000410000_temp.jpg  - image with fault
@@ -23,7 +24,7 @@ Multi-label Classification of PCB Faults by Image Processing
     |        └──000410000.txt       - label
     |
     └──  group12000
-
+```
 
 이외 폴더 구조는 동일하게 하면 됨
 
