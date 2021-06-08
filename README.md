@@ -13,7 +13,7 @@ Multi-label Classification of PCB Faults by Image Processing
 - dataset 폴더에 DeepPCB 데이터셋 폴더 그대로 이동
 
 (예시) 
-├── dataset                     
+├── dataset <br>                    
     ├── group00041  
     |   ├──00041                  
     │   |   ├── 000410000_temp.jpg  - image with fault
