@@ -151,12 +151,11 @@ def make_inference(args, model, test_loader):
             # Make predictions
             with torch.no_grad():
                 pred = model(test_X)
-            
-            # if args.voting == 'soft':
-            #     pred_label = torch.sigmoid(pred).detach().to('cpu').numpy()
-            # else:
-            #     # pred_label = ((pred > args.threshold)*1).detach().to('cpu').numpy()
-            #     pred_label = pred > args.threshold
+
+            if args.voting == 'soft':
+                pred_label = torch.sigmoid(pred).detach().to('cpu').numpy()
+            else:
+                pred_label = ((pred > args.threshold)*1).detach().to('cpu').numpy()
         
             pred_label = pred > args.threshold
             test_corrects = (pred_label == test_Y).sum()
@@ -176,6 +175,11 @@ def make_inference(args, model, test_loader):
 
         
         logger.info("Done.")
+
+        test_corrects_sum = 0
+        test_loss_sum = 0.0
+
+
         total_set.append(np.concatenate(fin_labels))
     
     if args.voting == 'soft':
@@ -213,10 +217,11 @@ if __name__ == "__main__":
     parser.add_argument("--cuda", dest='cuda', action='store_false', help='Whether to use CUDA: defuault is True, so specify this argument not to use CUDA')
     parser.add_argument("--device_index", type=int, default=0, help='Cuda device to use. Used for multiple gpu environment')
     parser.add_argument("--batch_size", type=int, default=4, help='Batch size for train-loader for training phase')
-    parser.add_argument("--val_ratio", type=float, default=0.1, help='Ratio for validation set: default=0.1')
-    parser.add_argument("--epochs", type=int, default=3, help='Epochs for training: default=100')
+    parser.add_argument("--val_ratio", type=float, default=0.4, help='Ratio for validation set: default=0.1')
+    parser.add_argument("--epochs", type=int, default=10, help='Epochs for training: default=100')
     parser.add_argument("--learning_rate", type=float, default=0.0029, help='Learning rate for training: default=0.0029')
-    parser.add_argument("--patience", type=int, default=2, help='Patience of the earlystopper: default=10')
+    parser.add_argument("--lr_type", choices= ['exp','cos','multi'], help='Type of learing rate scheduler')
+    parser.add_argument("--patience", type=int, default=10, help='Patience of the earlystopper: default=10')
     parser.add_argument("--verbose", type=int, default=100, help='Between batch range to print train accuracy: default=100')
     parser.add_argument("--threshold", type=float, default=0.0, help='Threshold used for predicting 0/1')
     parser.add_argument("--seed", type=int, default=227182, help='Seed used for reproduction')
@@ -264,8 +269,12 @@ if __name__ == "__main__":
     # -----------------------
     base_dir = args.base_dir
     ckpt_folder_path = os.path.join(args.ckpt_path, f'model_{args.model_index}')
-    
 
+    try:
+        os.mkdir(ckpt_folder_path)
+    except FileExistsError:
+        print(f'{ckpt_folder_path} alreay exist!')
+        pass
     
     # -------------------
     #   TRAIN/VAL SPLIT

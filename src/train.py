@@ -8,7 +8,7 @@ import torch
 import torch.optim as optim
 from torch import nn
 from torch.utils.data import Dataset, DataLoader
-from torch.cuda import amp
+from torch.cuda import amp # automatic mixed precision (to accelerate computation)
 
 from torchvision import transforms
 from torchvision.models import resnet50
@@ -48,13 +48,23 @@ class CustomLoss:
         self.base_loss_function = nn.MultiLabelSoftMarginLoss()
         
     def __call__(self, pred, gt):
+        # basic loss function
         loss1 = self.base_loss_function(pred, gt)
-        
+
         sum_preds = torch.sum(pred > 0.5, axis=-1)
         sum_gt = torch.sum(gt, axis=-1)
+        # 예측 개수 penalty
         loss2 = torch.mean(torch.abs(sum_gt - sum_preds))
         
-        return loss1 + 0.1*loss2
+        # gt가 1인데 0으로 예측하는 경우에 penalty 크게 (gt-pred==1 인 경우)
+        pred = torch.where(pred < 0.5, 0 ,1)
+        loss3 = torch.mean(torch.sum(gt-pred, axis=-1))
+
+        # IPython.embed();exit(1);
+
+        # print(f'total loss: {loss1 + 0.1*loss2 + 1.1*loss3}')
+
+        return loss1 + 0.1*loss2 + 0.3*loss3
     
 
 def train_model(input_model, fold_k, model_save_path, args, logger, *loaders):
@@ -71,10 +81,10 @@ def train_model(input_model, fold_k, model_save_path, args, logger, *loaders):
     
     early_stopping = EarlyStopping(patience=args.patience, verbose=False, fold_k=fold_k, path=model_save_path)
     
-    loss_function = nn.MultiLabelSoftMarginLoss()
+    # loss_function = nn.MultiLabelSoftMarginLoss()
     #loss_function = nn.BCEWithLogitsLoss()
     #loss_function = CustomSmoothedLoss()
-    #loss_function = CustomLoss()
+    loss_function = CustomLoss()
     
     #optimizer = optim.Adam(model.parameters(), lr=lr)
     optimizer = RAdam(model.parameters(), lr=learning_rate, betas=(0.9, 0.999), weight_decay=1e-4)
@@ -82,22 +92,28 @@ def train_model(input_model, fold_k, model_save_path, args, logger, *loaders):
     # -----------------
     #   amp wrapping
     # -----------------
+
     scaler = amp.GradScaler()
     #model, optimizer = amp.initialize(model, optimizer, opt_level='01')
     
     # LERANING RATE SCHEDULER (WARMUP)
     #decay_rate = 0.97
-    #lr_scheduler = torch.optim.lr_scheduler.ExponentialLR(optimizer=optimizer, gamma=decay_rate)
+
+    if args.lr_type == 'exp':
+        lr_scheduler = torch.optim.lr_scheduler.ExponentialLR(optimizer=optimizer, gamma=decay_rate)
     
-    #annealing_cycle = 3
-    #lr_scheduler = torch.optim.lr_scheduler.CosineAnnealingLR(optimizer=optimizer, T_max=int(args.epochs/annealing_cycle))
-    lr_scheduler = torch.optim.lr_scheduler.MultiStepLR(optimizer=optimizer,
-                                                        milestones=[
-                                                            int(args.epochs*0.3),
-                                                            int(args.epochs*0.4),
-                                                            int(args.epochs*0.6)
-                                                        ],
-                                                        gamma=0.7)
+    elif args.lr_type == 'cos':
+        annealing_cycle = 3
+        lr_scheduler = torch.optim.lr_scheduler.CosineAnnealingLR(optimizer=optimizer, T_max=int(args.epochs/annealing_cycle))
+    
+    elif args.lr_type == 'multi':
+        lr_scheduler = torch.optim.lr_scheduler.MultiStepLR(optimizer=optimizer,
+                                                            milestones=[
+                                                                int(args.epochs*0.3),
+                                                                int(args.epochs*0.4),
+                                                                int(args.epochs*0.6)
+                                                            ],
+                                                            gamma=0.7)
 
     # EF-b5
 #     lr_scheduler = torch.optim.lr_scheduler.MultiStepLR(optimizer=optimizer,
@@ -120,7 +136,7 @@ def train_model(input_model, fold_k, model_save_path, args, logger, *loaders):
     warmup_epochs = int(args.epochs * 0.15)
     
     # EF-b5
-    warmup_epochs = 10
+    # warmup_epochs = 10
     lr_warmup = GradualWarmupScheduler(optimizer, multiplier=1, total_epoch=warmup_epochs, after_scheduler=lr_scheduler)
     
     train_tot_num = train_loader.dataset.__len__()
@@ -232,6 +248,7 @@ def train_model(input_model, fold_k, model_save_path, args, logger, *loaders):
             save_path = os.path.join(model_save_path, f'model_ckpt_fold{fold_k}_{epoch+1}.pth')
             logger.info(f"SAVING MODEL: {save_path}")
             torch.save(model.state_dict(), save_path)
+            # IPython.embed();exit(1);
         
         # EARLY STOPPER
         early_stopping(val_loss, model)
