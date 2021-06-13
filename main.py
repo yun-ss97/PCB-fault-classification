@@ -92,21 +92,6 @@ def load_dataset(train_df, test_df, mode='train', **kwargs):
         val_index = kwargs['val_index']
         batch_size = kwargs['batch_size']
 
-#         train_set = CustomDataset(
-#                                     train_df,
-#                                     train=True,
-#                                     row_index=train_index,
-#                                     device=device
-#                                     )
-        
-#         val_set = CustomDataset(
-#                                     train_df,
-#                                     train=False,
-#                                     row_index=val_index,
-#                                     device=device
-#                                     )
-        
-#         # original
         train_set = CustomDataLoader(
                                     train_df,
                                     train=True,
@@ -126,7 +111,7 @@ def load_dataset(train_df, test_df, mode='train', **kwargs):
         train_loader = torch.utils.data.DataLoader(train_set,\
                                                    sampler=ImbalancedDatasetSampler(train_set),\
                                                    batch_size=batch_size)        
-        val_loader = torch.utils.data.DataLoader(val_set, batch_size=32)
+        val_loader = torch.utils.data.DataLoader(val_set, batch_size=32, shuffle=False)
 
         return train_loader, val_loader
 
@@ -164,9 +149,7 @@ def load_dataset(train_df, test_df, mode='train', **kwargs):
         return test_loader
 
 
-def load_trained_weight(model_input=None, model_index=0, fold_k=1, trained_weight_path='./ckpt'):
-    
-    # model_type='early'
+def load_trained_weight(model_input=None, model_index=0, fold_k=1, model_type='early', trained_weight_path='./ckpt'):
     assert model_index > 0
 
     model_name = f'early_stopped_fold{fold_k}.pth' if model_type == 'early' else f'model_ckpt_fold{fold_k}_{model_type}.pth'
@@ -452,12 +435,13 @@ if __name__ == "__main__":
         pred_list = []
         for k in range(args.fold_k):
             logger.info(f"Inference using model of fold ({k+1}/{args.fold_k})")
+            
             # Call model & trained weights
-            model_inference = load_trained_weight(
-                model_input=model,
-                model_index=args.model_index,
-                model_type=4,
-                fold_k=k+1).to(global_device)
+            model_inference = load_trained_weight(model_input=model,
+                                                  model_index=args.model_index,
+                                                  model_type=50,
+                                                  fold_k=k+1
+                                                ).to(global_device)
         
             pred = make_inference(args, model_inference, test_loader)
             pred_list.append(pred)
