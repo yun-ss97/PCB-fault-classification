@@ -60,93 +60,38 @@ def split_kfold(k, train_len=2000):
     return splitted
 
 # load dataset
-def load_dataset(train_df, test_df, mode='train', **kwargs):
-    device = kwargs['device']
-    
-    if mode=='train':
+def load_trainset(train_df=None, mode='train', device=None, train_index=None, val_index=None, batch_size=16):
+    '''
+    mode: train or train_ovr
+    '''
+    if mode in ['train', 'train_ovr']:
         # train w/o oversampling
-        train_index = kwargs['train_index']
-        val_index = kwargs['val_index']
-        batch_size = kwargs['batch_size']
+        train_set = CustomDataLoader(train_df, train=True, row_index=train_index, device=device)
+        val_set = CustomDataLoader(train_df, train=False, row_index=val_index, device=device)
         
-        train_set = CustomDataLoader(
-            train_df,
-            train=True,
-            row_index=train_index,
-            device=device)
-
-        val_set = CustomDataLoader(
-            train_df,
-            train=False,
-            row_index=val_index,
-            device=device)
-        
-        train_loader = torch.utils.data.DataLoader(train_set, batch_size=batch_size, shuffle=True)
+        if mode == 'train':
+            train_loader = torch.utils.data.DataLoader(train_set, batch_size=batch_size, shuffle=True)
+        elif mode == 'train_ovr':
+            train_loader = torch.utils.data.DataLoader(train_set,
+                                                       sampler=ImbalancedDatasetSampler(train_set),
+                                                       batch_size=batch_size)
         val_loader = torch.utils.data.DataLoader(val_set, batch_size=32, shuffle=False)
-
         return train_loader, val_loader
+
     
-    if mode=='train_ovr':
-        # train w/ oversampling
-        train_index = kwargs['train_index']
-        val_index = kwargs['val_index']
-        batch_size = kwargs['batch_size']
-
-        train_set = CustomDataLoader(
-                                    train_df,
-                                    train=True,
-                                    row_index=train_index,
-                                    device=device
-                                    )
-
-        val_set = CustomDataLoader(
-                                    train_df,
-                                    train=False,
-                                    row_index=val_index,
-                                    device=device
-                                    )
-
-        # use sampler to oversample
-        #IPython.embed(); exit()
-        train_loader = torch.utils.data.DataLoader(train_set,\
-                                                   sampler=ImbalancedDatasetSampler(train_set),\
-                                                   batch_size=batch_size)        
-        val_loader = torch.utils.data.DataLoader(val_set, batch_size=32, shuffle=False)
-
-        return train_loader, val_loader
-
-
+def load_testset(test_df=None, test_index=None, tta=False, angles=[], device=None):
+    if not tta:
+        tmp_test_set = CustomDataLoader(test_df, train=False, row_index=test_index, device=device)
+        tmp_test_loader = torch.utils.data.DataLoader(tmp_test_set, batch_size=16, shuffle=False)
+        test_loader = [tmp_test_loader]
     else:
-        test_index = kwargs['test_index']
-        tta = kwargs['tta']
-        
-        if not tta:
-            tmp_test_set = CustomDataLoader(
-                test_df,
-                train=False,
-                row_index=test_index,
-                device=device)
+        test_loader = []
+        for angle in angles:
+            tmp_test_set = CustomDataLoader(test_df, row_index=test_index, device=device, tta=True, angle=angle)
             tmp_test_loader = torch.utils.data.DataLoader(tmp_test_set, batch_size=16, shuffle=False)
-            test_loader = [tmp_test_loader]
-        
-        else:
-            angles = kwargs['angles']
-            
-            test_loader = []
-            for angle in angles:
-                tmp_test_set = CustomDataLoader(
-                    test_df,
-                    row_index=test_index,
-                    device=device,
-                    tta=True,
-                    angle=angle)
-                
-                tmp_test_loader = torch.utils.data.DataLoader(tmp_test_set, batch_size=16, shuffle=False)
-                test_loader.append(tmp_test_loader)
+            test_loader.append(tmp_test_loader)
 
-        #test_loader = torch.utils.data.DataLoader(test_set, batch_size=32, shuffle=False)
-
-        return test_loader
+    return test_loader
 
 
 def load_trained_weight(model_input=None, model_index=0, fold_k=1, model_type='early', trained_weight_path='./ckpt'):
@@ -163,12 +108,10 @@ def load_trained_weight(model_input=None, model_index=0, fold_k=1, model_type='e
     return trained_model
     
 
-def make_inference(args, model, test_loader):
+def make_inference(args, model, test_loader, test_tot_num):
     
     total_set = []
-    test_tot_num = 1000
 
-    # IPython.embed();exit(1);
     test_corrects_sum = 0
     test_loss_sum = 0.0
 
@@ -248,7 +191,8 @@ if __name__ == "__main__":
     parser.add_argument("--cuda", dest='cuda', action='store_false', help='Whether to use CUDA: defuault is True, so specify this argument not to use CUDA')
     parser.add_argument("--device_index", type=int, default=0, help='Cuda device to use. Used for multiple gpu environment')
     parser.add_argument("--batch_size", type=int, default=8, help='Batch size for train-loader for training phase')
-    parser.add_argument("--val_ratio", type=float, default=0.15, help='Ratio for validation set: default=0.1')
+    parser.add_argument("--test_ratio", type=float, default=0.20, help='Ratio for testset: default=0.20')
+    parser.add_argument("--val_ratio", type=float, default=0.15, help='Ratio for validation set: default=0.15')
     parser.add_argument("--epochs", type=int, default=10, help='Epochs for training: default=100')
     parser.add_argument("--learning_rate", type=float, default=0.003, help='Learning rate for training: default=0.0029')
     parser.add_argument("--lr_type", choices= ['exp','cos','multi'], help='Type of learing rate scheduler')
@@ -283,10 +227,7 @@ if __name__ == "__main__":
     #   GLOBAL CUDA SETTING
     # ------------------------
     global_cuda = args.cuda and torch.cuda.is_available()
-    if global_cuda:
-        global_device = torch.device(f'cuda:{args.device_index}')
-    else:
-        global_device = torch.device('cpu')
+    global_device = torch.device(f'cuda:{args.device_index}') if global_cuda else torch.device('cpu')
 
     logger.info(f"Global Device: {global_device}")
     logger.info(f'Parsed Args: {args}')
@@ -303,10 +244,7 @@ if __name__ == "__main__":
     # -----------------------
     base_dir = args.base_dir
     ckpt_folder_path = os.path.join(args.ckpt_path, f'model_{args.model_index}')
-    
-    ###
-    #IPython.embed();exit(1);
-    
+
     try:
         os.mkdir(ckpt_folder_path)
     except FileExistsError:
@@ -318,17 +256,18 @@ if __name__ == "__main__":
     # -------------------
 
     label_df = pd.read_csv(args.label_dir)
+    tot_num = label_df.shape[0]
     
-    tot_num = 3000
-    train_sample_idx = random.sample(range(tot_num), 2500)
+    train_num = int(tot_num*(1-args.test_ratio))
+    test_num = tot_num - train_num
+    logger.info(f"Trainset length: {train_num}, Valset length: {test_num}")
+    
+    train_sample_idx = random.sample(range(tot_num), train_num)
     test_sample_idx = [idx for idx in range(tot_num) if idx not in train_sample_idx]
     
     train_df = label_df.iloc[train_sample_idx]
     test_df = label_df.iloc[test_sample_idx]
-    
-    #train_df = label_df.iloc[:2500,:] # 2000 for train
-    #test_df = label_df.iloc[2500:,:] # 1000 for test
-
+    test_index = range(len(test_df))
 
     if args.fold_k == 1:
         train_index_set, val_index_set = split_index(range(len(train_df)), args.val_ratio)
@@ -343,9 +282,6 @@ if __name__ == "__main__":
             val_index_set.append(val_fold)
         
         logger.info(f"Trainset length: {len(train_index_set[0])}, Valset length: {len(val_index_set[0])}")
-    
-    test_index = range(len(test_df))
-    # IPython.embed();exit(1);
 
 
     # ----------------
@@ -363,13 +299,12 @@ if __name__ == "__main__":
     # --------------------
     #        TRAIN
     # --------------------
-    if args.mode == 'train':
+    if args.mode in ['train', 'train_ovr']:
         
         #  MAKE FOLDER for saving CHECKPOINTS
         # if folder already exists, assert. Else, make folder.
         # assert not os.path.exists(ckpt_folder_path), "Model checkpoint folder already exists."
         # os.makedirs(ckpt_folder_path)
-        
         for k in range(args.fold_k):
             model_to_train = copy.deepcopy(model)
             
@@ -378,55 +313,22 @@ if __name__ == "__main__":
             train_index = train_index_set[k]
             val_index = val_index_set[k]
             
-            train_loader, val_loader = load_dataset(train_df, test_df,
-                                                    mode='train',
-                                                    batch_size=args.batch_size,
-                                                    train_index=train_index,
-                                                    val_index=val_index,
-                                                    device=global_device)
+            train_loader, val_loader = load_trainset(train_df=train_df,
+                                                     mode=args.mode,
+                                                     batch_size=args.batch_size,
+                                                     train_index=train_index,
+                                                     val_index=val_index,
+                                                     device=global_device)
             
             # Train model
             train_model(model_to_train, k, ckpt_folder_path, args, logger, train_loader, val_loader)
 
-    # --------------------
-    #  TRAIN - OverSampling
-    # --------------------
-    
-    # Using https://github.com/ufoym/imbalanced-dataset-sampler
-    if args.mode == 'train_ovr':
-        
-        #  MAKE FOLDER for saving CHECKPOINTS
-        # if folder already exists, assert. Else, make folder.
-        # assert not os.path.exists(ckpt_folder_path), "Model checkpoint folder already exists."
-        # os.makedirs(ckpt_folder_path)
-        
-        for k in range(args.fold_k):
-            model_to_train = copy.deepcopy(model)
-
-            logger.info(f"Training on Fold ({k+1}/{args.fold_k})")
-
-            # Load trainset/valset
-            train_index = train_index_set[k]
-            val_index = val_index_set[k]
-
-            train_loader, val_loader = load_dataset(train_df, test_df,
-                                                    mode='train_ovr',
-                                                    batch_size=args.batch_size,
-                                                    train_index=train_index,
-                                                    val_index=val_index,
-                                                    device=global_device)
-
-            # Train model
-            train_model(model_to_train, k, ckpt_folder_path, args, logger, train_loader, val_loader)
-
-    
+            
     # --------------------
     #      INFERENCE
     # -------------------    
     if args.mode == 'test':
-        
-        test_loader = load_dataset(train_df, test_df,
-                                    mode='test',
+        test_loader = load_testset(test_df=test_df,
                                    test_index=test_index,
                                    tta = args.tta,
                                    angles = [0, 90, -90, 180],
@@ -443,7 +345,7 @@ if __name__ == "__main__":
                                                   fold_k=k+1
                                                 ).to(global_device)
         
-            pred = make_inference(args, model_inference, test_loader)
+            pred = make_inference(args, model_inference, test_loader, test_num)
             pred_list.append(pred)
         
         # Aggregate and Save result
