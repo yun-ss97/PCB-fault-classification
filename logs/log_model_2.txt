@@ -1,0 +1,2184 @@
+2021-06-13 05:18:43,337 : START
+2021-06-13 05:18:43,370 : Global Device: cuda:0
+2021-06-13 05:18:43,371 : Parsed Args: Namespace(base_dir='/repo/course/sem21_01/PCB-fault-classification/', base_model='plain_resnet50', batch_size=4, ckpt_path='/repo/course/sem21_01/PCB-fault-classification/ckpt/', cuda=True, data_type='original', device_index=0, epochs=10, fold_k=1, label_dir='/repo/course/sem21_01/PCB-fault-classification/label.csv', learning_rate=0.0029, lr_type=None, mode='train_ovr', model_index=2, patience=10, pretrained=False, pretrained_weights_dir='/home/ys/repo/PCB-fault-classification/pretrained_model', seed=227182, threshold=0.0, tta=False, val_ratio=0.4, verbose=100, voting='hard')
+2021-06-13 05:18:43,395 : Trainset length: 1200, Valset length: 800
+2021-06-13 05:18:43,684 : Not using pretrained model.
+2021-06-13 05:18:47,182 : Training on Fold (1/1)
+2021-06-13 05:24:20,244 : START
+2021-06-13 05:24:20,278 : Global Device: cuda:0
+2021-06-13 05:24:20,278 : Parsed Args: Namespace(base_dir='/repo/course/sem21_01/PCB-fault-classification/', base_model='plain_resnet50', batch_size=4, ckpt_path='/repo/course/sem21_01/PCB-fault-classification/ckpt/', cuda=True, data_type='original', device_index=0, epochs=10, fold_k=1, label_dir='/repo/course/sem21_01/PCB-fault-classification/label.csv', learning_rate=0.0029, lr_type=None, mode='train_ovr', model_index=2, patience=10, pretrained=False, pretrained_weights_dir='/home/ys/repo/PCB-fault-classification/pretrained_model', seed=227182, threshold=0.0, tta=False, val_ratio=0.4, verbose=100, voting='hard')
+2021-06-13 05:24:20,304 : Trainset length: 1200, Valset length: 800
+2021-06-13 05:24:20,592 : Not using pretrained model.
+2021-06-13 05:24:24,054 : Training on Fold (1/1)
+2021-06-13 05:26:41,382 : START
+2021-06-13 05:26:41,412 : Global Device: cuda:0
+2021-06-13 05:26:41,412 : Parsed Args: Namespace(base_dir='/repo/course/sem21_01/PCB-fault-classification/', base_model='plain_resnet50', batch_size=4, ckpt_path='/repo/course/sem21_01/PCB-fault-classification/ckpt/', cuda=True, data_type='original', device_index=0, epochs=10, fold_k=1, label_dir='/repo/course/sem21_01/PCB-fault-classification/label.csv', learning_rate=0.0029, lr_type=None, mode='train_ovr', model_index=2, patience=10, pretrained=False, pretrained_weights_dir='/home/ys/repo/PCB-fault-classification/pretrained_model', seed=227182, threshold=0.0, tta=False, val_ratio=0.4, verbose=100, voting='hard')
+2021-06-13 05:26:41,437 : Trainset length: 1200, Valset length: 800
+2021-06-13 05:26:41,730 : Not using pretrained model.
+2021-06-13 05:26:45,253 : Training on Fold (1/1)
+2021-06-13 05:27:36,904 : START
+2021-06-13 05:27:36,937 : Global Device: cuda:0
+2021-06-13 05:27:36,937 : Parsed Args: Namespace(base_dir='/repo/course/sem21_01/PCB-fault-classification/', base_model='plain_resnet50', batch_size=4, ckpt_path='/repo/course/sem21_01/PCB-fault-classification/ckpt/', cuda=True, data_type='original', device_index=0, epochs=10, fold_k=1, label_dir='/repo/course/sem21_01/PCB-fault-classification/label.csv', learning_rate=0.0029, lr_type=None, mode='train_ovr', model_index=2, patience=10, pretrained=False, pretrained_weights_dir='/home/ys/repo/PCB-fault-classification/pretrained_model', seed=227182, threshold=0.0, tta=False, val_ratio=0.4, verbose=100, voting='hard')
+2021-06-13 05:27:36,963 : Trainset length: 1200, Valset length: 800
+2021-06-13 05:27:37,259 : Not using pretrained model.
+2021-06-13 05:27:40,753 : Training on Fold (1/1)
+2021-06-13 05:28:32,109 : START
+2021-06-13 05:28:32,144 : Global Device: cuda:0
+2021-06-13 05:28:32,144 : Parsed Args: Namespace(base_dir='/repo/course/sem21_01/PCB-fault-classification/', base_model='plain_resnet50', batch_size=4, ckpt_path='/repo/course/sem21_01/PCB-fault-classification/ckpt/', cuda=True, data_type='original', device_index=0, epochs=10, fold_k=1, label_dir='/repo/course/sem21_01/PCB-fault-classification/label.csv', learning_rate=0.0029, lr_type=None, mode='train_ovr', model_index=2, patience=10, pretrained=False, pretrained_weights_dir='/home/ys/repo/PCB-fault-classification/pretrained_model', seed=227182, threshold=0.0, tta=False, val_ratio=0.4, verbose=100, voting='hard')
+2021-06-13 05:28:32,171 : Trainset length: 1200, Valset length: 800
+2021-06-13 05:28:32,487 : Not using pretrained model.
+2021-06-13 05:28:35,981 : Training on Fold (1/1)
+2021-06-13 05:32:47,981 : START
+2021-06-13 05:32:48,016 : Global Device: cuda:0
+2021-06-13 05:32:48,017 : Parsed Args: Namespace(base_dir='/repo/course/sem21_01/PCB-fault-classification/', base_model='plain_resnet50', batch_size=4, ckpt_path='/repo/course/sem21_01/PCB-fault-classification/ckpt/', cuda=True, data_type='original', device_index=0, epochs=10, fold_k=1, label_dir='/repo/course/sem21_01/PCB-fault-classification/label.csv', learning_rate=0.0029, lr_type=None, mode='train_ovr', model_index=2, patience=10, pretrained=False, pretrained_weights_dir='/home/ys/repo/PCB-fault-classification/pretrained_model', seed=227182, threshold=0.0, tta=False, val_ratio=0.4, verbose=100, voting='hard')
+2021-06-13 05:32:48,045 : Trainset length: 1200, Valset length: 800
+2021-06-13 05:32:48,351 : Not using pretrained model.
+2021-06-13 05:32:51,901 : Training on Fold (1/1)
+2021-06-13 05:33:52,854 : START
+2021-06-13 05:33:52,890 : Global Device: cuda:0
+2021-06-13 05:33:52,890 : Parsed Args: Namespace(base_dir='/repo/course/sem21_01/PCB-fault-classification/', base_model='plain_resnet50', batch_size=4, ckpt_path='/repo/course/sem21_01/PCB-fault-classification/ckpt/', cuda=True, data_type='original', device_index=0, epochs=10, fold_k=1, label_dir='/repo/course/sem21_01/PCB-fault-classification/label.csv', learning_rate=0.0029, lr_type=None, mode='train_ovr', model_index=2, patience=10, pretrained=False, pretrained_weights_dir='/home/ys/repo/PCB-fault-classification/pretrained_model', seed=227182, threshold=0.0, tta=False, val_ratio=0.4, verbose=100, voting='hard')
+2021-06-13 05:33:52,915 : Trainset length: 1200, Valset length: 800
+2021-06-13 05:33:53,204 : Not using pretrained model.
+2021-06-13 05:33:56,672 : Training on Fold (1/1)
+2021-06-13 05:36:34,751 : START
+2021-06-13 05:36:34,783 : Global Device: cuda:0
+2021-06-13 05:36:34,783 : Parsed Args: Namespace(base_dir='/repo/course/sem21_01/PCB-fault-classification/', base_model='plain_resnet50', batch_size=4, ckpt_path='/repo/course/sem21_01/PCB-fault-classification/ckpt/', cuda=True, data_type='original', device_index=0, epochs=10, fold_k=1, label_dir='/repo/course/sem21_01/PCB-fault-classification/label.csv', learning_rate=0.0029, lr_type=None, mode='train_ovr', model_index=2, patience=10, pretrained=False, pretrained_weights_dir='/home/ys/repo/PCB-fault-classification/pretrained_model', seed=227182, threshold=0.0, tta=False, val_ratio=0.4, verbose=100, voting='hard')
+2021-06-13 05:36:34,808 : Trainset length: 1200, Valset length: 800
+2021-06-13 05:36:35,095 : Not using pretrained model.
+2021-06-13 05:36:38,582 : Training on Fold (1/1)
+2021-06-13 05:37:31,601 : START
+2021-06-13 05:37:31,632 : Global Device: cuda:0
+2021-06-13 05:37:31,632 : Parsed Args: Namespace(base_dir='/repo/course/sem21_01/PCB-fault-classification/', base_model='plain_resnet50', batch_size=4, ckpt_path='/repo/course/sem21_01/PCB-fault-classification/ckpt/', cuda=True, data_type='original', device_index=0, epochs=10, fold_k=1, label_dir='/repo/course/sem21_01/PCB-fault-classification/label.csv', learning_rate=0.0029, lr_type=None, mode='train_ovr', model_index=2, patience=10, pretrained=False, pretrained_weights_dir='/home/ys/repo/PCB-fault-classification/pretrained_model', seed=227182, threshold=0.0, tta=False, val_ratio=0.4, verbose=100, voting='hard')
+2021-06-13 05:37:31,658 : Trainset length: 1200, Valset length: 800
+2021-06-13 05:37:31,958 : Not using pretrained model.
+2021-06-13 05:37:35,452 : Training on Fold (1/1)
+2021-06-13 05:38:52,531 : START
+2021-06-13 05:38:52,563 : Global Device: cuda:0
+2021-06-13 05:38:52,563 : Parsed Args: Namespace(base_dir='/repo/course/sem21_01/PCB-fault-classification/', base_model='plain_resnet50', batch_size=4, ckpt_path='/repo/course/sem21_01/PCB-fault-classification/ckpt/', cuda=True, data_type='original', device_index=0, epochs=10, fold_k=1, label_dir='/repo/course/sem21_01/PCB-fault-classification/label.csv', learning_rate=0.0029, lr_type=None, mode='train_ovr', model_index=2, patience=10, pretrained=False, pretrained_weights_dir='/home/ys/repo/PCB-fault-classification/pretrained_model', seed=227182, threshold=0.0, tta=False, val_ratio=0.4, verbose=100, voting='hard')
+2021-06-13 05:38:52,589 : Trainset length: 1200, Valset length: 800
+2021-06-13 05:38:52,881 : Not using pretrained model.
+2021-06-13 05:38:56,410 : Training on Fold (1/1)
+2021-06-13 06:12:20,647 : START
+2021-06-13 06:12:20,683 : Global Device: cuda:0
+2021-06-13 06:12:20,683 : Parsed Args: Namespace(base_dir='/repo/course/sem21_01/PCB-fault-classification/', base_model='plain_resnet50', batch_size=4, ckpt_path='/repo/course/sem21_01/PCB-fault-classification/ckpt/', cuda=True, data_type='original', device_index=0, epochs=10, fold_k=1, label_dir='/repo/course/sem21_01/PCB-fault-classification/label.csv', learning_rate=0.0029, lr_type=None, mode='train_ovr', model_index=2, patience=10, pretrained=False, pretrained_weights_dir='/home/ys/repo/PCB-fault-classification/pretrained_model', seed=227182, threshold=0.0, tta=False, val_ratio=0.4, verbose=100, voting='hard')
+2021-06-13 06:12:20,710 : Trainset length: 1200, Valset length: 800
+2021-06-13 06:12:21,007 : Not using pretrained model.
+2021-06-13 06:12:24,472 : Training on Fold (1/1)
+2021-06-13 06:12:57,783 : START
+2021-06-13 06:12:57,817 : Global Device: cuda:0
+2021-06-13 06:12:57,817 : Parsed Args: Namespace(base_dir='/repo/course/sem21_01/PCB-fault-classification/', base_model='plain_resnet50', batch_size=4, ckpt_path='/repo/course/sem21_01/PCB-fault-classification/ckpt/', cuda=True, data_type='original', device_index=0, epochs=10, fold_k=1, label_dir='/repo/course/sem21_01/PCB-fault-classification/label.csv', learning_rate=0.0029, lr_type=None, mode='train_ovr', model_index=2, patience=10, pretrained=False, pretrained_weights_dir='/home/ys/repo/PCB-fault-classification/pretrained_model', seed=227182, threshold=0.0, tta=False, val_ratio=0.4, verbose=100, voting='hard')
+2021-06-13 06:12:57,841 : Trainset length: 1200, Valset length: 800
+2021-06-13 06:12:58,139 : Not using pretrained model.
+2021-06-13 06:13:01,602 : Training on Fold (1/1)
+2021-06-13 06:20:44,410 : START
+2021-06-13 06:20:44,444 : Global Device: cuda:0
+2021-06-13 06:20:44,444 : Parsed Args: Namespace(base_dir='/repo/course/sem21_01/PCB-fault-classification/', base_model='plain_resnet50', batch_size=4, ckpt_path='/repo/course/sem21_01/PCB-fault-classification/ckpt/', cuda=True, data_type='original', device_index=0, epochs=10, fold_k=1, label_dir='/repo/course/sem21_01/PCB-fault-classification/label.csv', learning_rate=0.0029, lr_type=None, mode='train_ovr', model_index=2, patience=10, pretrained=False, pretrained_weights_dir='/home/ys/repo/PCB-fault-classification/pretrained_model', seed=227182, threshold=0.0, tta=False, val_ratio=0.4, verbose=100, voting='hard')
+2021-06-13 06:20:44,472 : Trainset length: 1200, Valset length: 800
+2021-06-13 06:20:44,768 : Not using pretrained model.
+2021-06-13 06:20:48,264 : Training on Fold (1/1)
+2021-06-13 06:21:33,421 : START
+2021-06-13 06:21:33,457 : Global Device: cuda:0
+2021-06-13 06:21:33,457 : Parsed Args: Namespace(base_dir='/repo/course/sem21_01/PCB-fault-classification/', base_model='plain_resnet50', batch_size=4, ckpt_path='/repo/course/sem21_01/PCB-fault-classification/ckpt/', cuda=True, data_type='original', device_index=0, epochs=10, fold_k=1, label_dir='/repo/course/sem21_01/PCB-fault-classification/label.csv', learning_rate=0.0029, lr_type=None, mode='train_ovr', model_index=2, patience=10, pretrained=False, pretrained_weights_dir='/home/ys/repo/PCB-fault-classification/pretrained_model', seed=227182, threshold=0.0, tta=False, val_ratio=0.4, verbose=100, voting='hard')
+2021-06-13 06:21:33,487 : Trainset length: 1200, Valset length: 800
+2021-06-13 06:21:33,788 : Not using pretrained model.
+2021-06-13 06:21:37,254 : Training on Fold (1/1)
+2021-06-13 06:24:18,374 : START
+2021-06-13 06:24:18,407 : Global Device: cuda:0
+2021-06-13 06:24:18,407 : Parsed Args: Namespace(base_dir='/repo/course/sem21_01/PCB-fault-classification/', base_model='plain_resnet50', batch_size=4, ckpt_path='/repo/course/sem21_01/PCB-fault-classification/ckpt/', cuda=True, data_type='original', device_index=0, epochs=10, fold_k=1, label_dir='/repo/course/sem21_01/PCB-fault-classification/label.csv', learning_rate=0.0029, lr_type=None, mode='train_ovr', model_index=2, patience=10, pretrained=False, pretrained_weights_dir='/home/ys/repo/PCB-fault-classification/pretrained_model', seed=227182, threshold=0.0, tta=False, val_ratio=0.4, verbose=100, voting='hard')
+2021-06-13 06:24:18,432 : Trainset length: 1200, Valset length: 800
+2021-06-13 06:24:18,726 : Not using pretrained model.
+2021-06-13 06:24:22,210 : Training on Fold (1/1)
+2021-06-13 06:26:30,352 : START
+2021-06-13 06:26:30,387 : Global Device: cuda:0
+2021-06-13 06:26:30,387 : Parsed Args: Namespace(base_dir='/repo/course/sem21_01/PCB-fault-classification/', base_model='plain_resnet50', batch_size=4, ckpt_path='/repo/course/sem21_01/PCB-fault-classification/ckpt/', cuda=True, data_type='original', device_index=0, epochs=10, fold_k=1, label_dir='/repo/course/sem21_01/PCB-fault-classification/label.csv', learning_rate=0.0029, lr_type=None, mode='train_ovr', model_index=2, patience=10, pretrained=False, pretrained_weights_dir='/home/ys/repo/PCB-fault-classification/pretrained_model', seed=227182, threshold=0.0, tta=False, val_ratio=0.4, verbose=100, voting='hard')
+2021-06-13 06:26:30,412 : Trainset length: 1200, Valset length: 800
+2021-06-13 06:26:30,715 : Not using pretrained model.
+2021-06-13 06:26:34,178 : Training on Fold (1/1)
+2021-06-13 06:27:04,414 : START
+2021-06-13 06:27:04,449 : Global Device: cuda:0
+2021-06-13 06:27:04,449 : Parsed Args: Namespace(base_dir='/repo/course/sem21_01/PCB-fault-classification/', base_model='plain_resnet50', batch_size=4, ckpt_path='/repo/course/sem21_01/PCB-fault-classification/ckpt/', cuda=True, data_type='original', device_index=0, epochs=10, fold_k=1, label_dir='/repo/course/sem21_01/PCB-fault-classification/label.csv', learning_rate=0.0029, lr_type=None, mode='train_ovr', model_index=2, patience=10, pretrained=False, pretrained_weights_dir='/home/ys/repo/PCB-fault-classification/pretrained_model', seed=227182, threshold=0.0, tta=False, val_ratio=0.4, verbose=100, voting='hard')
+2021-06-13 06:27:04,477 : Trainset length: 1200, Valset length: 800
+2021-06-13 06:27:04,766 : Not using pretrained model.
+2021-06-13 06:27:08,298 : Training on Fold (1/1)
+2021-06-13 06:31:36,119 : START
+2021-06-13 06:31:36,154 : Global Device: cuda:0
+2021-06-13 06:31:36,154 : Parsed Args: Namespace(base_dir='/repo/course/sem21_01/PCB-fault-classification/', base_model='plain_resnet50', batch_size=4, ckpt_path='/repo/course/sem21_01/PCB-fault-classification/ckpt/', cuda=True, data_type='original', device_index=0, epochs=10, fold_k=1, label_dir='/repo/course/sem21_01/PCB-fault-classification/label.csv', learning_rate=0.0029, lr_type='exp', mode='train_ovr', model_index=2, patience=10, pretrained=False, pretrained_weights_dir='/home/ys/repo/PCB-fault-classification/pretrained_model', seed=227182, threshold=0.0, tta=False, val_ratio=0.4, verbose=100, voting='hard')
+2021-06-13 06:31:36,184 : Trainset length: 1200, Valset length: 800
+2021-06-13 06:31:36,482 : Not using pretrained model.
+2021-06-13 06:31:39,934 : Training on Fold (1/1)
+2021-06-13 06:32:45,788 : START
+2021-06-13 06:32:45,827 : Global Device: cuda:0
+2021-06-13 06:32:45,828 : Parsed Args: Namespace(base_dir='/repo/course/sem21_01/PCB-fault-classification/', base_model='plain_resnet50', batch_size=4, ckpt_path='/repo/course/sem21_01/PCB-fault-classification/ckpt/', cuda=True, data_type='original', device_index=0, epochs=10, fold_k=1, label_dir='/repo/course/sem21_01/PCB-fault-classification/label.csv', learning_rate=0.0029, lr_type='exp', mode='train_ovr', model_index=2, patience=10, pretrained=False, pretrained_weights_dir='/home/ys/repo/PCB-fault-classification/pretrained_model', seed=227182, threshold=0.0, tta=False, val_ratio=0.4, verbose=100, voting='hard')
+2021-06-13 06:32:45,853 : Trainset length: 1200, Valset length: 800
+2021-06-13 06:32:46,175 : Not using pretrained model.
+2021-06-13 06:32:49,704 : Training on Fold (1/1)
+2021-06-13 06:32:49,732 : 
+                    ---------------------------------------------------------------------------
+                        TRAINING INFO
+                            Loss function : MultiLabelSoftMarginLoss()
+                            Optimizer     : RAdam (
+Parameter Group 0
+    betas: (0.9, 0.999)
+    eps: 1e-08
+    initial_lr: 0.0029
+    lr: 0.0029
+    weight_decay: 0.0001
+)
+                            LR_Scheduler  : <torch.optim.lr_scheduler.ExponentialLR object at 0x7f9071b34e80>
+                    ---------------------------------------------------------------------------
+2021-06-13 06:32:49,732 : Training begins... Epochs = 10
+2021-06-13 06:32:49,733 : 
+===========================================================================
+    PHASE INFO
+        Current fold  : Fold (1)
+        Current phase : 1th epoch
+        Learning Rate : 0.002900
+---------------------------------------------------------------------------
+2021-06-13 06:41:47,707 : START
+2021-06-13 06:41:47,742 : Global Device: cuda:0
+2021-06-13 06:41:47,742 : Parsed Args: Namespace(base_dir='/repo/course/sem21_01/PCB-fault-classification/', base_model='plain_resnet50', batch_size=4, ckpt_path='/repo/course/sem21_01/PCB-fault-classification/ckpt/', cuda=True, data_type='original', device_index=0, epochs=10, fold_k=1, label_dir='/repo/course/sem21_01/PCB-fault-classification/label.csv', learning_rate=0.0029, lr_type='exp', mode='train_ovr', model_index=2, patience=10, pretrained=False, pretrained_weights_dir='/home/ys/repo/PCB-fault-classification/pretrained_model', seed=227182, threshold=0.0, tta=False, val_ratio=0.4, verbose=100, voting='hard')
+2021-06-13 06:41:47,768 : Trainset length: 1200, Valset length: 800
+2021-06-13 06:41:48,072 : Not using pretrained model.
+2021-06-13 06:41:51,517 : Training on Fold (1/1)
+2021-06-13 06:42:57,573 : START
+2021-06-13 06:42:57,609 : Global Device: cuda:0
+2021-06-13 06:42:57,609 : Parsed Args: Namespace(base_dir='/repo/course/sem21_01/PCB-fault-classification/', base_model='plain_resnet50', batch_size=4, ckpt_path='/repo/course/sem21_01/PCB-fault-classification/ckpt/', cuda=True, data_type='original', device_index=0, epochs=10, fold_k=1, label_dir='/repo/course/sem21_01/PCB-fault-classification/label.csv', learning_rate=0.0029, lr_type='exp', mode='train_ovr', model_index=2, patience=10, pretrained=False, pretrained_weights_dir='/home/ys/repo/PCB-fault-classification/pretrained_model', seed=227182, threshold=0.0, tta=False, val_ratio=0.4, verbose=100, voting='hard')
+2021-06-13 06:42:57,636 : Trainset length: 1200, Valset length: 800
+2021-06-13 06:42:57,932 : Not using pretrained model.
+2021-06-13 06:43:01,384 : Training on Fold (1/1)
+2021-06-13 06:44:09,808 : START
+2021-06-13 06:44:09,839 : Global Device: cuda:0
+2021-06-13 06:44:09,840 : Parsed Args: Namespace(base_dir='/repo/course/sem21_01/PCB-fault-classification/', base_model='plain_resnet50', batch_size=4, ckpt_path='/repo/course/sem21_01/PCB-fault-classification/ckpt/', cuda=True, data_type='original', device_index=0, epochs=10, fold_k=1, label_dir='/repo/course/sem21_01/PCB-fault-classification/label.csv', learning_rate=0.0029, lr_type='exp', mode='train_ovr', model_index=2, patience=10, pretrained=False, pretrained_weights_dir='/home/ys/repo/PCB-fault-classification/pretrained_model', seed=227182, threshold=0.0, tta=False, val_ratio=0.4, verbose=100, voting='hard')
+2021-06-13 06:44:09,866 : Trainset length: 1200, Valset length: 800
+2021-06-13 06:44:10,157 : Not using pretrained model.
+2021-06-13 06:44:13,630 : Training on Fold (1/1)
+2021-06-13 06:45:15,949 : START
+2021-06-13 06:45:15,984 : Global Device: cuda:0
+2021-06-13 06:45:15,984 : Parsed Args: Namespace(base_dir='/repo/course/sem21_01/PCB-fault-classification/', base_model='plain_resnet50', batch_size=4, ckpt_path='/repo/course/sem21_01/PCB-fault-classification/ckpt/', cuda=True, data_type='original', device_index=0, epochs=10, fold_k=1, label_dir='/repo/course/sem21_01/PCB-fault-classification/label.csv', learning_rate=0.0029, lr_type='exp', mode='train_ovr', model_index=2, patience=10, pretrained=False, pretrained_weights_dir='/home/ys/repo/PCB-fault-classification/pretrained_model', seed=227182, threshold=0.0, tta=False, val_ratio=0.4, verbose=100, voting='hard')
+2021-06-13 06:45:16,012 : Trainset length: 1200, Valset length: 800
+2021-06-13 06:45:16,300 : Not using pretrained model.
+2021-06-13 06:45:19,729 : Training on Fold (1/1)
+2021-06-13 06:46:04,914 : START
+2021-06-13 06:46:04,948 : Global Device: cuda:0
+2021-06-13 06:46:04,949 : Parsed Args: Namespace(base_dir='/repo/course/sem21_01/PCB-fault-classification/', base_model='plain_resnet50', batch_size=4, ckpt_path='/repo/course/sem21_01/PCB-fault-classification/ckpt/', cuda=True, data_type='original', device_index=0, epochs=10, fold_k=1, label_dir='/repo/course/sem21_01/PCB-fault-classification/label.csv', learning_rate=0.0029, lr_type='exp', mode='train_ovr', model_index=2, patience=10, pretrained=False, pretrained_weights_dir='/home/ys/repo/PCB-fault-classification/pretrained_model', seed=227182, threshold=0.0, tta=False, val_ratio=0.4, verbose=100, voting='hard')
+2021-06-13 06:46:04,976 : Trainset length: 1200, Valset length: 800
+2021-06-13 06:46:05,267 : Not using pretrained model.
+2021-06-13 06:46:08,761 : Training on Fold (1/1)
+2021-06-13 06:49:35,267 : START
+2021-06-13 06:49:35,302 : Global Device: cuda:0
+2021-06-13 06:49:35,303 : Parsed Args: Namespace(base_dir='/repo/course/sem21_01/PCB-fault-classification/', base_model='plain_resnet50', batch_size=4, ckpt_path='/repo/course/sem21_01/PCB-fault-classification/ckpt/', cuda=True, data_type='original', device_index=0, epochs=10, fold_k=1, label_dir='/repo/course/sem21_01/PCB-fault-classification/label.csv', learning_rate=0.0029, lr_type='exp', mode='train_ovr', model_index=2, patience=10, pretrained=False, pretrained_weights_dir='/home/ys/repo/PCB-fault-classification/pretrained_model', seed=227182, threshold=0.0, tta=False, val_ratio=0.4, verbose=100, voting='hard')
+2021-06-13 06:49:35,330 : Trainset length: 1200, Valset length: 800
+2021-06-13 06:49:35,620 : Not using pretrained model.
+2021-06-13 06:49:39,101 : Training on Fold (1/1)
+2021-06-13 06:52:28,159 : START
+2021-06-13 06:52:28,192 : Global Device: cuda:0
+2021-06-13 06:52:28,192 : Parsed Args: Namespace(base_dir='/repo/course/sem21_01/PCB-fault-classification/', base_model='plain_resnet50', batch_size=4, ckpt_path='/repo/course/sem21_01/PCB-fault-classification/ckpt/', cuda=True, data_type='original', device_index=0, epochs=10, fold_k=1, label_dir='/repo/course/sem21_01/PCB-fault-classification/label.csv', learning_rate=0.0029, lr_type='exp', mode='train_ovr', model_index=2, patience=10, pretrained=False, pretrained_weights_dir='/home/ys/repo/PCB-fault-classification/pretrained_model', seed=227182, threshold=0.0, tta=False, val_ratio=0.4, verbose=100, voting='hard')
+2021-06-13 06:52:28,227 : Trainset length: 1200, Valset length: 800
+2021-06-13 06:52:28,512 : Not using pretrained model.
+2021-06-13 06:52:31,970 : Training on Fold (1/1)
+2021-06-13 06:52:31,997 : 
+                    ---------------------------------------------------------------------------
+                        TRAINING INFO
+                            Loss function : MultiLabelSoftMarginLoss()
+                            Optimizer     : RAdam (
+Parameter Group 0
+    betas: (0.9, 0.999)
+    eps: 1e-08
+    initial_lr: 0.0029
+    lr: 0.0029
+    weight_decay: 0.0001
+)
+                            LR_Scheduler  : <torch.optim.lr_scheduler.ExponentialLR object at 0x7fe4d5f6bcf8>
+                    ---------------------------------------------------------------------------
+2021-06-13 06:52:31,997 : Training begins... Epochs = 10
+2021-06-13 06:52:31,997 : 
+===========================================================================
+    PHASE INFO
+        Current fold  : Fold (1)
+        Current phase : 1th epoch
+        Learning Rate : 0.002900
+---------------------------------------------------------------------------
+2021-06-13 06:59:56,230 : START
+2021-06-13 06:59:56,266 : Global Device: cuda:0
+2021-06-13 06:59:56,266 : Parsed Args: Namespace(base_dir='/repo/course/sem21_01/PCB-fault-classification/', base_model='plain_resnet50', batch_size=4, ckpt_path='/repo/course/sem21_01/PCB-fault-classification/ckpt/', cuda=True, data_type='original', device_index=0, epochs=10, fold_k=1, label_dir='/repo/course/sem21_01/PCB-fault-classification/label.csv', learning_rate=0.0029, lr_type='exp', mode='train_ovr', model_index=2, patience=10, pretrained=False, pretrained_weights_dir='/home/ys/repo/PCB-fault-classification/pretrained_model', seed=227182, threshold=0.0, tta=False, val_ratio=0.4, verbose=100, voting='hard')
+2021-06-13 06:59:56,292 : Trainset length: 1200, Valset length: 800
+2021-06-13 06:59:56,591 : Not using pretrained model.
+2021-06-13 07:00:00,060 : Training on Fold (1/1)
+2021-06-13 07:00:00,086 : 
+                    ---------------------------------------------------------------------------
+                        TRAINING INFO
+                            Loss function : MultiLabelSoftMarginLoss()
+                            Optimizer     : RAdam (
+Parameter Group 0
+    betas: (0.9, 0.999)
+    eps: 1e-08
+    initial_lr: 0.0029
+    lr: 0.0029
+    weight_decay: 0.0001
+)
+                            LR_Scheduler  : <torch.optim.lr_scheduler.ExponentialLR object at 0x7f943b206d30>
+                    ---------------------------------------------------------------------------
+2021-06-13 07:00:00,086 : Training begins... Epochs = 10
+2021-06-13 07:00:00,087 : 
+===========================================================================
+    PHASE INFO
+        Current fold  : Fold (1)
+        Current phase : 1th epoch
+        Learning Rate : 0.002900
+---------------------------------------------------------------------------
+2021-06-13 07:04:38,028 : START
+2021-06-13 07:04:38,061 : Global Device: cuda:0
+2021-06-13 07:04:38,062 : Parsed Args: Namespace(base_dir='/repo/course/sem21_01/PCB-fault-classification/', base_model='plain_resnet50', batch_size=4, ckpt_path='/repo/course/sem21_01/PCB-fault-classification/ckpt/', cuda=True, data_type='original', device_index=0, epochs=10, fold_k=1, label_dir='/repo/course/sem21_01/PCB-fault-classification/label.csv', learning_rate=0.0029, lr_type='exp', mode='train_ovr', model_index=2, patience=10, pretrained=False, pretrained_weights_dir='/home/ys/repo/PCB-fault-classification/pretrained_model', seed=227182, threshold=0.0, tta=False, val_ratio=0.4, verbose=100, voting='hard')
+2021-06-13 07:04:38,093 : Trainset length: 1200, Valset length: 800
+2021-06-13 07:04:38,388 : Not using pretrained model.
+2021-06-13 07:04:41,863 : Training on Fold (1/1)
+2021-06-13 07:04:41,879 : 
+                    ---------------------------------------------------------------------------
+                        TRAINING INFO
+                            Loss function : MultiLabelSoftMarginLoss()
+                            Optimizer     : RAdam (
+Parameter Group 0
+    betas: (0.9, 0.999)
+    eps: 1e-08
+    initial_lr: 0.0029
+    lr: 0.0029
+    weight_decay: 0.0001
+)
+                            LR_Scheduler  : <torch.optim.lr_scheduler.ExponentialLR object at 0x7f69b3198550>
+                    ---------------------------------------------------------------------------
+2021-06-13 07:04:41,879 : Training begins... Epochs = 10
+2021-06-13 07:04:41,880 : 
+===========================================================================
+    PHASE INFO
+        Current fold  : Fold (1)
+        Current phase : 1th epoch
+        Learning Rate : 0.002900
+---------------------------------------------------------------------------
+2021-06-13 07:05:35,804 : 
+---------------------------------------------------------------------------
+    SUMMARY
+        Finished phase  : 1th epoch
+        Time taken      : 0m 53.92s
+        Training Loss   : 0.179972  |  Training Acc   : 57.1528%
+        Validation Loss : 0.023930  |  Validation Acc : 43.8333%
+===========================================================================
+
+2021-06-13 07:05:35,923 : 
+===========================================================================
+    PHASE INFO
+        Current fold  : Fold (1)
+        Current phase : 2th epoch
+        Learning Rate : 0.002729
+---------------------------------------------------------------------------
+2021-06-13 07:06:30,061 : 
+---------------------------------------------------------------------------
+    SUMMARY
+        Finished phase  : 2th epoch
+        Time taken      : 0m 54.14s
+        Training Loss   : 0.171025  |  Training Acc   : 57.4028%
+        Validation Loss : 0.023089  |  Validation Acc : 44.8542%
+===========================================================================
+
+2021-06-13 07:06:30,062 : SAVING MODEL: /repo/course/sem21_01/PCB-fault-classification/ckpt/model_2/model_ckpt_fold1_2.pth
+2021-06-13 07:06:30,547 : 
+===========================================================================
+    PHASE INFO
+        Current fold  : Fold (1)
+        Current phase : 3th epoch
+        Learning Rate : 0.002647
+---------------------------------------------------------------------------
+2021-06-13 07:07:25,544 : 
+---------------------------------------------------------------------------
+    SUMMARY
+        Finished phase  : 3th epoch
+        Time taken      : 0m 55.00s
+        Training Loss   : 0.169910  |  Training Acc   : 57.4306%
+        Validation Loss : 0.022581  |  Validation Acc : 44.3958%
+===========================================================================
+
+2021-06-13 07:07:25,862 : 
+===========================================================================
+    PHASE INFO
+        Current fold  : Fold (1)
+        Current phase : 4th epoch
+        Learning Rate : 0.002567
+---------------------------------------------------------------------------
+2021-06-13 07:08:20,938 : 
+---------------------------------------------------------------------------
+    SUMMARY
+        Finished phase  : 4th epoch
+        Time taken      : 0m 55.08s
+        Training Loss   : 0.167382  |  Training Acc   : 59.8333%
+        Validation Loss : 0.022773  |  Validation Acc : 43.5833%
+===========================================================================
+
+2021-06-13 07:08:20,938 : SAVING MODEL: /repo/course/sem21_01/PCB-fault-classification/ckpt/model_2/model_ckpt_fold1_4.pth
+2021-06-13 07:08:21,056 : 
+===========================================================================
+    PHASE INFO
+        Current fold  : Fold (1)
+        Current phase : 5th epoch
+        Learning Rate : 0.002490
+---------------------------------------------------------------------------
+2021-06-13 07:09:16,721 : 
+---------------------------------------------------------------------------
+    SUMMARY
+        Finished phase  : 5th epoch
+        Time taken      : 0m 55.66s
+        Training Loss   : 0.167526  |  Training Acc   : 58.7639%
+        Validation Loss : 0.026535  |  Validation Acc : 40.8750%
+===========================================================================
+
+2021-06-13 07:09:16,721 : 
+===========================================================================
+    PHASE INFO
+        Current fold  : Fold (1)
+        Current phase : 6th epoch
+        Learning Rate : 0.002416
+---------------------------------------------------------------------------
+2021-06-13 07:10:12,136 : 
+---------------------------------------------------------------------------
+    SUMMARY
+        Finished phase  : 6th epoch
+        Time taken      : 0m 55.41s
+        Training Loss   : 0.168730  |  Training Acc   : 58.2639%
+        Validation Loss : 0.022843  |  Validation Acc : 46.9792%
+===========================================================================
+
+2021-06-13 07:10:12,136 : SAVING MODEL: /repo/course/sem21_01/PCB-fault-classification/ckpt/model_2/model_ckpt_fold1_6.pth
+2021-06-13 07:10:12,251 : 
+===========================================================================
+    PHASE INFO
+        Current fold  : Fold (1)
+        Current phase : 7th epoch
+        Learning Rate : 0.002343
+---------------------------------------------------------------------------
+2021-06-13 07:12:18,680 : START
+2021-06-13 07:12:18,714 : Global Device: cuda:0
+2021-06-13 07:12:18,715 : Parsed Args: Namespace(base_dir='/repo/course/sem21_01/PCB-fault-classification/', base_model='plain_resnet50', batch_size=16, ckpt_path='/repo/course/sem21_01/PCB-fault-classification/ckpt/', cuda=True, data_type='original', device_index=0, epochs=10, fold_k=1, label_dir='/repo/course/sem21_01/PCB-fault-classification/label.csv', learning_rate=0.001, lr_type='exp', mode='train_ovr', model_index=2, patience=10, pretrained=False, pretrained_weights_dir='/home/ys/repo/PCB-fault-classification/pretrained_model', seed=227182, threshold=0.0, tta=False, val_ratio=0.4, verbose=100, voting='hard')
+2021-06-13 07:12:18,744 : Trainset length: 1200, Valset length: 800
+2021-06-13 07:12:19,029 : Not using pretrained model.
+2021-06-13 07:12:22,498 : Training on Fold (1/1)
+2021-06-13 07:12:22,517 : 
+                    ---------------------------------------------------------------------------
+                        TRAINING INFO
+                            Loss function : MultiLabelSoftMarginLoss()
+                            Optimizer     : RAdam (
+Parameter Group 0
+    betas: (0.9, 0.999)
+    eps: 1e-08
+    initial_lr: 0.001
+    lr: 0.001
+    weight_decay: 0.0001
+)
+                            LR_Scheduler  : <torch.optim.lr_scheduler.ExponentialLR object at 0x7f452487c630>
+                    ---------------------------------------------------------------------------
+2021-06-13 07:12:22,517 : Training begins... Epochs = 10
+2021-06-13 07:12:22,517 : 
+===========================================================================
+    PHASE INFO
+        Current fold  : Fold (1)
+        Current phase : 1th epoch
+        Learning Rate : 0.001000
+---------------------------------------------------------------------------
+2021-06-13 07:13:04,739 : START
+2021-06-13 07:13:04,770 : Global Device: cuda:0
+2021-06-13 07:13:04,770 : Parsed Args: Namespace(base_dir='/repo/course/sem21_01/PCB-fault-classification/', base_model='plain_resnet50', batch_size=16, ckpt_path='/repo/course/sem21_01/PCB-fault-classification/ckpt/', cuda=True, data_type='original', device_index=0, epochs=10, fold_k=1, label_dir='/repo/course/sem21_01/PCB-fault-classification/label.csv', learning_rate=0.001, lr_type='exp', mode='train_ovr', model_index=2, patience=10, pretrained=False, pretrained_weights_dir='/home/ys/repo/PCB-fault-classification/pretrained_model', seed=227182, threshold=0.0, tta=False, val_ratio=0.4, verbose=100, voting='hard')
+2021-06-13 07:13:04,804 : Trainset length: 1500, Valset length: 1000
+2021-06-13 07:13:05,094 : Not using pretrained model.
+2021-06-13 07:13:08,545 : Training on Fold (1/1)
+2021-06-13 07:13:08,563 : 
+                    ---------------------------------------------------------------------------
+                        TRAINING INFO
+                            Loss function : MultiLabelSoftMarginLoss()
+                            Optimizer     : RAdam (
+Parameter Group 0
+    betas: (0.9, 0.999)
+    eps: 1e-08
+    initial_lr: 0.001
+    lr: 0.001
+    weight_decay: 0.0001
+)
+                            LR_Scheduler  : <torch.optim.lr_scheduler.ExponentialLR object at 0x7f80ba88a550>
+                    ---------------------------------------------------------------------------
+2021-06-13 07:13:08,563 : Training begins... Epochs = 10
+2021-06-13 07:13:08,563 : 
+===========================================================================
+    PHASE INFO
+        Current fold  : Fold (1)
+        Current phase : 1th epoch
+        Learning Rate : 0.001000
+---------------------------------------------------------------------------
+2021-06-13 07:14:06,283 : 
+---------------------------------------------------------------------------
+    SUMMARY
+        Finished phase  : 1th epoch
+        Time taken      : 0m 57.72s
+        Training Loss   : 0.046852  |  Training Acc   : 55.0444%
+        Validation Loss : 0.024680  |  Validation Acc : 45.6000%
+===========================================================================
+
+2021-06-13 07:14:06,891 : 
+===========================================================================
+    PHASE INFO
+        Current fold  : Fold (1)
+        Current phase : 2th epoch
+        Learning Rate : 0.000970
+---------------------------------------------------------------------------
+2021-06-13 07:15:03,882 : 
+---------------------------------------------------------------------------
+    SUMMARY
+        Finished phase  : 2th epoch
+        Time taken      : 0m 56.99s
+        Training Loss   : 0.042362  |  Training Acc   : 59.1111%
+        Validation Loss : 0.023300  |  Validation Acc : 45.9833%
+===========================================================================
+
+2021-06-13 07:15:03,882 : SAVING MODEL: /repo/course/sem21_01/PCB-fault-classification/ckpt/model_2/model_ckpt_fold1_2.pth
+2021-06-13 07:15:04,542 : 
+===========================================================================
+    PHASE INFO
+        Current fold  : Fold (1)
+        Current phase : 3th epoch
+        Learning Rate : 0.000941
+---------------------------------------------------------------------------
+2021-06-13 07:16:01,311 : 
+---------------------------------------------------------------------------
+    SUMMARY
+        Finished phase  : 3th epoch
+        Time taken      : 0m 56.77s
+        Training Loss   : 0.041686  |  Training Acc   : 60.4111%
+        Validation Loss : 0.025258  |  Validation Acc : 47.3333%
+===========================================================================
+
+2021-06-13 07:16:01,312 : 
+===========================================================================
+    PHASE INFO
+        Current fold  : Fold (1)
+        Current phase : 4th epoch
+        Learning Rate : 0.000913
+---------------------------------------------------------------------------
+2021-06-13 07:16:58,267 : 
+---------------------------------------------------------------------------
+    SUMMARY
+        Finished phase  : 4th epoch
+        Time taken      : 0m 56.96s
+        Training Loss   : 0.040871  |  Training Acc   : 62.0889%
+        Validation Loss : 0.024913  |  Validation Acc : 44.6667%
+===========================================================================
+
+2021-06-13 07:16:58,267 : SAVING MODEL: /repo/course/sem21_01/PCB-fault-classification/ckpt/model_2/model_ckpt_fold1_4.pth
+2021-06-13 07:16:58,578 : 
+===========================================================================
+    PHASE INFO
+        Current fold  : Fold (1)
+        Current phase : 5th epoch
+        Learning Rate : 0.000885
+---------------------------------------------------------------------------
+2021-06-13 07:17:55,510 : 
+---------------------------------------------------------------------------
+    SUMMARY
+        Finished phase  : 5th epoch
+        Time taken      : 0m 56.93s
+        Training Loss   : 0.041324  |  Training Acc   : 60.7333%
+        Validation Loss : 0.025402  |  Validation Acc : 47.2333%
+===========================================================================
+
+2021-06-13 07:17:55,511 : 
+===========================================================================
+    PHASE INFO
+        Current fold  : Fold (1)
+        Current phase : 6th epoch
+        Learning Rate : 0.000859
+---------------------------------------------------------------------------
+2021-06-13 07:18:47,486 : START
+2021-06-13 07:18:47,524 : Global Device: cuda:0
+2021-06-13 07:18:47,525 : Parsed Args: Namespace(base_dir='/repo/course/sem21_01/PCB-fault-classification/', base_model='plain_efficientnetb4', batch_size=16, ckpt_path='/repo/course/sem21_01/PCB-fault-classification/ckpt/', cuda=True, data_type='original', device_index=0, epochs=10, fold_k=1, label_dir='/repo/course/sem21_01/PCB-fault-classification/label.csv', learning_rate=0.001, lr_type='exp', mode='train_ovr', model_index=2, patience=10, pretrained=False, pretrained_weights_dir='/home/ys/repo/PCB-fault-classification/pretrained_model', seed=227182, threshold=0.0, tta=False, val_ratio=0.4, verbose=100, voting='hard')
+2021-06-13 07:18:47,559 : Trainset length: 1500, Valset length: 1000
+2021-06-13 07:18:55,559 : Not using pretrained model.
+2021-06-13 07:18:59,058 : Training on Fold (1/1)
+2021-06-13 07:18:59,078 : 
+                    ---------------------------------------------------------------------------
+                        TRAINING INFO
+                            Loss function : MultiLabelSoftMarginLoss()
+                            Optimizer     : RAdam (
+Parameter Group 0
+    betas: (0.9, 0.999)
+    eps: 1e-08
+    initial_lr: 0.001
+    lr: 0.001
+    weight_decay: 0.0001
+)
+                            LR_Scheduler  : <torch.optim.lr_scheduler.ExponentialLR object at 0x7f60ca513828>
+                    ---------------------------------------------------------------------------
+2021-06-13 07:18:59,078 : Training begins... Epochs = 10
+2021-06-13 07:18:59,078 : 
+===========================================================================
+    PHASE INFO
+        Current fold  : Fold (1)
+        Current phase : 1th epoch
+        Learning Rate : 0.001000
+---------------------------------------------------------------------------
+2021-06-13 07:19:12,014 : START
+2021-06-13 07:19:12,045 : Global Device: cuda:0
+2021-06-13 07:19:12,046 : Parsed Args: Namespace(base_dir='/repo/course/sem21_01/PCB-fault-classification/', base_model='plain_efficientnetb4', batch_size=8, ckpt_path='/repo/course/sem21_01/PCB-fault-classification/ckpt/', cuda=True, data_type='original', device_index=0, epochs=10, fold_k=1, label_dir='/repo/course/sem21_01/PCB-fault-classification/label.csv', learning_rate=0.001, lr_type='exp', mode='train_ovr', model_index=2, patience=10, pretrained=False, pretrained_weights_dir='/home/ys/repo/PCB-fault-classification/pretrained_model', seed=227182, threshold=0.0, tta=False, val_ratio=0.4, verbose=100, voting='hard')
+2021-06-13 07:19:12,079 : Trainset length: 1500, Valset length: 1000
+2021-06-13 07:19:12,322 : Not using pretrained model.
+2021-06-13 07:19:15,827 : Training on Fold (1/1)
+2021-06-13 07:19:15,847 : 
+                    ---------------------------------------------------------------------------
+                        TRAINING INFO
+                            Loss function : MultiLabelSoftMarginLoss()
+                            Optimizer     : RAdam (
+Parameter Group 0
+    betas: (0.9, 0.999)
+    eps: 1e-08
+    initial_lr: 0.001
+    lr: 0.001
+    weight_decay: 0.0001
+)
+                            LR_Scheduler  : <torch.optim.lr_scheduler.ExponentialLR object at 0x7fb22a1386d8>
+                    ---------------------------------------------------------------------------
+2021-06-13 07:19:15,847 : Training begins... Epochs = 10
+2021-06-13 07:19:15,847 : 
+===========================================================================
+    PHASE INFO
+        Current fold  : Fold (1)
+        Current phase : 1th epoch
+        Learning Rate : 0.001000
+---------------------------------------------------------------------------
+2021-06-13 07:21:18,432 : 
+---------------------------------------------------------------------------
+    SUMMARY
+        Finished phase  : 1th epoch
+        Time taken      : 2m 2.59s
+        Training Loss   : 0.072089  |  Training Acc   : 69.1889%
+        Validation Loss : 0.028295  |  Validation Acc : 48.3333%
+===========================================================================
+
+2021-06-13 07:21:18,718 : 
+===========================================================================
+    PHASE INFO
+        Current fold  : Fold (1)
+        Current phase : 2th epoch
+        Learning Rate : 0.000970
+---------------------------------------------------------------------------
+2021-06-13 07:21:39,435 : START
+2021-06-13 07:21:39,473 : Global Device: cuda:0
+2021-06-13 07:21:39,473 : Parsed Args: Namespace(base_dir='/repo/course/sem21_01/PCB-fault-classification/', base_model='plain_efficientnetb4', batch_size=8, ckpt_path='/repo/course/sem21_01/PCB-fault-classification/ckpt/', cuda=True, data_type='original', device_index=0, epochs=10, fold_k=1, label_dir='/repo/course/sem21_01/PCB-fault-classification/label.csv', learning_rate=0.001, lr_type='multi', mode='train', model_index=2, patience=10, pretrained=False, pretrained_weights_dir='/home/ys/repo/PCB-fault-classification/pretrained_model', seed=227182, threshold=0.0, tta=False, val_ratio=0.4, verbose=100, voting='hard')
+2021-06-13 07:21:39,509 : Trainset length: 1500, Valset length: 1000
+2021-06-13 07:21:39,746 : Not using pretrained model.
+2021-06-13 07:21:43,340 : Training on Fold (1/1)
+2021-06-13 07:22:54,708 : START
+2021-06-13 07:22:54,743 : Global Device: cuda:0
+2021-06-13 07:22:54,743 : Parsed Args: Namespace(base_dir='/repo/course/sem21_01/PCB-fault-classification/', base_model='plain_efficientnetb4', batch_size=8, ckpt_path='/repo/course/sem21_01/PCB-fault-classification/ckpt/', cuda=True, data_type='original', device_index=0, epochs=10, fold_k=1, label_dir='/repo/course/sem21_01/PCB-fault-classification/label.csv', learning_rate=0.001, lr_type='multi', mode='train', model_index=2, patience=10, pretrained=False, pretrained_weights_dir='/home/ys/repo/PCB-fault-classification/pretrained_model', seed=227182, threshold=0.0, tta=False, val_ratio=0.4, verbose=100, voting='hard')
+2021-06-13 07:22:54,777 : Trainset length: 1500, Valset length: 1000
+2021-06-13 07:22:55,023 : Not using pretrained model.
+2021-06-13 07:22:58,575 : Training on Fold (1/1)
+2021-06-13 07:22:58,583 : 
+                    ---------------------------------------------------------------------------
+                        TRAINING INFO
+                            Loss function : MultiLabelSoftMarginLoss()
+                            Optimizer     : RAdam (
+Parameter Group 0
+    betas: (0.9, 0.999)
+    eps: 1e-08
+    initial_lr: 0.001
+    lr: 0.001
+    weight_decay: 0.0001
+)
+                            LR_Scheduler  : <torch.optim.lr_scheduler.MultiStepLR object at 0x7efc1c60b4e0>
+                    ---------------------------------------------------------------------------
+2021-06-13 07:22:58,583 : Training begins... Epochs = 10
+2021-06-13 07:22:58,583 : 
+===========================================================================
+    PHASE INFO
+        Current fold  : Fold (1)
+        Current phase : 1th epoch
+        Learning Rate : 0.001000
+---------------------------------------------------------------------------
+2021-06-13 07:25:00,158 : 
+---------------------------------------------------------------------------
+    SUMMARY
+        Finished phase  : 1th epoch
+        Time taken      : 2m 1.57s
+        Training Loss   : 0.086994  |  Training Acc   : 54.2000%
+        Validation Loss : 0.021905  |  Validation Acc : 57.0333%
+===========================================================================
+
+2021-06-13 07:25:00,392 : 
+===========================================================================
+    PHASE INFO
+        Current fold  : Fold (1)
+        Current phase : 2th epoch
+        Learning Rate : 0.001000
+---------------------------------------------------------------------------
+2021-06-13 07:27:03,475 : 
+---------------------------------------------------------------------------
+    SUMMARY
+        Finished phase  : 2th epoch
+        Time taken      : 2m 3.08s
+        Training Loss   : 0.086586  |  Training Acc   : 55.3778%
+        Validation Loss : 0.022150  |  Validation Acc : 58.1500%
+===========================================================================
+
+2021-06-13 07:27:03,475 : SAVING MODEL: /repo/course/sem21_01/PCB-fault-classification/ckpt/model_2/model_ckpt_fold1_2.pth
+2021-06-13 07:27:03,734 : 
+===========================================================================
+    PHASE INFO
+        Current fold  : Fold (1)
+        Current phase : 3th epoch
+        Learning Rate : 0.001000
+---------------------------------------------------------------------------
+2021-06-13 07:29:06,991 : 
+---------------------------------------------------------------------------
+    SUMMARY
+        Finished phase  : 3th epoch
+        Time taken      : 2m 3.26s
+        Training Loss   : 0.085867  |  Training Acc   : 56.6889%
+        Validation Loss : 0.021958  |  Validation Acc : 57.3333%
+===========================================================================
+
+2021-06-13 07:29:06,992 : 
+===========================================================================
+    PHASE INFO
+        Current fold  : Fold (1)
+        Current phase : 4th epoch
+        Learning Rate : 0.000700
+---------------------------------------------------------------------------
+2021-06-13 07:31:14,857 : 
+---------------------------------------------------------------------------
+    SUMMARY
+        Finished phase  : 4th epoch
+        Time taken      : 2m 7.87s
+        Training Loss   : 0.085467  |  Training Acc   : 57.8889%
+        Validation Loss : 0.021891  |  Validation Acc : 55.6000%
+===========================================================================
+
+2021-06-13 07:31:14,857 : SAVING MODEL: /repo/course/sem21_01/PCB-fault-classification/ckpt/model_2/model_ckpt_fold1_4.pth
+2021-06-13 07:31:15,389 : 
+===========================================================================
+    PHASE INFO
+        Current fold  : Fold (1)
+        Current phase : 5th epoch
+        Learning Rate : 0.000490
+---------------------------------------------------------------------------
+2021-06-13 07:33:30,334 : START
+2021-06-13 07:33:30,365 : Global Device: cuda:0
+2021-06-13 07:33:30,366 : Parsed Args: Namespace(base_dir='/repo/course/sem21_01/PCB-fault-classification/', base_model='plain_efficientnetb4', batch_size=8, ckpt_path='/repo/course/sem21_01/PCB-fault-classification/ckpt/', cuda=True, data_type='original', device_index=0, epochs=10, fold_k=1, label_dir='/repo/course/sem21_01/PCB-fault-classification/label.csv', learning_rate=0.001, lr_type='multi', mode='train', model_index=2, patience=10, pretrained=False, pretrained_weights_dir='/home/ys/repo/PCB-fault-classification/pretrained_model', seed=227182, threshold=0.0, tta=False, val_ratio=0.4, verbose=100, voting='hard')
+2021-06-13 07:33:30,400 : Trainset length: 1500, Valset length: 1000
+2021-06-13 07:33:30,639 : Not using pretrained model.
+2021-06-13 07:33:34,193 : Training on Fold (1/1)
+2021-06-13 07:33:57,634 : START
+2021-06-13 07:33:57,664 : Global Device: cuda:0
+2021-06-13 07:33:57,665 : Parsed Args: Namespace(base_dir='/repo/course/sem21_01/PCB-fault-classification/', base_model='plain_efficientnetb4', batch_size=8, ckpt_path='/repo/course/sem21_01/PCB-fault-classification/ckpt/', cuda=True, data_type='original', device_index=0, epochs=10, fold_k=1, label_dir='/repo/course/sem21_01/PCB-fault-classification/label.csv', learning_rate=0.001, lr_type='multi', mode='train', model_index=2, patience=10, pretrained=False, pretrained_weights_dir='/home/ys/repo/PCB-fault-classification/pretrained_model', seed=227182, threshold=0.0, tta=False, val_ratio=0.4, verbose=100, voting='hard')
+2021-06-13 07:33:57,697 : Trainset length: 1500, Valset length: 1000
+2021-06-13 07:33:57,938 : Not using pretrained model.
+2021-06-13 07:34:01,550 : Training on Fold (1/1)
+2021-06-13 07:34:01,556 : 
+                    ---------------------------------------------------------------------------
+                        TRAINING INFO
+                            Loss function : BCELoss()
+                            Optimizer     : RAdam (
+Parameter Group 0
+    betas: (0.9, 0.999)
+    eps: 1e-08
+    initial_lr: 0.001
+    lr: 0.001
+    weight_decay: 0.0001
+)
+                            LR_Scheduler  : <torch.optim.lr_scheduler.MultiStepLR object at 0x7fb5fb906550>
+                    ---------------------------------------------------------------------------
+2021-06-13 07:34:01,556 : Training begins... Epochs = 10
+2021-06-13 07:34:01,556 : 
+===========================================================================
+    PHASE INFO
+        Current fold  : Fold (1)
+        Current phase : 1th epoch
+        Learning Rate : 0.001000
+---------------------------------------------------------------------------
+2021-06-13 07:35:55,158 : START
+2021-06-13 07:35:55,196 : Global Device: cuda:0
+2021-06-13 07:35:55,196 : Parsed Args: Namespace(base_dir='/repo/course/sem21_01/PCB-fault-classification/', base_model='plain_efficientnetb4', batch_size=8, ckpt_path='/repo/course/sem21_01/PCB-fault-classification/ckpt/', cuda=True, data_type='original', device_index=0, epochs=10, fold_k=1, label_dir='/repo/course/sem21_01/PCB-fault-classification/label.csv', learning_rate=0.001, lr_type='multi', mode='train', model_index=2, patience=10, pretrained=False, pretrained_weights_dir='/home/ys/repo/PCB-fault-classification/pretrained_model', seed=227182, threshold=0.0, tta=False, val_ratio=0.4, verbose=100, voting='hard')
+2021-06-13 07:35:55,229 : Trainset length: 1500, Valset length: 1000
+2021-06-13 07:35:55,476 : Not using pretrained model.
+2021-06-13 07:35:59,135 : Training on Fold (1/1)
+2021-06-13 07:35:59,143 : 
+                    ---------------------------------------------------------------------------
+                        TRAINING INFO
+                            Loss function : BCELoss()
+                            Optimizer     : RAdam (
+Parameter Group 0
+    betas: (0.9, 0.999)
+    eps: 1e-08
+    initial_lr: 0.001
+    lr: 0.001
+    weight_decay: 0.0001
+)
+                            LR_Scheduler  : <torch.optim.lr_scheduler.MultiStepLR object at 0x7f59e00bd4a8>
+                    ---------------------------------------------------------------------------
+2021-06-13 07:35:59,143 : Training begins... Epochs = 10
+2021-06-13 07:35:59,143 : 
+===========================================================================
+    PHASE INFO
+        Current fold  : Fold (1)
+        Current phase : 1th epoch
+        Learning Rate : 0.001000
+---------------------------------------------------------------------------
+2021-06-13 07:36:49,489 : START
+2021-06-13 07:36:49,525 : Global Device: cuda:0
+2021-06-13 07:36:49,525 : Parsed Args: Namespace(base_dir='/repo/course/sem21_01/PCB-fault-classification/', base_model='plain_efficientnetb4', batch_size=8, ckpt_path='/repo/course/sem21_01/PCB-fault-classification/ckpt/', cuda=True, data_type='original', device_index=0, epochs=10, fold_k=1, label_dir='/repo/course/sem21_01/PCB-fault-classification/label.csv', learning_rate=0.001, lr_type='multi', mode='train', model_index=2, patience=10, pretrained=False, pretrained_weights_dir='/home/ys/repo/PCB-fault-classification/pretrained_model', seed=227182, threshold=0.0, tta=False, val_ratio=0.4, verbose=100, voting='hard')
+2021-06-13 07:36:49,559 : Trainset length: 1500, Valset length: 1000
+2021-06-13 07:36:49,797 : Not using pretrained model.
+2021-06-13 07:36:53,333 : Training on Fold (1/1)
+2021-06-13 07:36:53,339 : 
+                    ---------------------------------------------------------------------------
+                        TRAINING INFO
+                            Loss function : BCELoss()
+                            Optimizer     : RAdam (
+Parameter Group 0
+    betas: (0.9, 0.999)
+    eps: 1e-08
+    initial_lr: 0.001
+    lr: 0.001
+    weight_decay: 0.0001
+)
+                            LR_Scheduler  : <torch.optim.lr_scheduler.MultiStepLR object at 0x7f710459d550>
+                    ---------------------------------------------------------------------------
+2021-06-13 07:36:53,339 : Training begins... Epochs = 10
+2021-06-13 07:36:53,339 : 
+===========================================================================
+    PHASE INFO
+        Current fold  : Fold (1)
+        Current phase : 1th epoch
+        Learning Rate : 0.001000
+---------------------------------------------------------------------------
+2021-06-13 07:37:27,206 : START
+2021-06-13 07:37:27,237 : Global Device: cuda:0
+2021-06-13 07:37:27,237 : Parsed Args: Namespace(base_dir='/repo/course/sem21_01/PCB-fault-classification/', base_model='plain_efficientnetb4', batch_size=8, ckpt_path='/repo/course/sem21_01/PCB-fault-classification/ckpt/', cuda=True, data_type='original', device_index=0, epochs=10, fold_k=1, label_dir='/repo/course/sem21_01/PCB-fault-classification/label.csv', learning_rate=0.001, lr_type='multi', mode='train', model_index=2, patience=10, pretrained=False, pretrained_weights_dir='/home/ys/repo/PCB-fault-classification/pretrained_model', seed=227182, threshold=0.0, tta=False, val_ratio=0.4, verbose=100, voting='hard')
+2021-06-13 07:37:27,271 : Trainset length: 1500, Valset length: 1000
+2021-06-13 07:37:27,510 : Not using pretrained model.
+2021-06-13 07:37:31,042 : Training on Fold (1/1)
+2021-06-13 07:37:31,048 : 
+                    ---------------------------------------------------------------------------
+                        TRAINING INFO
+                            Loss function : BCELoss()
+                            Optimizer     : RAdam (
+Parameter Group 0
+    betas: (0.9, 0.999)
+    eps: 1e-08
+    initial_lr: 0.001
+    lr: 0.001
+    weight_decay: 0.0001
+)
+                            LR_Scheduler  : <torch.optim.lr_scheduler.MultiStepLR object at 0x7f24470324e0>
+                    ---------------------------------------------------------------------------
+2021-06-13 07:37:31,049 : Training begins... Epochs = 10
+2021-06-13 07:37:31,049 : 
+===========================================================================
+    PHASE INFO
+        Current fold  : Fold (1)
+        Current phase : 1th epoch
+        Learning Rate : 0.001000
+---------------------------------------------------------------------------
+2021-06-13 07:38:03,001 : START
+2021-06-13 07:38:03,031 : Global Device: cuda:0
+2021-06-13 07:38:03,032 : Parsed Args: Namespace(base_dir='/repo/course/sem21_01/PCB-fault-classification/', base_model='plain_efficientnetb4', batch_size=8, ckpt_path='/repo/course/sem21_01/PCB-fault-classification/ckpt/', cuda=True, data_type='original', device_index=0, epochs=10, fold_k=1, label_dir='/repo/course/sem21_01/PCB-fault-classification/label.csv', learning_rate=0.001, lr_type='multi', mode='train', model_index=2, patience=10, pretrained=False, pretrained_weights_dir='/home/ys/repo/PCB-fault-classification/pretrained_model', seed=227182, threshold=0.0, tta=False, val_ratio=0.4, verbose=100, voting='hard')
+2021-06-13 07:38:03,067 : Trainset length: 1500, Valset length: 1000
+2021-06-13 07:38:03,336 : Not using pretrained model.
+2021-06-13 07:38:06,900 : Training on Fold (1/1)
+2021-06-13 07:38:06,906 : 
+                    ---------------------------------------------------------------------------
+                        TRAINING INFO
+                            Loss function : BCEWithLogitsLoss()
+                            Optimizer     : RAdam (
+Parameter Group 0
+    betas: (0.9, 0.999)
+    eps: 1e-08
+    initial_lr: 0.001
+    lr: 0.001
+    weight_decay: 0.0001
+)
+                            LR_Scheduler  : <torch.optim.lr_scheduler.MultiStepLR object at 0x7f0de6b08518>
+                    ---------------------------------------------------------------------------
+2021-06-13 07:38:06,906 : Training begins... Epochs = 10
+2021-06-13 07:38:06,906 : 
+===========================================================================
+    PHASE INFO
+        Current fold  : Fold (1)
+        Current phase : 1th epoch
+        Learning Rate : 0.001000
+---------------------------------------------------------------------------
+2021-06-13 07:40:08,216 : 
+---------------------------------------------------------------------------
+    SUMMARY
+        Finished phase  : 1th epoch
+        Time taken      : 2m 1.31s
+        Training Loss   : 0.090316  |  Training Acc   : 8.3889%
+        Validation Loss : 0.022994  |  Validation Acc : 8.3667%
+===========================================================================
+
+2021-06-13 07:40:08,469 : 
+===========================================================================
+    PHASE INFO
+        Current fold  : Fold (1)
+        Current phase : 2th epoch
+        Learning Rate : 0.001000
+---------------------------------------------------------------------------
+2021-06-13 07:40:34,624 : START
+2021-06-13 07:40:34,659 : Global Device: cuda:0
+2021-06-13 07:40:34,659 : Parsed Args: Namespace(base_dir='/repo/course/sem21_01/PCB-fault-classification/', base_model='plain_efficientnetb4', batch_size=8, ckpt_path='/repo/course/sem21_01/PCB-fault-classification/ckpt/', cuda=True, data_type='original', device_index=0, epochs=10, fold_k=1, label_dir='/repo/course/sem21_01/PCB-fault-classification/label.csv', learning_rate=0.001, lr_type='multi', mode='train', model_index=2, patience=10, pretrained=False, pretrained_weights_dir='/home/ys/repo/PCB-fault-classification/pretrained_model', seed=227182, threshold=0.0, tta=False, val_ratio=0.4, verbose=100, voting='hard')
+2021-06-13 07:40:34,698 : Trainset length: 1500, Valset length: 1000
+2021-06-13 07:40:34,957 : Not using pretrained model.
+2021-06-13 07:40:38,498 : Training on Fold (1/1)
+2021-06-13 07:40:38,504 : 
+                    ---------------------------------------------------------------------------
+                        TRAINING INFO
+                            Loss function : BCEWithLogitsLoss()
+                            Optimizer     : RAdam (
+Parameter Group 0
+    betas: (0.9, 0.999)
+    eps: 1e-08
+    initial_lr: 0.001
+    lr: 0.001
+    weight_decay: 0.0001
+)
+                            LR_Scheduler  : <torch.optim.lr_scheduler.MultiStepLR object at 0x7f74ec6e9518>
+                    ---------------------------------------------------------------------------
+2021-06-13 07:40:38,504 : Training begins... Epochs = 10
+2021-06-13 07:40:38,504 : 
+===========================================================================
+    PHASE INFO
+        Current fold  : Fold (1)
+        Current phase : 1th epoch
+        Learning Rate : 0.001000
+---------------------------------------------------------------------------
+2021-06-13 07:44:20,030 : START
+2021-06-13 07:44:20,060 : Global Device: cuda:0
+2021-06-13 07:44:20,060 : Parsed Args: Namespace(base_dir='/repo/course/sem21_01/PCB-fault-classification/', base_model='plain_efficientnetb4', batch_size=8, ckpt_path='/repo/course/sem21_01/PCB-fault-classification/ckpt/', cuda=True, data_type='original', device_index=0, epochs=10, fold_k=1, label_dir='/repo/course/sem21_01/PCB-fault-classification/label.csv', learning_rate=0.001, lr_type='multi', mode='train', model_index=2, patience=10, pretrained=False, pretrained_weights_dir='/home/ys/repo/PCB-fault-classification/pretrained_model', seed=227182, threshold=0.0, tta=False, val_ratio=0.4, verbose=100, voting='hard')
+2021-06-13 07:44:20,094 : Trainset length: 1500, Valset length: 1000
+2021-06-13 07:44:20,350 : Not using pretrained model.
+2021-06-13 07:44:23,885 : Training on Fold (1/1)
+2021-06-13 07:44:23,891 : 
+                    ---------------------------------------------------------------------------
+                        TRAINING INFO
+                            Loss function : BCEWithLogitsLoss()
+                            Optimizer     : RAdam (
+Parameter Group 0
+    betas: (0.9, 0.999)
+    eps: 1e-08
+    initial_lr: 0.001
+    lr: 0.001
+    weight_decay: 0.0001
+)
+                            LR_Scheduler  : <torch.optim.lr_scheduler.MultiStepLR object at 0x7f37cb5d4518>
+                    ---------------------------------------------------------------------------
+2021-06-13 07:44:23,891 : Training begins... Epochs = 10
+2021-06-13 07:44:23,891 : 
+===========================================================================
+    PHASE INFO
+        Current fold  : Fold (1)
+        Current phase : 1th epoch
+        Learning Rate : 0.001000
+---------------------------------------------------------------------------
+2021-06-13 07:44:34,221 : START
+2021-06-13 07:44:34,258 : Global Device: cuda:0
+2021-06-13 07:44:34,258 : Parsed Args: Namespace(base_dir='/repo/course/sem21_01/PCB-fault-classification/', base_model='plain_efficientnetb4', batch_size=8, ckpt_path='/repo/course/sem21_01/PCB-fault-classification/ckpt/', cuda=True, data_type='original', device_index=0, epochs=10, fold_k=1, label_dir='/repo/course/sem21_01/PCB-fault-classification/label.csv', learning_rate=0.001, lr_type='multi', mode='train', model_index=2, patience=10, pretrained=False, pretrained_weights_dir='/home/ys/repo/PCB-fault-classification/pretrained_model', seed=227182, threshold=0.0, tta=False, val_ratio=0.4, verbose=100, voting='hard')
+2021-06-13 07:44:34,293 : Trainset length: 1500, Valset length: 1000
+2021-06-13 07:44:34,536 : Not using pretrained model.
+2021-06-13 07:44:38,083 : Training on Fold (1/1)
+2021-06-13 07:44:38,089 : 
+                    ---------------------------------------------------------------------------
+                        TRAINING INFO
+                            Loss function : BCEWithLogitsLoss()
+                            Optimizer     : RAdam (
+Parameter Group 0
+    betas: (0.9, 0.999)
+    eps: 1e-08
+    initial_lr: 0.001
+    lr: 0.001
+    weight_decay: 0.0001
+)
+                            LR_Scheduler  : <torch.optim.lr_scheduler.MultiStepLR object at 0x7ff63130b518>
+                    ---------------------------------------------------------------------------
+2021-06-13 07:44:38,089 : Training begins... Epochs = 10
+2021-06-13 07:44:38,089 : 
+===========================================================================
+    PHASE INFO
+        Current fold  : Fold (1)
+        Current phase : 1th epoch
+        Learning Rate : 0.001000
+---------------------------------------------------------------------------
+2021-06-13 07:45:06,976 : START
+2021-06-13 07:45:07,009 : Global Device: cuda:0
+2021-06-13 07:45:07,009 : Parsed Args: Namespace(base_dir='/repo/course/sem21_01/PCB-fault-classification/', base_model='plain_efficientnetb4', batch_size=8, ckpt_path='/repo/course/sem21_01/PCB-fault-classification/ckpt/', cuda=True, data_type='original', device_index=0, epochs=10, fold_k=1, label_dir='/repo/course/sem21_01/PCB-fault-classification/label.csv', learning_rate=0.001, lr_type='multi', mode='train', model_index=2, patience=10, pretrained=False, pretrained_weights_dir='/home/ys/repo/PCB-fault-classification/pretrained_model', seed=227182, threshold=0.0, tta=False, val_ratio=0.4, verbose=100, voting='hard')
+2021-06-13 07:45:07,043 : Trainset length: 1500, Valset length: 1000
+2021-06-13 07:45:07,286 : Not using pretrained model.
+2021-06-13 07:45:10,900 : Training on Fold (1/1)
+2021-06-13 07:45:10,906 : 
+                    ---------------------------------------------------------------------------
+                        TRAINING INFO
+                            Loss function : BCEWithLogitsLoss()
+                            Optimizer     : RAdam (
+Parameter Group 0
+    betas: (0.9, 0.999)
+    eps: 1e-08
+    initial_lr: 0.001
+    lr: 0.001
+    weight_decay: 0.0001
+)
+                            LR_Scheduler  : <torch.optim.lr_scheduler.MultiStepLR object at 0x7fc844f95470>
+                    ---------------------------------------------------------------------------
+2021-06-13 07:45:10,907 : Training begins... Epochs = 10
+2021-06-13 07:45:10,907 : 
+===========================================================================
+    PHASE INFO
+        Current fold  : Fold (1)
+        Current phase : 1th epoch
+        Learning Rate : 0.001000
+---------------------------------------------------------------------------
+2021-06-13 07:47:13,463 : 
+---------------------------------------------------------------------------
+    SUMMARY
+        Finished phase  : 1th epoch
+        Time taken      : 2m 2.56s
+        Training Loss   : 0.090732  |  Training Acc   : 8.3222%
+        Validation Loss : 0.022931  |  Validation Acc : 50.4000%
+===========================================================================
+
+2021-06-13 07:47:13,721 : 
+===========================================================================
+    PHASE INFO
+        Current fold  : Fold (1)
+        Current phase : 2th epoch
+        Learning Rate : 0.001000
+---------------------------------------------------------------------------
+2021-06-13 07:48:21,615 : START
+2021-06-13 07:48:21,649 : Global Device: cuda:0
+2021-06-13 07:48:21,649 : Parsed Args: Namespace(base_dir='/repo/course/sem21_01/PCB-fault-classification/', base_model='plain_efficientnetb4', batch_size=8, ckpt_path='/repo/course/sem21_01/PCB-fault-classification/ckpt/', cuda=True, data_type='original', device_index=0, epochs=10, fold_k=1, label_dir='/repo/course/sem21_01/PCB-fault-classification/label.csv', learning_rate=0.001, lr_type='multi', mode='train', model_index=2, patience=10, pretrained=False, pretrained_weights_dir='/home/ys/repo/PCB-fault-classification/pretrained_model', seed=227182, threshold=0.0, tta=False, val_ratio=0.4, verbose=20, voting='hard')
+2021-06-13 07:48:21,688 : Trainset length: 1500, Valset length: 1000
+2021-06-13 07:48:21,934 : Not using pretrained model.
+2021-06-13 07:48:25,510 : Training on Fold (1/1)
+2021-06-13 07:48:25,516 : 
+                    ---------------------------------------------------------------------------
+                        TRAINING INFO
+                            Loss function : BCEWithLogitsLoss()
+                            Optimizer     : RAdam (
+Parameter Group 0
+    betas: (0.9, 0.999)
+    eps: 1e-08
+    initial_lr: 0.001
+    lr: 0.001
+    weight_decay: 0.0001
+)
+                            LR_Scheduler  : <torch.optim.lr_scheduler.MultiStepLR object at 0x7fb443e6c4e0>
+                    ---------------------------------------------------------------------------
+2021-06-13 07:48:25,516 : Training begins... Epochs = 10
+2021-06-13 07:48:25,516 : 
+===========================================================================
+    PHASE INFO
+        Current fold  : Fold (1)
+        Current phase : 1th epoch
+        Learning Rate : 0.001000
+---------------------------------------------------------------------------
+2021-06-13 07:50:28,234 : 
+---------------------------------------------------------------------------
+    SUMMARY
+        Finished phase  : 1th epoch
+        Time taken      : 2m 2.72s
+        Training Loss   : 0.090468  |  Training Acc   : 50.7333%
+        Validation Loss : 0.023038  |  Validation Acc : 49.2000%
+===========================================================================
+
+2021-06-13 07:50:28,505 : 
+===========================================================================
+    PHASE INFO
+        Current fold  : Fold (1)
+        Current phase : 2th epoch
+        Learning Rate : 0.001000
+---------------------------------------------------------------------------
+2021-06-13 07:52:33,673 : 
+---------------------------------------------------------------------------
+    SUMMARY
+        Finished phase  : 2th epoch
+        Time taken      : 2m 5.17s
+        Training Loss   : 0.091083  |  Training Acc   : 51.4000%
+        Validation Loss : 0.022758  |  Validation Acc : 48.3000%
+===========================================================================
+
+2021-06-13 07:52:33,673 : SAVING MODEL: /repo/course/sem21_01/PCB-fault-classification/ckpt/model_2/model_ckpt_fold1_2.pth
+2021-06-13 07:52:34,198 : 
+===========================================================================
+    PHASE INFO
+        Current fold  : Fold (1)
+        Current phase : 3th epoch
+        Learning Rate : 0.001000
+---------------------------------------------------------------------------
+2021-06-13 07:54:39,651 : 
+---------------------------------------------------------------------------
+    SUMMARY
+        Finished phase  : 3th epoch
+        Time taken      : 2m 5.45s
+        Training Loss   : 0.090395  |  Training Acc   : 49.2667%
+        Validation Loss : 0.022768  |  Validation Acc : 49.6000%
+===========================================================================
+
+2021-06-13 07:54:39,651 : 
+===========================================================================
+    PHASE INFO
+        Current fold  : Fold (1)
+        Current phase : 4th epoch
+        Learning Rate : 0.000700
+---------------------------------------------------------------------------
+2021-06-13 07:55:13,454 : START
+2021-06-13 07:55:13,485 : Global Device: cuda:0
+2021-06-13 07:55:13,485 : Parsed Args: Namespace(base_dir='/repo/course/sem21_01/PCB-fault-classification/', base_model='plain_resnet50', batch_size=8, ckpt_path='/repo/course/sem21_01/PCB-fault-classification/ckpt/', cuda=True, data_type='original', device_index=0, epochs=10, fold_k=1, label_dir='/repo/course/sem21_01/PCB-fault-classification/label.csv', learning_rate=0.001, lr_type='multi', mode='train', model_index=2, patience=10, pretrained=False, pretrained_weights_dir='/home/ys/repo/PCB-fault-classification/pretrained_model', seed=227182, threshold=0.0, tta=False, val_ratio=0.4, verbose=20, voting='hard')
+2021-06-13 07:55:13,519 : Trainset length: 1500, Valset length: 1000
+2021-06-13 07:55:13,847 : Not using pretrained model.
+2021-06-13 07:55:17,343 : Training on Fold (1/1)
+2021-06-13 07:55:17,347 : 
+                    ---------------------------------------------------------------------------
+                        TRAINING INFO
+                            Loss function : BCEWithLogitsLoss()
+                            Optimizer     : RAdam (
+Parameter Group 0
+    betas: (0.9, 0.999)
+    eps: 1e-08
+    initial_lr: 0.001
+    lr: 0.001
+    weight_decay: 0.0001
+)
+                            LR_Scheduler  : <torch.optim.lr_scheduler.MultiStepLR object at 0x7f8f8e111320>
+                    ---------------------------------------------------------------------------
+2021-06-13 07:55:17,347 : Training begins... Epochs = 10
+2021-06-13 07:55:17,347 : 
+===========================================================================
+    PHASE INFO
+        Current fold  : Fold (1)
+        Current phase : 1th epoch
+        Learning Rate : 0.001000
+---------------------------------------------------------------------------
+2021-06-13 07:55:30,723 : START
+2021-06-13 07:55:30,758 : Global Device: cuda:0
+2021-06-13 07:55:30,758 : Parsed Args: Namespace(base_dir='/repo/course/sem21_01/PCB-fault-classification/', base_model='plain_resnet50', batch_size=8, ckpt_path='/repo/course/sem21_01/PCB-fault-classification/ckpt/', cuda=True, data_type='original', device_index=0, epochs=10, fold_k=1, label_dir='/repo/course/sem21_01/PCB-fault-classification/label.csv', learning_rate=0.001, lr_type='multi', mode='train', model_index=2, patience=10, pretrained=False, pretrained_weights_dir='/home/ys/repo/PCB-fault-classification/pretrained_model', seed=227182, threshold=0.0, tta=False, val_ratio=0.4, verbose=20, voting='hard')
+2021-06-13 07:55:30,795 : Trainset length: 1500, Valset length: 1000
+2021-06-13 07:55:31,133 : Not using pretrained model.
+2021-06-13 07:55:34,632 : Training on Fold (1/1)
+2021-06-13 07:55:34,637 : 
+                    ---------------------------------------------------------------------------
+                        TRAINING INFO
+                            Loss function : BCEWithLogitsLoss()
+                            Optimizer     : RAdam (
+Parameter Group 0
+    betas: (0.9, 0.999)
+    eps: 1e-08
+    initial_lr: 0.001
+    lr: 0.001
+    weight_decay: 0.0001
+)
+                            LR_Scheduler  : <torch.optim.lr_scheduler.MultiStepLR object at 0x7f5cfab12390>
+                    ---------------------------------------------------------------------------
+2021-06-13 07:55:34,637 : Training begins... Epochs = 10
+2021-06-13 07:55:34,637 : 
+===========================================================================
+    PHASE INFO
+        Current fold  : Fold (1)
+        Current phase : 1th epoch
+        Learning Rate : 0.001000
+---------------------------------------------------------------------------
+2021-06-13 07:56:35,464 : 
+---------------------------------------------------------------------------
+    SUMMARY
+        Finished phase  : 1th epoch
+        Time taken      : 1m 0.83s
+        Training Loss   : 0.100250  |  Training Acc   : 50.8667%
+        Validation Loss : 0.024310  |  Validation Acc : 49.5000%
+===========================================================================
+
+2021-06-13 07:56:35,780 : 
+===========================================================================
+    PHASE INFO
+        Current fold  : Fold (1)
+        Current phase : 2th epoch
+        Learning Rate : 0.001000
+---------------------------------------------------------------------------
+2021-06-13 07:57:37,936 : 
+---------------------------------------------------------------------------
+    SUMMARY
+        Finished phase  : 2th epoch
+        Time taken      : 1m 2.16s
+        Training Loss   : 0.087558  |  Training Acc   : 52.2667%
+        Validation Loss : 0.024244  |  Validation Acc : 50.5000%
+===========================================================================
+
+2021-06-13 07:57:37,936 : SAVING MODEL: /repo/course/sem21_01/PCB-fault-classification/ckpt/model_2/model_ckpt_fold1_2.pth
+2021-06-13 07:57:38,882 : 
+===========================================================================
+    PHASE INFO
+        Current fold  : Fold (1)
+        Current phase : 3th epoch
+        Learning Rate : 0.001000
+---------------------------------------------------------------------------
+2021-06-13 07:58:41,221 : 
+---------------------------------------------------------------------------
+    SUMMARY
+        Finished phase  : 3th epoch
+        Time taken      : 1m 2.34s
+        Training Loss   : 0.087925  |  Training Acc   : 49.2667%
+        Validation Loss : 0.022304  |  Validation Acc : 50.5000%
+===========================================================================
+
+2021-06-13 07:58:41,664 : 
+===========================================================================
+    PHASE INFO
+        Current fold  : Fold (1)
+        Current phase : 4th epoch
+        Learning Rate : 0.000700
+---------------------------------------------------------------------------
+2021-06-13 07:59:44,026 : 
+---------------------------------------------------------------------------
+    SUMMARY
+        Finished phase  : 4th epoch
+        Time taken      : 1m 2.36s
+        Training Loss   : 0.087337  |  Training Acc   : 48.6667%
+        Validation Loss : 0.022194  |  Validation Acc : 49.4000%
+===========================================================================
+
+2021-06-13 07:59:44,027 : SAVING MODEL: /repo/course/sem21_01/PCB-fault-classification/ckpt/model_2/model_ckpt_fold1_4.pth
+2021-06-13 07:59:44,665 : 
+===========================================================================
+    PHASE INFO
+        Current fold  : Fold (1)
+        Current phase : 5th epoch
+        Learning Rate : 0.000490
+---------------------------------------------------------------------------
+2021-06-13 08:00:38,910 : START
+2021-06-13 08:00:38,940 : Global Device: cuda:0
+2021-06-13 08:00:38,941 : Parsed Args: Namespace(base_dir='/repo/course/sem21_01/PCB-fault-classification/', base_model='plain_resnet50', batch_size=8, ckpt_path='/repo/course/sem21_01/PCB-fault-classification/ckpt/', cuda=True, data_type='original', device_index=0, epochs=10, fold_k=1, label_dir='/repo/course/sem21_01/PCB-fault-classification/label.csv', learning_rate=0.001, lr_type='multi', mode='train', model_index=2, patience=10, pretrained=False, pretrained_weights_dir='/home/ys/repo/PCB-fault-classification/pretrained_model', seed=227182, threshold=0.0, tta=False, val_ratio=0.4, verbose=20, voting='hard')
+2021-06-13 08:00:38,975 : Trainset length: 1500, Valset length: 1000
+2021-06-13 08:00:39,268 : Not using pretrained model.
+2021-06-13 08:00:42,739 : Training on Fold (1/1)
+2021-06-13 08:00:42,743 : 
+                    ---------------------------------------------------------------------------
+                        TRAINING INFO
+                            Loss function : BCEWithLogitsLoss()
+                            Optimizer     : RAdam (
+Parameter Group 0
+    betas: (0.9, 0.999)
+    eps: 1e-08
+    initial_lr: 0.001
+    lr: 0.001
+    weight_decay: 0.0001
+)
+                            LR_Scheduler  : <torch.optim.lr_scheduler.MultiStepLR object at 0x7f4293b34400>
+                    ---------------------------------------------------------------------------
+2021-06-13 08:00:42,743 : Training begins... Epochs = 10
+2021-06-13 08:00:42,743 : 
+===========================================================================
+    PHASE INFO
+        Current fold  : Fold (1)
+        Current phase : 1th epoch
+        Learning Rate : 0.001000
+---------------------------------------------------------------------------
+2021-06-13 08:06:47,075 : START
+2021-06-13 08:06:47,110 : Global Device: cuda:0
+2021-06-13 08:06:47,111 : Parsed Args: Namespace(base_dir='/repo/course/sem21_01/PCB-fault-classification/', base_model='plain_resnet50', batch_size=8, ckpt_path='/repo/course/sem21_01/PCB-fault-classification/ckpt/', cuda=True, data_type='original', device_index=0, epochs=10, fold_k=1, label_dir='/repo/course/sem21_01/PCB-fault-classification/label.csv', learning_rate=0.001, lr_type='multi', mode='train', model_index=2, patience=10, pretrained=False, pretrained_weights_dir='/home/ys/repo/PCB-fault-classification/pretrained_model', seed=227182, threshold=0.0, tta=False, val_ratio=0.4, verbose=20, voting='hard')
+2021-06-13 08:06:47,145 : Trainset length: 1500, Valset length: 1000
+2021-06-13 08:06:47,441 : Not using pretrained model.
+2021-06-13 08:06:50,924 : Training on Fold (1/1)
+2021-06-13 08:06:50,930 : 
+                    ---------------------------------------------------------------------------
+                        TRAINING INFO
+                            Loss function : BCEWithLogitsLoss()
+                            Optimizer     : RAdam (
+Parameter Group 0
+    betas: (0.9, 0.999)
+    eps: 1e-08
+    initial_lr: 0.001
+    lr: 0.001
+    weight_decay: 0.0001
+)
+                            LR_Scheduler  : <torch.optim.lr_scheduler.MultiStepLR object at 0x7f8733ea0358>
+                    ---------------------------------------------------------------------------
+2021-06-13 08:06:50,931 : Training begins... Epochs = 10
+2021-06-13 08:06:50,931 : 
+===========================================================================
+    PHASE INFO
+        Current fold  : Fold (1)
+        Current phase : 1th epoch
+        Learning Rate : 0.001000
+---------------------------------------------------------------------------
+2021-06-13 08:07:54,699 : START
+2021-06-13 08:07:54,739 : Global Device: cuda:0
+2021-06-13 08:07:54,740 : Parsed Args: Namespace(base_dir='/repo/course/sem21_01/PCB-fault-classification/', base_model='plain_resnet50', batch_size=8, ckpt_path='/repo/course/sem21_01/PCB-fault-classification/ckpt/', cuda=True, data_type='original', device_index=0, epochs=10, fold_k=1, label_dir='/repo/course/sem21_01/PCB-fault-classification/label.csv', learning_rate=0.001, lr_type='multi', mode='train', model_index=2, patience=10, pretrained=False, pretrained_weights_dir='/home/ys/repo/PCB-fault-classification/pretrained_model', seed=227182, threshold=0.0, tta=False, val_ratio=0.4, verbose=20, voting='hard')
+2021-06-13 08:07:54,791 : Trainset length: 1500, Valset length: 1000
+2021-06-13 08:07:55,099 : Not using pretrained model.
+2021-06-13 08:08:02,290 : START
+2021-06-13 08:08:02,322 : Global Device: cuda:0
+2021-06-13 08:08:02,323 : Parsed Args: Namespace(base_dir='/repo/course/sem21_01/PCB-fault-classification/', base_model='plain_resnet50', batch_size=8, ckpt_path='/repo/course/sem21_01/PCB-fault-classification/ckpt/', cuda=True, data_type='original', device_index=0, epochs=10, fold_k=1, label_dir='/repo/course/sem21_01/PCB-fault-classification/label.csv', learning_rate=0.001, lr_type='multi', mode='train', model_index=2, patience=10, pretrained=False, pretrained_weights_dir='/home/ys/repo/PCB-fault-classification/pretrained_model', seed=227182, threshold=0.0, tta=False, val_ratio=0.4, verbose=20, voting='hard')
+2021-06-13 08:08:02,358 : Trainset length: 1500, Valset length: 1000
+2021-06-13 08:08:02,657 : Not using pretrained model.
+2021-06-13 08:08:06,122 : Training on Fold (1/1)
+2021-06-13 08:08:06,127 : 
+                    ---------------------------------------------------------------------------
+                        TRAINING INFO
+                            Loss function : BCEWithLogitsLoss()
+                            Optimizer     : RAdam (
+Parameter Group 0
+    betas: (0.9, 0.999)
+    eps: 1e-08
+    initial_lr: 0.001
+    lr: 0.001
+    weight_decay: 0.0001
+)
+                            LR_Scheduler  : <torch.optim.lr_scheduler.MultiStepLR object at 0x7f0c9c0c82e8>
+                    ---------------------------------------------------------------------------
+2021-06-13 08:08:06,127 : Training begins... Epochs = 10
+2021-06-13 08:08:06,127 : 
+===========================================================================
+    PHASE INFO
+        Current fold  : Fold (1)
+        Current phase : 1th epoch
+        Learning Rate : 0.001000
+---------------------------------------------------------------------------
+2021-06-13 08:08:30,362 : START
+2021-06-13 08:08:30,398 : Global Device: cuda:0
+2021-06-13 08:08:30,398 : Parsed Args: Namespace(base_dir='/repo/course/sem21_01/PCB-fault-classification/', base_model='plain_resnet50', batch_size=8, ckpt_path='/repo/course/sem21_01/PCB-fault-classification/ckpt/', cuda=True, data_type='original', device_index=0, epochs=10, fold_k=1, label_dir='/repo/course/sem21_01/PCB-fault-classification/label.csv', learning_rate=0.001, lr_type='multi', mode='train', model_index=2, patience=10, pretrained=False, pretrained_weights_dir='/home/ys/repo/PCB-fault-classification/pretrained_model', seed=227182, threshold=0.0, tta=False, val_ratio=0.4, verbose=20, voting='hard')
+2021-06-13 08:08:30,432 : Trainset length: 1500, Valset length: 1000
+2021-06-13 08:08:30,729 : Not using pretrained model.
+2021-06-13 08:08:34,260 : Training on Fold (1/1)
+2021-06-13 08:10:01,196 : START
+2021-06-13 08:10:01,229 : Global Device: cuda:0
+2021-06-13 08:10:01,229 : Parsed Args: Namespace(base_dir='/repo/course/sem21_01/PCB-fault-classification/', base_model='plain_resnet50', batch_size=8, ckpt_path='/repo/course/sem21_01/PCB-fault-classification/ckpt/', cuda=True, data_type='original', device_index=0, epochs=10, fold_k=1, label_dir='/repo/course/sem21_01/PCB-fault-classification/label.csv', learning_rate=0.001, lr_type='multi', mode='train', model_index=2, patience=10, pretrained=False, pretrained_weights_dir='/home/ys/repo/PCB-fault-classification/pretrained_model', seed=227182, threshold=0.0, tta=False, val_ratio=0.4, verbose=20, voting='hard')
+2021-06-13 08:10:01,263 : Trainset length: 1500, Valset length: 1000
+2021-06-13 08:10:01,560 : Not using pretrained model.
+2021-06-13 08:10:05,009 : Training on Fold (1/1)
+2021-06-13 08:10:05,014 : 
+                    ---------------------------------------------------------------------------
+                        TRAINING INFO
+                            Loss function : BCEWithLogitsLoss()
+                            Optimizer     : RAdam (
+Parameter Group 0
+    betas: (0.9, 0.999)
+    eps: 1e-08
+    initial_lr: 0.001
+    lr: 0.001
+    weight_decay: 0.0001
+)
+                            LR_Scheduler  : <torch.optim.lr_scheduler.MultiStepLR object at 0x7fa485d102b0>
+                    ---------------------------------------------------------------------------
+2021-06-13 08:10:05,014 : Training begins... Epochs = 10
+2021-06-13 08:10:05,014 : 
+===========================================================================
+    PHASE INFO
+        Current fold  : Fold (1)
+        Current phase : 1th epoch
+        Learning Rate : 0.001000
+---------------------------------------------------------------------------
+2021-06-13 08:12:41,612 : START
+2021-06-13 08:12:41,652 : Global Device: cuda:0
+2021-06-13 08:12:41,652 : Parsed Args: Namespace(base_dir='/repo/course/sem21_01/PCB-fault-classification/', base_model='plain_resnet50', batch_size=8, ckpt_path='/repo/course/sem21_01/PCB-fault-classification/ckpt/', cuda=True, data_type='original', device_index=0, epochs=10, fold_k=1, label_dir='/repo/course/sem21_01/PCB-fault-classification/label.csv', learning_rate=0.001, lr_type='multi', mode='train', model_index=2, patience=10, pretrained=False, pretrained_weights_dir='/home/ys/repo/PCB-fault-classification/pretrained_model', seed=227182, threshold=0.0, tta=False, val_ratio=0.4, verbose=20, voting='hard')
+2021-06-13 08:12:41,685 : Trainset length: 1500, Valset length: 1000
+2021-06-13 08:12:41,972 : Not using pretrained model.
+2021-06-13 08:12:45,461 : Training on Fold (1/1)
+2021-06-13 08:12:45,466 : 
+                    ---------------------------------------------------------------------------
+                        TRAINING INFO
+                            Loss function : BCEWithLogitsLoss()
+                            Optimizer     : RAdam (
+Parameter Group 0
+    betas: (0.9, 0.999)
+    eps: 1e-08
+    initial_lr: 0.001
+    lr: 0.001
+    weight_decay: 0.0001
+)
+                            LR_Scheduler  : <torch.optim.lr_scheduler.MultiStepLR object at 0x7fd963232358>
+                    ---------------------------------------------------------------------------
+2021-06-13 08:12:45,466 : Training begins... Epochs = 10
+2021-06-13 08:12:45,466 : 
+===========================================================================
+    PHASE INFO
+        Current fold  : Fold (1)
+        Current phase : 1th epoch
+        Learning Rate : 0.001000
+---------------------------------------------------------------------------
+2021-06-13 08:13:44,942 : 
+---------------------------------------------------------------------------
+    SUMMARY
+        Finished phase  : 1th epoch
+        Time taken      : 0m 59.48s
+        Training Loss   : 0.100250  |  Training Acc   : 50.8667%
+        Validation Loss : 0.024310  |  Validation Acc : 49.5000%
+===========================================================================
+
+2021-06-13 08:13:45,260 : 
+===========================================================================
+    PHASE INFO
+        Current fold  : Fold (1)
+        Current phase : 2th epoch
+        Learning Rate : 0.001000
+---------------------------------------------------------------------------
+2021-06-13 08:15:04,737 : START
+2021-06-13 08:15:04,767 : Global Device: cuda:0
+2021-06-13 08:15:04,768 : Parsed Args: Namespace(base_dir='/repo/course/sem21_01/PCB-fault-classification/', base_model='plain_resnet50', batch_size=8, ckpt_path='/repo/course/sem21_01/PCB-fault-classification/ckpt/', cuda=True, data_type='original', device_index=0, epochs=10, fold_k=1, label_dir='/repo/course/sem21_01/PCB-fault-classification/label.csv', learning_rate=0.001, lr_type='multi', mode='train', model_index=2, patience=10, pretrained=False, pretrained_weights_dir='/home/ys/repo/PCB-fault-classification/pretrained_model', seed=227182, threshold=0.0, tta=False, val_ratio=0.4, verbose=20, voting='hard')
+2021-06-13 08:15:04,801 : Trainset length: 1500, Valset length: 1000
+2021-06-13 08:15:05,094 : Not using pretrained model.
+2021-06-13 08:15:08,585 : Training on Fold (1/1)
+2021-06-13 08:15:08,589 : 
+                    ---------------------------------------------------------------------------
+                        TRAINING INFO
+                            Loss function : BCELoss()
+                            Optimizer     : RAdam (
+Parameter Group 0
+    betas: (0.9, 0.999)
+    eps: 1e-08
+    initial_lr: 0.001
+    lr: 0.001
+    weight_decay: 0.0001
+)
+                            LR_Scheduler  : <torch.optim.lr_scheduler.MultiStepLR object at 0x7f68c55c12e8>
+                    ---------------------------------------------------------------------------
+2021-06-13 08:15:08,589 : Training begins... Epochs = 10
+2021-06-13 08:15:08,590 : 
+===========================================================================
+    PHASE INFO
+        Current fold  : Fold (1)
+        Current phase : 1th epoch
+        Learning Rate : 0.001000
+---------------------------------------------------------------------------
+2021-06-13 08:16:04,658 : START
+2021-06-13 08:16:04,692 : Global Device: cuda:0
+2021-06-13 08:16:04,692 : Parsed Args: Namespace(base_dir='/repo/course/sem21_01/PCB-fault-classification/', base_model='plain_resnet50', batch_size=8, ckpt_path='/repo/course/sem21_01/PCB-fault-classification/ckpt/', cuda=True, data_type='original', device_index=0, epochs=10, fold_k=1, label_dir='/repo/course/sem21_01/PCB-fault-classification/label.csv', learning_rate=0.001, lr_type='multi', mode='train', model_index=2, patience=10, pretrained=False, pretrained_weights_dir='/home/ys/repo/PCB-fault-classification/pretrained_model', seed=227182, threshold=0.0, tta=False, val_ratio=0.4, verbose=20, voting='hard')
+2021-06-13 08:16:04,725 : Trainset length: 1500, Valset length: 1000
+2021-06-13 08:16:05,026 : Not using pretrained model.
+2021-06-13 08:16:08,457 : Training on Fold (1/1)
+2021-06-13 08:16:08,462 : 
+                    ---------------------------------------------------------------------------
+                        TRAINING INFO
+                            Loss function : BCELoss()
+                            Optimizer     : RAdam (
+Parameter Group 0
+    betas: (0.9, 0.999)
+    eps: 1e-08
+    initial_lr: 0.001
+    lr: 0.001
+    weight_decay: 0.0001
+)
+                            LR_Scheduler  : <torch.optim.lr_scheduler.MultiStepLR object at 0x7f00db357438>
+                    ---------------------------------------------------------------------------
+2021-06-13 08:16:08,462 : Training begins... Epochs = 10
+2021-06-13 08:16:08,462 : 
+===========================================================================
+    PHASE INFO
+        Current fold  : Fold (1)
+        Current phase : 1th epoch
+        Learning Rate : 0.001000
+---------------------------------------------------------------------------
+2021-06-13 08:17:34,033 : START
+2021-06-13 08:17:34,069 : Global Device: cuda:0
+2021-06-13 08:17:34,069 : Parsed Args: Namespace(base_dir='/repo/course/sem21_01/PCB-fault-classification/', base_model='plain_resnet50', batch_size=8, ckpt_path='/repo/course/sem21_01/PCB-fault-classification/ckpt/', cuda=True, data_type='original', device_index=0, epochs=10, fold_k=1, label_dir='/repo/course/sem21_01/PCB-fault-classification/label.csv', learning_rate=0.001, lr_type='multi', mode='train', model_index=2, patience=10, pretrained=False, pretrained_weights_dir='/home/ys/repo/PCB-fault-classification/pretrained_model', seed=227182, threshold=0.0, tta=False, val_ratio=0.4, verbose=20, voting='hard')
+2021-06-13 08:17:34,102 : Trainset length: 1500, Valset length: 1000
+2021-06-13 08:17:34,392 : Not using pretrained model.
+2021-06-13 08:17:37,876 : Training on Fold (1/1)
+2021-06-13 08:17:37,881 : 
+                    ---------------------------------------------------------------------------
+                        TRAINING INFO
+                            Loss function : BCELoss()
+                            Optimizer     : RAdam (
+Parameter Group 0
+    betas: (0.9, 0.999)
+    eps: 1e-08
+    initial_lr: 0.001
+    lr: 0.001
+    weight_decay: 0.0001
+)
+                            LR_Scheduler  : <torch.optim.lr_scheduler.MultiStepLR object at 0x7fc6a92b5470>
+                    ---------------------------------------------------------------------------
+2021-06-13 08:17:37,881 : Training begins... Epochs = 10
+2021-06-13 08:17:37,881 : 
+===========================================================================
+    PHASE INFO
+        Current fold  : Fold (1)
+        Current phase : 1th epoch
+        Learning Rate : 0.001000
+---------------------------------------------------------------------------
+2021-06-13 08:30:23,132 : START
+2021-06-13 08:30:23,164 : Global Device: cuda:0
+2021-06-13 08:30:23,164 : Parsed Args: Namespace(base_dir='/repo/course/sem21_01/PCB-fault-classification/', base_model='plain_resnet50', batch_size=8, ckpt_path='/repo/course/sem21_01/PCB-fault-classification/ckpt/', cuda=True, data_type='original', device_index=0, epochs=10, fold_k=1, label_dir='/repo/course/sem21_01/PCB-fault-classification/label.csv', learning_rate=0.001, lr_type='multi', mode='train', model_index=2, patience=10, pretrained=False, pretrained_weights_dir='/home/ys/repo/PCB-fault-classification/pretrained_model', seed=227182, threshold=0.0, tta=False, val_ratio=0.4, verbose=20, voting='hard')
+2021-06-13 08:30:23,197 : Trainset length: 1500, Valset length: 1000
+2021-06-13 08:30:23,484 : Not using pretrained model.
+2021-06-13 08:30:26,942 : Training on Fold (1/1)
+2021-06-13 08:32:01,324 : START
+2021-06-13 08:32:01,363 : Global Device: cuda:0
+2021-06-13 08:32:01,363 : Parsed Args: Namespace(base_dir='/repo/course/sem21_01/PCB-fault-classification/', base_model='plain_resnet50', batch_size=8, ckpt_path='/repo/course/sem21_01/PCB-fault-classification/ckpt/', cuda=True, data_type='original', device_index=0, epochs=10, fold_k=1, label_dir='/repo/course/sem21_01/PCB-fault-classification/label.csv', learning_rate=0.001, lr_type='multi', mode='train', model_index=2, patience=10, pretrained=False, pretrained_weights_dir='/home/ys/repo/PCB-fault-classification/pretrained_model', seed=227182, threshold=0.0, tta=False, val_ratio=0.25, verbose=20, voting='hard')
+2021-06-13 08:32:01,401 : Trainset length: 1875, Valset length: 625
+2021-06-13 08:32:01,697 : Not using pretrained model.
+2021-06-13 08:32:05,225 : Training on Fold (1/1)
+2021-06-13 08:32:05,232 : 
+                    ---------------------------------------------------------------------------
+                        TRAINING INFO
+                            Loss function : BCELoss()
+                            Optimizer     : RAdam (
+Parameter Group 0
+    betas: (0.9, 0.999)
+    eps: 1e-08
+    initial_lr: 0.001
+    lr: 0.001
+    weight_decay: 0.0001
+)
+                            LR_Scheduler  : <torch.optim.lr_scheduler.MultiStepLR object at 0x7fa675839400>
+                    ---------------------------------------------------------------------------
+2021-06-13 08:32:05,232 : Training begins... Epochs = 10
+2021-06-13 08:32:05,232 : 
+===========================================================================
+    PHASE INFO
+        Current fold  : Fold (1)
+        Current phase : 1th epoch
+        Learning Rate : 0.001000
+---------------------------------------------------------------------------
+2021-06-13 08:32:17,667 : START
+2021-06-13 08:32:17,697 : Global Device: cuda:0
+2021-06-13 08:32:17,697 : Parsed Args: Namespace(base_dir='/repo/course/sem21_01/PCB-fault-classification/', base_model='plain_resnet50', batch_size=8, ckpt_path='/repo/course/sem21_01/PCB-fault-classification/ckpt/', cuda=True, data_type='original', device_index=0, epochs=10, fold_k=1, label_dir='/repo/course/sem21_01/PCB-fault-classification/label.csv', learning_rate=0.001, lr_type='multi', mode='train', model_index=2, patience=10, pretrained=False, pretrained_weights_dir='/home/ys/repo/PCB-fault-classification/pretrained_model', seed=227182, threshold=0.0, tta=False, val_ratio=0.25, verbose=20, voting='hard')
+2021-06-13 08:32:17,734 : Trainset length: 1875, Valset length: 625
+2021-06-13 08:32:18,017 : Not using pretrained model.
+2021-06-13 08:32:21,443 : Training on Fold (1/1)
+2021-06-13 08:32:21,450 : 
+                    ---------------------------------------------------------------------------
+                        TRAINING INFO
+                            Loss function : BCEWithLogitsLoss()
+                            Optimizer     : RAdam (
+Parameter Group 0
+    betas: (0.9, 0.999)
+    eps: 1e-08
+    initial_lr: 0.001
+    lr: 0.001
+    weight_decay: 0.0001
+)
+                            LR_Scheduler  : <torch.optim.lr_scheduler.MultiStepLR object at 0x7f531935f4a8>
+                    ---------------------------------------------------------------------------
+2021-06-13 08:32:21,450 : Training begins... Epochs = 10
+2021-06-13 08:32:21,450 : 
+===========================================================================
+    PHASE INFO
+        Current fold  : Fold (1)
+        Current phase : 1th epoch
+        Learning Rate : 0.001000
+---------------------------------------------------------------------------
+2021-06-13 08:33:31,111 : START
+2021-06-13 08:33:31,144 : Global Device: cuda:0
+2021-06-13 08:33:31,144 : Parsed Args: Namespace(base_dir='/repo/course/sem21_01/PCB-fault-classification/', base_model='plain_resnet50', batch_size=8, ckpt_path='/repo/course/sem21_01/PCB-fault-classification/ckpt/', cuda=True, data_type='original', device_index=0, epochs=10, fold_k=1, label_dir='/repo/course/sem21_01/PCB-fault-classification/label.csv', learning_rate=0.001, lr_type='multi', mode='train', model_index=2, patience=10, pretrained=False, pretrained_weights_dir='/home/ys/repo/PCB-fault-classification/pretrained_model', seed=227182, threshold=0.0, tta=False, val_ratio=0.25, verbose=20, voting='hard')
+2021-06-13 08:33:31,186 : Trainset length: 1875, Valset length: 625
+2021-06-13 08:33:31,467 : Not using pretrained model.
+2021-06-13 08:33:35,030 : Training on Fold (1/1)
+2021-06-13 08:38:36,926 : START
+2021-06-13 08:38:36,961 : Global Device: cuda:0
+2021-06-13 08:38:36,961 : Parsed Args: Namespace(base_dir='/repo/course/sem21_01/PCB-fault-classification/', base_model='plain_resnet50', batch_size=8, ckpt_path='/repo/course/sem21_01/PCB-fault-classification/ckpt/', cuda=True, data_type='original', device_index=0, epochs=10, fold_k=1, label_dir='/repo/course/sem21_01/PCB-fault-classification/label.csv', learning_rate=0.001, lr_type='multi', mode='train', model_index=2, patience=10, pretrained=False, pretrained_weights_dir='/home/ys/repo/PCB-fault-classification/pretrained_model', seed=227182, threshold=0.0, tta=False, val_ratio=0.25, verbose=20, voting='hard')
+2021-06-13 08:38:36,998 : Trainset length: 1875, Valset length: 625
+2021-06-13 08:38:37,290 : Not using pretrained model.
+2021-06-13 08:38:40,816 : Training on Fold (1/1)
+2021-06-13 08:39:13,325 : START
+2021-06-13 08:39:13,360 : Global Device: cuda:0
+2021-06-13 08:39:13,360 : Parsed Args: Namespace(base_dir='/repo/course/sem21_01/PCB-fault-classification/', base_model='plain_resnet50', batch_size=8, ckpt_path='/repo/course/sem21_01/PCB-fault-classification/ckpt/', cuda=True, data_type='original', device_index=0, epochs=10, fold_k=1, label_dir='/repo/course/sem21_01/PCB-fault-classification/label.csv', learning_rate=0.001, lr_type='multi', mode='train', model_index=2, patience=10, pretrained=False, pretrained_weights_dir='/home/ys/repo/PCB-fault-classification/pretrained_model', seed=227182, threshold=0.0, tta=False, val_ratio=0.25, verbose=20, voting='hard')
+2021-06-13 08:39:13,397 : Trainset length: 1875, Valset length: 625
+2021-06-13 08:39:13,688 : Not using pretrained model.
+2021-06-13 08:39:17,166 : Training on Fold (1/1)
+2021-06-13 08:39:17,174 : 
+                    ---------------------------------------------------------------------------
+                        TRAINING INFO
+                            Loss function : BCEWithLogitsLoss()
+                            Optimizer     : RAdam (
+Parameter Group 0
+    betas: (0.9, 0.999)
+    eps: 1e-08
+    initial_lr: 0.001
+    lr: 0.001
+    weight_decay: 0.0001
+)
+                            LR_Scheduler  : <torch.optim.lr_scheduler.MultiStepLR object at 0x7f414a27b400>
+                    ---------------------------------------------------------------------------
+2021-06-13 08:39:17,174 : Training begins... Epochs = 10
+2021-06-13 08:39:17,174 : 
+===========================================================================
+    PHASE INFO
+        Current fold  : Fold (1)
+        Current phase : 1th epoch
+        Learning Rate : 0.001000
+---------------------------------------------------------------------------
+2021-06-13 08:40:25,934 : 
+---------------------------------------------------------------------------
+    SUMMARY
+        Finished phase  : 1th epoch
+        Time taken      : 1m 8.76s
+        Training Loss   : 0.096951  |  Training Acc   : 49.9200%
+        Validation Loss : 0.027426  |  Validation Acc : 47.8400%
+===========================================================================
+
+2021-06-13 08:40:26,282 : 
+===========================================================================
+    PHASE INFO
+        Current fold  : Fold (1)
+        Current phase : 2th epoch
+        Learning Rate : 0.001000
+---------------------------------------------------------------------------
+2021-06-13 08:41:34,765 : 
+---------------------------------------------------------------------------
+    SUMMARY
+        Finished phase  : 2th epoch
+        Time taken      : 1m 8.48s
+        Training Loss   : 0.087991  |  Training Acc   : 50.5067%
+        Validation Loss : 0.022027  |  Validation Acc : 50.8800%
+===========================================================================
+
+2021-06-13 08:41:34,765 : SAVING MODEL: /repo/course/sem21_01/PCB-fault-classification/ckpt/model_2/model_ckpt_fold1_2.pth
+2021-06-13 08:41:35,428 : 
+===========================================================================
+    PHASE INFO
+        Current fold  : Fold (1)
+        Current phase : 3th epoch
+        Learning Rate : 0.001000
+---------------------------------------------------------------------------
+2021-06-13 08:42:44,021 : 
+---------------------------------------------------------------------------
+    SUMMARY
+        Finished phase  : 3th epoch
+        Time taken      : 1m 8.59s
+        Training Loss   : 0.087249  |  Training Acc   : 50.9333%
+        Validation Loss : 0.022878  |  Validation Acc : 47.8400%
+===========================================================================
+
+2021-06-13 08:42:44,021 : 
+===========================================================================
+    PHASE INFO
+        Current fold  : Fold (1)
+        Current phase : 4th epoch
+        Learning Rate : 0.000700
+---------------------------------------------------------------------------
+2021-06-13 08:43:53,233 : 
+---------------------------------------------------------------------------
+    SUMMARY
+        Finished phase  : 4th epoch
+        Time taken      : 1m 9.21s
+        Training Loss   : 0.087732  |  Training Acc   : 49.9733%
+        Validation Loss : 0.022145  |  Validation Acc : 52.9600%
+===========================================================================
+
+2021-06-13 08:43:53,233 : SAVING MODEL: /repo/course/sem21_01/PCB-fault-classification/ckpt/model_2/model_ckpt_fold1_4.pth
+2021-06-13 08:43:53,574 : 
+===========================================================================
+    PHASE INFO
+        Current fold  : Fold (1)
+        Current phase : 5th epoch
+        Learning Rate : 0.000490
+---------------------------------------------------------------------------
+2021-06-13 08:44:13,259 : START
+2021-06-13 08:44:13,267 : Global Device: cuda:0
+2021-06-13 08:44:13,267 : Parsed Args: Namespace(base_dir='/repo/course/sem21_01/PCB-fault-classification/', base_model='plain_resnet50', batch_size=8, ckpt_path='/repo/course/sem21_01/PCB-fault-classification/ckpt/', cuda=True, data_type='original', device_index=0, epochs=10, fold_k=1, label_dir='/repo/course/sem21_01/PCB-fault-classification/label.csv', learning_rate=0.001, lr_type='multi', mode='train', model_index=2, patience=10, pretrained=False, pretrained_weights_dir='/home/ys/repo/PCB-fault-classification/pretrained_model', seed=227182, threshold=0.0, tta=False, val_ratio=0.25, verbose=20, voting='hard')
+2021-06-13 08:44:13,304 : Trainset length: 1875, Valset length: 625
+2021-06-13 08:44:13,590 : Not using pretrained model.
+2021-06-13 08:44:16,925 : Training on Fold (1/1)
+2021-06-13 08:44:16,932 : 
+                    ---------------------------------------------------------------------------
+                        TRAINING INFO
+                            Loss function : BCEWithLogitsLoss()
+                            Optimizer     : RAdam (
+Parameter Group 0
+    betas: (0.9, 0.999)
+    eps: 1e-08
+    initial_lr: 0.001
+    lr: 0.001
+    weight_decay: 0.0001
+)
+                            LR_Scheduler  : <torch.optim.lr_scheduler.MultiStepLR object at 0x7fa0588b8400>
+                    ---------------------------------------------------------------------------
+2021-06-13 08:44:16,932 : Training begins... Epochs = 10
+2021-06-13 08:44:16,932 : 
+===========================================================================
+    PHASE INFO
+        Current fold  : Fold (1)
+        Current phase : 1th epoch
+        Learning Rate : 0.001000
+---------------------------------------------------------------------------
+2021-06-13 08:44:42,712 : START
+2021-06-13 08:44:42,721 : Global Device: cuda:0
+2021-06-13 08:44:42,721 : Parsed Args: Namespace(base_dir='/repo/course/sem21_01/PCB-fault-classification/', base_model='plain_resnet50', batch_size=8, ckpt_path='/repo/course/sem21_01/PCB-fault-classification/ckpt/', cuda=True, data_type='original', device_index=0, epochs=10, fold_k=1, label_dir='/repo/course/sem21_01/PCB-fault-classification/label.csv', learning_rate=0.001, lr_type='multi', mode='train', model_index=2, patience=10, pretrained=False, pretrained_weights_dir='/home/ys/repo/PCB-fault-classification/pretrained_model', seed=227182, threshold=0.0, tta=False, val_ratio=0.25, verbose=20, voting='hard')
+2021-06-13 08:44:42,763 : Trainset length: 1875, Valset length: 625
+2021-06-13 08:44:43,117 : Not using pretrained model.
+2021-06-13 08:44:46,592 : Training on Fold (1/1)
+2021-06-13 08:44:46,596 : 
+                    ---------------------------------------------------------------------------
+                        TRAINING INFO
+                            Loss function : BCEWithLogitsLoss()
+                            Optimizer     : RAdam (
+Parameter Group 0
+    betas: (0.9, 0.999)
+    eps: 1e-08
+    initial_lr: 0.001
+    lr: 0.001
+    weight_decay: 0.0001
+)
+                            LR_Scheduler  : <torch.optim.lr_scheduler.MultiStepLR object at 0x7f145a0362b0>
+                    ---------------------------------------------------------------------------
+2021-06-13 08:44:46,596 : Training begins... Epochs = 10
+2021-06-13 08:44:46,596 : 
+===========================================================================
+    PHASE INFO
+        Current fold  : Fold (1)
+        Current phase : 1th epoch
+        Learning Rate : 0.001000
+---------------------------------------------------------------------------
+2021-06-13 08:45:09,917 : START
+2021-06-13 08:45:09,925 : Global Device: cuda:0
+2021-06-13 08:45:09,926 : Parsed Args: Namespace(base_dir='/repo/course/sem21_01/PCB-fault-classification/', base_model='plain_resnet50', batch_size=8, ckpt_path='/repo/course/sem21_01/PCB-fault-classification/ckpt/', cuda=True, data_type='original', device_index=0, epochs=10, fold_k=1, label_dir='/repo/course/sem21_01/PCB-fault-classification/label.csv', learning_rate=0.001, lr_type='multi', mode='train', model_index=2, patience=10, pretrained=False, pretrained_weights_dir='/home/ys/repo/PCB-fault-classification/pretrained_model', seed=227182, threshold=0.0, tta=False, val_ratio=0.25, verbose=20, voting='hard')
+2021-06-13 08:45:09,962 : Trainset length: 1875, Valset length: 625
+2021-06-13 08:45:10,262 : Not using pretrained model.
+2021-06-13 08:45:13,759 : Training on Fold (1/1)
+2021-06-13 08:45:13,765 : 
+                    ---------------------------------------------------------------------------
+                        TRAINING INFO
+                            Loss function : BCEWithLogitsLoss()
+                            Optimizer     : RAdam (
+Parameter Group 0
+    betas: (0.9, 0.999)
+    eps: 1e-08
+    initial_lr: 0.001
+    lr: 0.001
+    weight_decay: 0.0001
+)
+                            LR_Scheduler  : <torch.optim.lr_scheduler.MultiStepLR object at 0x7f0545fe3400>
+                    ---------------------------------------------------------------------------
+2021-06-13 08:45:13,765 : Training begins... Epochs = 10
+2021-06-13 08:45:13,765 : 
+===========================================================================
+    PHASE INFO
+        Current fold  : Fold (1)
+        Current phase : 1th epoch
+        Learning Rate : 0.001000
+---------------------------------------------------------------------------
+2021-06-13 08:47:46,572 : START
+2021-06-13 08:47:46,581 : Global Device: cuda:0
+2021-06-13 08:47:46,581 : Parsed Args: Namespace(base_dir='/repo/course/sem21_01/PCB-fault-classification/', base_model='plain_resnet50', batch_size=8, ckpt_path='/repo/course/sem21_01/PCB-fault-classification/ckpt/', cuda=True, data_type='original', device_index=0, epochs=10, fold_k=1, label_dir='/repo/course/sem21_01/PCB-fault-classification/label.csv', learning_rate=0.001, lr_type='multi', mode='train', model_index=2, patience=10, pretrained=False, pretrained_weights_dir='/home/ys/repo/PCB-fault-classification/pretrained_model', seed=227182, threshold=0.0, tta=False, val_ratio=0.15, verbose=20, voting='hard')
+2021-06-13 08:47:46,618 : Trainset length: 2125, Valset length: 375
+2021-06-13 08:47:46,908 : Not using pretrained model.
+2021-06-13 08:47:50,368 : Training on Fold (1/1)
+2021-06-13 08:47:50,375 : 
+                    ---------------------------------------------------------------------------
+                        TRAINING INFO
+                            Loss function : BCEWithLogitsLoss()
+                            Optimizer     : RAdam (
+Parameter Group 0
+    betas: (0.9, 0.999)
+    eps: 1e-08
+    initial_lr: 0.001
+    lr: 0.001
+    weight_decay: 0.0001
+)
+                            LR_Scheduler  : <torch.optim.lr_scheduler.MultiStepLR object at 0x7f83372da5f8>
+                    ---------------------------------------------------------------------------
+2021-06-13 08:47:50,375 : Training begins... Epochs = 10
+2021-06-13 08:47:50,375 : 
+===========================================================================
+    PHASE INFO
+        Current fold  : Fold (1)
+        Current phase : 1th epoch
+        Learning Rate : 0.001000
+---------------------------------------------------------------------------
+2021-06-13 08:48:00,662 : START
+2021-06-13 08:48:00,672 : Global Device: cuda:0
+2021-06-13 08:48:00,672 : Parsed Args: Namespace(base_dir='/repo/course/sem21_01/PCB-fault-classification/', base_model='plain_resnet50', batch_size=8, ckpt_path='/repo/course/sem21_01/PCB-fault-classification/ckpt/', cuda=True, data_type='original', device_index=0, epochs=10, fold_k=1, label_dir='/repo/course/sem21_01/PCB-fault-classification/label.csv', learning_rate=0.001, lr_type='multi', mode='train', model_index=2, patience=10, pretrained=False, pretrained_weights_dir='/home/ys/repo/PCB-fault-classification/pretrained_model', seed=227182, threshold=0.0, tta=False, val_ratio=0.15, verbose=20, voting='hard')
+2021-06-13 08:48:00,712 : Trainset length: 2125, Valset length: 375
+2021-06-13 08:48:01,002 : Not using pretrained model.
+2021-06-13 08:48:16,580 : START
+2021-06-13 08:48:16,588 : Global Device: cuda:0
+2021-06-13 08:48:16,588 : Parsed Args: Namespace(base_dir='/repo/course/sem21_01/PCB-fault-classification/', base_model='plain_resnet50', batch_size=8, ckpt_path='/repo/course/sem21_01/PCB-fault-classification/ckpt/', cuda=True, data_type='original', device_index=0, epochs=10, fold_k=1, label_dir='/repo/course/sem21_01/PCB-fault-classification/label.csv', learning_rate=0.001, lr_type='multi', mode='train', model_index=2, patience=10, pretrained=False, pretrained_weights_dir='/home/ys/repo/PCB-fault-classification/pretrained_model', seed=227182, threshold=0.0, tta=False, val_ratio=0.15, verbose=20, voting='hard')
+2021-06-13 08:48:16,628 : Trainset length: 2125, Valset length: 375
+2021-06-13 08:48:16,913 : Not using pretrained model.
+2021-06-13 08:48:20,329 : Training on Fold (1/1)
+2021-06-13 08:48:20,335 : 
+                    ---------------------------------------------------------------------------
+                        TRAINING INFO
+                            Loss function : BCEWithLogitsLoss()
+                            Optimizer     : RAdam (
+Parameter Group 0
+    betas: (0.9, 0.999)
+    eps: 1e-08
+    initial_lr: 0.001
+    lr: 0.001
+    weight_decay: 0.0001
+)
+                            LR_Scheduler  : <torch.optim.lr_scheduler.MultiStepLR object at 0x7fe54862e470>
+                    ---------------------------------------------------------------------------
+2021-06-13 08:48:20,335 : Training begins... Epochs = 10
+2021-06-13 08:48:20,335 : 
+===========================================================================
+    PHASE INFO
+        Current fold  : Fold (1)
+        Current phase : 1th epoch
+        Learning Rate : 0.001000
+---------------------------------------------------------------------------
+2021-06-13 08:49:34,292 : 
+---------------------------------------------------------------------------
+    SUMMARY
+        Finished phase  : 1th epoch
+        Time taken      : 1m 13.96s
+        Training Loss   : 0.089936  |  Training Acc   : 329.6941%
+        Validation Loss : 0.021960  |  Validation Acc : 54.5778%
+===========================================================================
+
+2021-06-13 08:49:34,609 : 
+===========================================================================
+    PHASE INFO
+        Current fold  : Fold (1)
+        Current phase : 2th epoch
+        Learning Rate : 0.001000
+---------------------------------------------------------------------------
+2021-06-13 08:50:49,754 : 
+---------------------------------------------------------------------------
+    SUMMARY
+        Finished phase  : 2th epoch
+        Time taken      : 1m 15.15s
+        Training Loss   : 0.085721  |  Training Acc   : 344.0471%
+        Validation Loss : 0.021956  |  Validation Acc : 53.8667%
+===========================================================================
+
+2021-06-13 08:50:49,754 : SAVING MODEL: /repo/course/sem21_01/PCB-fault-classification/ckpt/model_2/model_ckpt_fold1_2.pth
+2021-06-13 08:50:50,478 : 
+===========================================================================
+    PHASE INFO
+        Current fold  : Fold (1)
+        Current phase : 3th epoch
+        Learning Rate : 0.001000
+---------------------------------------------------------------------------
+2021-06-13 08:52:05,048 : 
+---------------------------------------------------------------------------
+    SUMMARY
+        Finished phase  : 3th epoch
+        Time taken      : 1m 14.57s
+        Training Loss   : 0.085648  |  Training Acc   : 347.9059%
+        Validation Loss : 0.021858  |  Validation Acc : 56.1333%
+===========================================================================
+
+2021-06-13 08:52:05,753 : 
+===========================================================================
+    PHASE INFO
+        Current fold  : Fold (1)
+        Current phase : 4th epoch
+        Learning Rate : 0.000700
+---------------------------------------------------------------------------
+2021-06-13 08:53:21,167 : 
+---------------------------------------------------------------------------
+    SUMMARY
+        Finished phase  : 4th epoch
+        Time taken      : 1m 15.41s
+        Training Loss   : 0.085228  |  Training Acc   : 350.0706%
+        Validation Loss : 0.021848  |  Validation Acc : 56.4889%
+===========================================================================
+
+2021-06-13 08:53:21,167 : SAVING MODEL: /repo/course/sem21_01/PCB-fault-classification/ckpt/model_2/model_ckpt_fold1_4.pth
+2021-06-13 08:53:21,898 : 
+===========================================================================
+    PHASE INFO
+        Current fold  : Fold (1)
+        Current phase : 5th epoch
+        Learning Rate : 0.000490
+---------------------------------------------------------------------------
+2021-06-13 08:54:37,699 : 
+---------------------------------------------------------------------------
+    SUMMARY
+        Finished phase  : 5th epoch
+        Time taken      : 1m 15.80s
+        Training Loss   : 0.084828  |  Training Acc   : 349.9294%
+        Validation Loss : 0.021677  |  Validation Acc : 56.1333%
+===========================================================================
+
+2021-06-13 08:54:38,017 : 
+===========================================================================
+    PHASE INFO
+        Current fold  : Fold (1)
+        Current phase : 6th epoch
+        Learning Rate : 0.000490
+---------------------------------------------------------------------------
+2021-06-13 08:55:52,864 : 
+---------------------------------------------------------------------------
+    SUMMARY
+        Finished phase  : 6th epoch
+        Time taken      : 1m 14.85s
+        Training Loss   : 0.084851  |  Training Acc   : 352.8000%
+        Validation Loss : 0.021679  |  Validation Acc : 56.5778%
+===========================================================================
+
+2021-06-13 08:55:52,864 : SAVING MODEL: /repo/course/sem21_01/PCB-fault-classification/ckpt/model_2/model_ckpt_fold1_6.pth
+2021-06-13 08:55:53,178 : 
+===========================================================================
+    PHASE INFO
+        Current fold  : Fold (1)
+        Current phase : 7th epoch
+        Learning Rate : 0.000343
+---------------------------------------------------------------------------
+2021-06-13 08:57:08,083 : 
+---------------------------------------------------------------------------
+    SUMMARY
+        Finished phase  : 7th epoch
+        Time taken      : 1m 14.90s
+        Training Loss   : 0.069862  |  Training Acc   : 434.3529%
+        Validation Loss : 0.012164  |  Validation Acc : 84.1778%
+===========================================================================
+
+2021-06-13 08:57:08,418 : 
+===========================================================================
+    PHASE INFO
+        Current fold  : Fold (1)
+        Current phase : 8th epoch
+        Learning Rate : 0.000343
+---------------------------------------------------------------------------
+2021-06-13 08:58:23,443 : 
+---------------------------------------------------------------------------
+    SUMMARY
+        Finished phase  : 8th epoch
+        Time taken      : 1m 15.02s
+        Training Loss   : 0.053507  |  Training Acc   : 487.9529%
+        Validation Loss : 0.012735  |  Validation Acc : 80.2667%
+===========================================================================
+
+2021-06-13 08:58:23,443 : SAVING MODEL: /repo/course/sem21_01/PCB-fault-classification/ckpt/model_2/model_ckpt_fold1_8.pth
+2021-06-13 08:58:23,559 : 
+===========================================================================
+    PHASE INFO
+        Current fold  : Fold (1)
+        Current phase : 9th epoch
+        Learning Rate : 0.000343
+---------------------------------------------------------------------------
+2021-06-13 08:59:38,413 : 
+---------------------------------------------------------------------------
+    SUMMARY
+        Finished phase  : 9th epoch
+        Time taken      : 1m 14.85s
+        Training Loss   : 0.047146  |  Training Acc   : 503.8118%
+        Validation Loss : 0.010410  |  Validation Acc : 87.7333%
+===========================================================================
+
+2021-06-13 08:59:38,737 : 
+===========================================================================
+    PHASE INFO
+        Current fold  : Fold (1)
+        Current phase : 10th epoch
+        Learning Rate : 0.000343
+---------------------------------------------------------------------------
+2021-06-13 09:00:53,503 : 
+---------------------------------------------------------------------------
+    SUMMARY
+        Finished phase  : 10th epoch
+        Time taken      : 1m 14.77s
+        Training Loss   : 0.043089  |  Training Acc   : 511.0118%
+        Validation Loss : 0.010178  |  Validation Acc : 89.1556%
+===========================================================================
+
+2021-06-13 09:00:53,503 : SAVING MODEL: /repo/course/sem21_01/PCB-fault-classification/ckpt/model_2/model_ckpt_fold1_10.pth
+2021-06-13 09:14:58,956 : START
+2021-06-13 09:14:58,964 : Global Device: cuda:0
+2021-06-13 09:14:58,964 : Parsed Args: Namespace(base_dir='/repo/course/sem21_01/PCB-fault-classification/', base_model='plain_resnet50', batch_size=8, ckpt_path='/repo/course/sem21_01/PCB-fault-classification/ckpt/', cuda=True, data_type='original', device_index=0, epochs=10, fold_k=1, label_dir='/repo/course/sem21_01/PCB-fault-classification/label.csv', learning_rate=0.001, lr_type='multi', mode='test', model_index=2, patience=10, pretrained=False, pretrained_weights_dir='/home/ys/repo/PCB-fault-classification/pretrained_model', seed=227182, threshold=0.0, tta=False, val_ratio=0.15, verbose=20, voting='hard')
+2021-06-13 09:14:59,004 : Trainset length: 2125, Valset length: 375
+2021-06-13 09:14:59,303 : Not using pretrained model.
+2021-06-13 09:16:23,465 : START
+2021-06-13 09:16:23,476 : Global Device: cuda:0
+2021-06-13 09:16:23,476 : Parsed Args: Namespace(base_dir='/repo/course/sem21_01/PCB-fault-classification/', base_model='plain_resnet50', batch_size=8, ckpt_path='/repo/course/sem21_01/PCB-fault-classification/ckpt/', cuda=True, data_type='original', device_index=0, epochs=10, fold_k=1, label_dir='/repo/course/sem21_01/PCB-fault-classification/label.csv', learning_rate=0.001, lr_type='multi', mode='test', model_index=2, patience=10, pretrained=False, pretrained_weights_dir='/home/ys/repo/PCB-fault-classification/pretrained_model', seed=227182, threshold=0.0, tta=False, val_ratio=0.15, verbose=20, voting='hard')
+2021-06-13 09:16:23,515 : Trainset length: 2125, Valset length: 375
+2021-06-13 09:16:23,809 : Not using pretrained model.
+2021-06-13 09:18:14,537 : START
+2021-06-13 09:18:14,546 : Global Device: cuda:0
+2021-06-13 09:18:14,546 : Parsed Args: Namespace(base_dir='/repo/course/sem21_01/PCB-fault-classification/', base_model='plain_resnet50', batch_size=8, ckpt_path='/repo/course/sem21_01/PCB-fault-classification/ckpt/', cuda=True, data_type='original', device_index=0, epochs=10, fold_k=1, label_dir='/repo/course/sem21_01/PCB-fault-classification/label.csv', learning_rate=0.001, lr_type='multi', mode='test', model_index=2, patience=10, pretrained=False, pretrained_weights_dir='/home/ys/repo/PCB-fault-classification/pretrained_model', seed=227182, threshold=0.0, tta=False, val_ratio=0.15, verbose=20, voting='hard')
+2021-06-13 09:18:14,587 : Trainset length: 2125, Valset length: 375
+2021-06-13 09:18:14,878 : Not using pretrained model.
+2021-06-13 09:18:52,899 : START
+2021-06-13 09:18:52,913 : Global Device: cuda:0
+2021-06-13 09:18:52,913 : Parsed Args: Namespace(base_dir='/repo/course/sem21_01/PCB-fault-classification/', base_model='plain_resnet50', batch_size=8, ckpt_path='/repo/course/sem21_01/PCB-fault-classification/ckpt/', cuda=True, data_type='original', device_index=0, epochs=10, fold_k=1, label_dir='/repo/course/sem21_01/PCB-fault-classification/label.csv', learning_rate=0.001, lr_type='multi', mode='test', model_index=2, patience=10, pretrained=False, pretrained_weights_dir='/home/ys/repo/PCB-fault-classification/pretrained_model', seed=227182, threshold=0.0, tta=False, val_ratio=0.15, verbose=20, voting='hard')
+2021-06-13 09:18:52,953 : Trainset length: 2125, Valset length: 375
+2021-06-13 09:18:53,242 : Not using pretrained model.
+2021-06-13 09:19:59,024 : START
+2021-06-13 09:19:59,033 : Global Device: cuda:0
+2021-06-13 09:19:59,033 : Parsed Args: Namespace(base_dir='/repo/course/sem21_01/PCB-fault-classification/', base_model='plain_resnet50', batch_size=8, ckpt_path='/repo/course/sem21_01/PCB-fault-classification/ckpt/', cuda=True, data_type='original', device_index=0, epochs=10, fold_k=1, label_dir='/repo/course/sem21_01/PCB-fault-classification/label.csv', learning_rate=0.001, lr_type='multi', mode='test', model_index=2, patience=10, pretrained=False, pretrained_weights_dir='/home/ys/repo/PCB-fault-classification/pretrained_model', seed=227182, threshold=0.0, tta=False, val_ratio=0.15, verbose=20, voting='hard')
+2021-06-13 09:19:59,072 : Trainset length: 2125, Valset length: 375
+2021-06-13 09:19:59,370 : Not using pretrained model.
+2021-06-13 09:20:47,923 : START
+2021-06-13 09:20:47,932 : Global Device: cuda:0
+2021-06-13 09:20:47,932 : Parsed Args: Namespace(base_dir='/repo/course/sem21_01/PCB-fault-classification/', base_model='plain_resnet50', batch_size=8, ckpt_path='/repo/course/sem21_01/PCB-fault-classification/ckpt/', cuda=True, data_type='original', device_index=0, epochs=10, fold_k=1, label_dir='/repo/course/sem21_01/PCB-fault-classification/label.csv', learning_rate=0.001, lr_type='multi', mode='test', model_index=2, patience=10, pretrained=False, pretrained_weights_dir='/home/ys/repo/PCB-fault-classification/pretrained_model', seed=227182, threshold=0.0, tta=False, val_ratio=0.15, verbose=20, voting='hard')
+2021-06-13 09:20:47,974 : Trainset length: 2125, Valset length: 375
+2021-06-13 09:20:48,274 : Not using pretrained model.
+2021-06-13 09:20:55,998 : START
+2021-06-13 09:20:56,007 : Global Device: cuda:0
+2021-06-13 09:20:56,007 : Parsed Args: Namespace(base_dir='/repo/course/sem21_01/PCB-fault-classification/', base_model='plain_resnet50', batch_size=8, ckpt_path='/repo/course/sem21_01/PCB-fault-classification/ckpt/', cuda=True, data_type='original', device_index=0, epochs=10, fold_k=1, label_dir='/repo/course/sem21_01/PCB-fault-classification/label.csv', learning_rate=0.001, lr_type='multi', mode='test', model_index=2, patience=10, pretrained=False, pretrained_weights_dir='/home/ys/repo/PCB-fault-classification/pretrained_model', seed=227182, threshold=0.0, tta=False, val_ratio=0.15, verbose=20, voting='hard')
+2021-06-13 09:20:56,046 : Trainset length: 2125, Valset length: 375
+2021-06-13 09:20:56,332 : Not using pretrained model.
+2021-06-13 09:20:59,997 : Inference using model of fold (1/1)
+2021-06-13 09:21:00,083 : Inference on test_loader (1/1)
+2021-06-13 09:21:08,544 : 
+---------------------------------------------------------------------------
+    SUMMARY
+        Test Acc        : 43.8000%
+===========================================================================
+
+2021-06-13 09:21:08,545 : Done.
+2021-06-13 09:21:08,549 : Result file save at: /repo/course/sem21_01/PCB-fault-classification/submit/submission_model_2.csv
+2021-06-13 09:22:27,919 : START
+2021-06-13 09:22:27,929 : Global Device: cuda:0
+2021-06-13 09:22:27,930 : Parsed Args: Namespace(base_dir='/repo/course/sem21_01/PCB-fault-classification/', base_model='plain_resnet50', batch_size=8, ckpt_path='/repo/course/sem21_01/PCB-fault-classification/ckpt/', cuda=True, data_type='original', device_index=0, epochs=10, fold_k=1, label_dir='/repo/course/sem21_01/PCB-fault-classification/label.csv', learning_rate=0.001, lr_type='multi', mode='test', model_index=2, patience=10, pretrained=False, pretrained_weights_dir='/home/ys/repo/PCB-fault-classification/pretrained_model', seed=227182, threshold=0.0, tta=False, val_ratio=0.15, verbose=20, voting='hard')
+2021-06-13 09:22:27,977 : Trainset length: 2125, Valset length: 375
+2021-06-13 09:22:28,286 : Not using pretrained model.
+2021-06-13 09:22:31,675 : Inference using model of fold (1/1)
+2021-06-13 09:22:31,764 : Inference on test_loader (1/1)
+2021-06-13 09:22:40,117 : 
+---------------------------------------------------------------------------
+    SUMMARY
+        Test Acc        : 43.8000%
+===========================================================================
+
+2021-06-13 09:22:40,117 : Done.
+2021-06-13 09:22:40,120 : Result file save at: /repo/course/sem21_01/PCB-fault-classification/submit/submission_model_2.csv
+2021-06-13 09:23:09,478 : START
+2021-06-13 09:23:09,487 : Global Device: cuda:0
+2021-06-13 09:23:09,487 : Parsed Args: Namespace(base_dir='/repo/course/sem21_01/PCB-fault-classification/', base_model='plain_resnet50', batch_size=8, ckpt_path='/repo/course/sem21_01/PCB-fault-classification/ckpt/', cuda=True, data_type='original', device_index=0, epochs=10, fold_k=1, label_dir='/repo/course/sem21_01/PCB-fault-classification/label.csv', learning_rate=0.001, lr_type='multi', mode='test', model_index=2, patience=10, pretrained=False, pretrained_weights_dir='/home/ys/repo/PCB-fault-classification/pretrained_model', seed=227182, threshold=0.0, tta=False, val_ratio=0.15, verbose=20, voting='hard')
+2021-06-13 09:23:09,527 : Trainset length: 2125, Valset length: 375
+2021-06-13 09:23:09,822 : Not using pretrained model.
+2021-06-13 09:23:13,235 : Inference using model of fold (1/1)
+2021-06-13 09:23:13,321 : Inference on test_loader (1/1)
+2021-06-13 09:23:21,705 : 
+---------------------------------------------------------------------------
+    SUMMARY
+        Test Acc        : 43.8000%
+===========================================================================
+
+2021-06-13 09:23:21,705 : Done.
+2021-06-13 09:23:21,708 : Result file save at: /repo/course/sem21_01/PCB-fault-classification/submit/submission_model_2.csv
+2021-06-13 09:24:49,326 : START
+2021-06-13 09:24:49,334 : Global Device: cuda:0
+2021-06-13 09:24:49,334 : Parsed Args: Namespace(base_dir='/repo/course/sem21_01/PCB-fault-classification/', base_model='plain_resnet50', batch_size=8, ckpt_path='/repo/course/sem21_01/PCB-fault-classification/ckpt/', cuda=True, data_type='original', device_index=0, epochs=10, fold_k=1, label_dir='/repo/course/sem21_01/PCB-fault-classification/label.csv', learning_rate=0.001, lr_type='multi', mode='test', model_index=2, patience=10, pretrained=False, pretrained_weights_dir='/home/ys/repo/PCB-fault-classification/pretrained_model', seed=227182, threshold=0.0, tta=False, val_ratio=0.15, verbose=20, voting='hard')
+2021-06-13 09:24:49,375 : Trainset length: 2125, Valset length: 375
+2021-06-13 09:24:49,670 : Not using pretrained model.
+2021-06-13 09:25:54,913 : START
+2021-06-13 09:25:54,921 : Global Device: cuda:0
+2021-06-13 09:25:54,921 : Parsed Args: Namespace(base_dir='/repo/course/sem21_01/PCB-fault-classification/', base_model='plain_resnet50', batch_size=8, ckpt_path='/repo/course/sem21_01/PCB-fault-classification/ckpt/', cuda=True, data_type='original', device_index=0, epochs=10, fold_k=1, label_dir='/repo/course/sem21_01/PCB-fault-classification/label.csv', learning_rate=0.001, lr_type='multi', mode='test', model_index=2, patience=10, pretrained=False, pretrained_weights_dir='/home/ys/repo/PCB-fault-classification/pretrained_model', seed=227182, threshold=0.0, tta=False, val_ratio=0.15, verbose=20, voting='hard')
+2021-06-13 09:25:54,960 : Trainset length: 2125, Valset length: 375
+2021-06-13 09:25:55,256 : Not using pretrained model.
+2021-06-13 09:25:58,649 : Inference using model of fold (1/1)
+2021-06-13 09:25:58,730 : Inference on test_loader (1/1)
+2021-06-13 09:26:07,198 : 
+---------------------------------------------------------------------------
+    SUMMARY
+        Test Acc        : 43.8000%
+===========================================================================
+
+2021-06-13 09:26:07,199 : Done.
+2021-06-13 09:26:07,202 : Result file save at: /repo/course/sem21_01/PCB-fault-classification/submit/submission_model_2.csv
+2021-06-13 09:31:05,025 : START
+2021-06-13 09:31:05,036 : Global Device: cuda:0
+2021-06-13 09:31:05,036 : Parsed Args: Namespace(base_dir='/repo/course/sem21_01/PCB-fault-classification/', base_model='plain_resnet50', batch_size=8, ckpt_path='/repo/course/sem21_01/PCB-fault-classification/ckpt/', cuda=True, data_type='original', device_index=0, epochs=10, fold_k=1, label_dir='/repo/course/sem21_01/PCB-fault-classification/label.csv', learning_rate=0.003, lr_type='multi', mode='test', model_index=2, patience=10, pretrained=False, pretrained_weights_dir='/home/ys/repo/PCB-fault-classification/pretrained_model', seed=227182, threshold=0.0, tta=False, val_ratio=0.15, verbose=20, voting='hard')
+2021-06-13 09:31:05,075 : Trainset length: 2125, Valset length: 375
+2021-06-13 09:31:05,362 : Not using pretrained model.
+2021-06-13 09:31:08,887 : Inference using model of fold (1/1)
+2021-06-13 09:31:08,971 : Inference on test_loader (1/1)
+2021-06-13 09:31:17,432 : 
+---------------------------------------------------------------------------
+    SUMMARY
+        Test Acc        : 28.0000%
+===========================================================================
+
+2021-06-13 09:31:17,432 : Done.
+2021-06-13 09:31:17,436 : Result file save at: /repo/course/sem21_01/PCB-fault-classification/submit/submission_model_2.csv
+2021-06-13 09:33:02,253 : START
+2021-06-13 09:33:02,262 : Global Device: cuda:0
+2021-06-13 09:33:02,262 : Parsed Args: Namespace(base_dir='/repo/course/sem21_01/PCB-fault-classification/', base_model='plain_resnet50', batch_size=8, ckpt_path='/repo/course/sem21_01/PCB-fault-classification/ckpt/', cuda=True, data_type='original', device_index=0, epochs=10, fold_k=1, label_dir='/repo/course/sem21_01/PCB-fault-classification/label.csv', learning_rate=0.003, lr_type='multi', mode='test', model_index=2, patience=10, pretrained=False, pretrained_weights_dir='/home/ys/repo/PCB-fault-classification/pretrained_model', seed=227182, threshold=0.0, tta=False, val_ratio=0.15, verbose=20, voting='hard')
+2021-06-13 09:37:54,050 : START
+2021-06-13 09:37:54,060 : Global Device: cuda:0
+2021-06-13 09:37:54,060 : Parsed Args: Namespace(base_dir='/repo/course/sem21_01/PCB-fault-classification/', base_model='plain_resnet50', batch_size=8, ckpt_path='/repo/course/sem21_01/PCB-fault-classification/ckpt/', cuda=True, data_type='original', device_index=0, epochs=10, fold_k=1, label_dir='/repo/course/sem21_01/PCB-fault-classification/label.csv', learning_rate=0.003, lr_type='multi', mode='test', model_index=2, patience=10, pretrained=False, pretrained_weights_dir='/home/ys/repo/PCB-fault-classification/pretrained_model', seed=227182, threshold=0.0, tta=False, val_ratio=0.15, verbose=20, voting='hard')
+2021-06-13 09:38:13,743 : START
+2021-06-13 09:38:13,751 : Global Device: cuda:0
+2021-06-13 09:38:13,751 : Parsed Args: Namespace(base_dir='/repo/course/sem21_01/PCB-fault-classification/', base_model='plain_resnet50', batch_size=8, ckpt_path='/repo/course/sem21_01/PCB-fault-classification/ckpt/', cuda=True, data_type='original', device_index=0, epochs=10, fold_k=1, label_dir='/repo/course/sem21_01/PCB-fault-classification/label.csv', learning_rate=0.003, lr_type='multi', mode='test', model_index=2, patience=10, pretrained=False, pretrained_weights_dir='/home/ys/repo/PCB-fault-classification/pretrained_model', seed=227182, threshold=0.0, tta=False, val_ratio=0.15, verbose=20, voting='hard')
+2021-06-13 09:38:20,884 : START
+2021-06-13 09:38:20,893 : Global Device: cuda:0
+2021-06-13 09:38:20,893 : Parsed Args: Namespace(base_dir='/repo/course/sem21_01/PCB-fault-classification/', base_model='plain_resnet50', batch_size=8, ckpt_path='/repo/course/sem21_01/PCB-fault-classification/ckpt/', cuda=True, data_type='original', device_index=0, epochs=10, fold_k=1, label_dir='/repo/course/sem21_01/PCB-fault-classification/label.csv', learning_rate=0.003, lr_type='multi', mode='test', model_index=2, patience=10, pretrained=False, pretrained_weights_dir='/home/ys/repo/PCB-fault-classification/pretrained_model', seed=227182, threshold=0.0, tta=False, val_ratio=0.15, verbose=20, voting='hard')
+2021-06-13 09:38:52,120 : START
+2021-06-13 09:38:52,130 : Global Device: cuda:0
+2021-06-13 09:38:52,130 : Parsed Args: Namespace(base_dir='/repo/course/sem21_01/PCB-fault-classification/', base_model='plain_resnet50', batch_size=8, ckpt_path='/repo/course/sem21_01/PCB-fault-classification/ckpt/', cuda=True, data_type='original', device_index=0, epochs=10, fold_k=1, label_dir='/repo/course/sem21_01/PCB-fault-classification/label.csv', learning_rate=0.003, lr_type='multi', mode='train', model_index=2, patience=10, pretrained=False, pretrained_weights_dir='/home/ys/repo/PCB-fault-classification/pretrained_model', seed=227182, threshold=0.0, tta=False, val_ratio=0.15, verbose=20, voting='hard')
+2021-06-13 09:38:52,213 : Trainset length: 2125, Valset length: 375
+2021-06-13 09:38:52,516 : Not using pretrained model.
+2021-06-13 09:38:55,979 : Training on Fold (1/1)
+2021-06-13 09:38:55,986 : 
+                    ---------------------------------------------------------------------------
+                        TRAINING INFO
+                            Loss function : BCEWithLogitsLoss()
+                            Optimizer     : RAdam (
+Parameter Group 0
+    betas: (0.9, 0.999)
+    eps: 1e-08
+    initial_lr: 0.003
+    lr: 0.003
+    weight_decay: 0.0001
+)
+                            LR_Scheduler  : <torch.optim.lr_scheduler.MultiStepLR object at 0x7f23b3956550>
+                    ---------------------------------------------------------------------------
+2021-06-13 09:38:55,986 : Training begins... Epochs = 10
+2021-06-13 09:38:55,986 : 
+===========================================================================
+    PHASE INFO
+        Current fold  : Fold (1)
+        Current phase : 1th epoch
+        Learning Rate : 0.003000
+---------------------------------------------------------------------------
+2021-06-13 09:40:09,614 : 
+---------------------------------------------------------------------------
+    SUMMARY
+        Finished phase  : 1th epoch
+        Time taken      : 1m 13.63s
+        Training Loss   : 0.090382  |  Training Acc   : 54.5020%
+        Validation Loss : 0.021927  |  Validation Acc : 56.5778%
+===========================================================================
+
+2021-06-13 09:40:09,744 : 
+===========================================================================
+    PHASE INFO
+        Current fold  : Fold (1)
+        Current phase : 2th epoch
+        Learning Rate : 0.003000
+---------------------------------------------------------------------------
+2021-06-13 09:41:23,779 : 
+---------------------------------------------------------------------------
+    SUMMARY
+        Finished phase  : 2th epoch
+        Time taken      : 1m 14.03s
+        Training Loss   : 0.085583  |  Training Acc   : 56.9255%
+        Validation Loss : 0.021803  |  Validation Acc : 58.0000%
+===========================================================================
+
+2021-06-13 09:41:23,779 : SAVING MODEL: /repo/course/sem21_01/PCB-fault-classification/ckpt/model_2/model_ckpt_fold1_2.pth
+2021-06-13 09:41:24,239 : 
+===========================================================================
+    PHASE INFO
+        Current fold  : Fold (1)
+        Current phase : 3th epoch
+        Learning Rate : 0.003000
+---------------------------------------------------------------------------
+2021-06-13 09:42:37,870 : 
+---------------------------------------------------------------------------
+    SUMMARY
+        Finished phase  : 3th epoch
+        Time taken      : 1m 13.63s
+        Training Loss   : 0.086187  |  Training Acc   : 56.7922%
+        Validation Loss : 0.021555  |  Validation Acc : 59.9111%
+===========================================================================
+
+2021-06-13 09:42:38,222 : 
+===========================================================================
+    PHASE INFO
+        Current fold  : Fold (1)
+        Current phase : 4th epoch
+        Learning Rate : 0.002100
+---------------------------------------------------------------------------
+2021-06-13 09:43:52,559 : 
+---------------------------------------------------------------------------
+    SUMMARY
+        Finished phase  : 4th epoch
+        Time taken      : 1m 14.34s
+        Training Loss   : 0.085524  |  Training Acc   : 57.2627%
+        Validation Loss : 0.021550  |  Validation Acc : 59.8667%
+===========================================================================
+
+2021-06-13 09:43:52,559 : SAVING MODEL: /repo/course/sem21_01/PCB-fault-classification/ckpt/model_2/model_ckpt_fold1_4.pth
+2021-06-13 09:43:53,282 : 
+===========================================================================
+    PHASE INFO
+        Current fold  : Fold (1)
+        Current phase : 5th epoch
+        Learning Rate : 0.001470
+---------------------------------------------------------------------------
+2021-06-13 09:45:08,280 : 
+---------------------------------------------------------------------------
+    SUMMARY
+        Finished phase  : 5th epoch
+        Time taken      : 1m 15.00s
+        Training Loss   : 0.084930  |  Training Acc   : 57.9137%
+        Validation Loss : 0.021205  |  Validation Acc : 60.5778%
+===========================================================================
+
+2021-06-13 09:45:08,606 : 
+===========================================================================
+    PHASE INFO
+        Current fold  : Fold (1)
+        Current phase : 6th epoch
+        Learning Rate : 0.001470
+---------------------------------------------------------------------------
+2021-06-13 09:46:23,366 : 
+---------------------------------------------------------------------------
+    SUMMARY
+        Finished phase  : 6th epoch
+        Time taken      : 1m 14.76s
+        Training Loss   : 0.084707  |  Training Acc   : 58.3529%
+        Validation Loss : 0.021557  |  Validation Acc : 58.6222%
+===========================================================================
+
+2021-06-13 09:46:23,367 : SAVING MODEL: /repo/course/sem21_01/PCB-fault-classification/ckpt/model_2/model_ckpt_fold1_6.pth
+2021-06-13 09:46:23,481 : 
+===========================================================================
+    PHASE INFO
+        Current fold  : Fold (1)
+        Current phase : 7th epoch
+        Learning Rate : 0.001029
+---------------------------------------------------------------------------
+2021-06-13 09:47:37,951 : 
+---------------------------------------------------------------------------
+    SUMMARY
+        Finished phase  : 7th epoch
+        Time taken      : 1m 14.47s
+        Training Loss   : 0.084968  |  Training Acc   : 57.6549%
+        Validation Loss : 0.021479  |  Validation Acc : 59.6889%
+===========================================================================
+
+2021-06-13 09:47:37,951 : 
+===========================================================================
+    PHASE INFO
+        Current fold  : Fold (1)
+        Current phase : 8th epoch
+        Learning Rate : 0.001029
+---------------------------------------------------------------------------
+2021-06-13 09:48:52,592 : 
+---------------------------------------------------------------------------
+    SUMMARY
+        Finished phase  : 8th epoch
+        Time taken      : 1m 14.64s
+        Training Loss   : 0.084708  |  Training Acc   : 57.8196%
+        Validation Loss : 0.021383  |  Validation Acc : 59.5111%
+===========================================================================
+
+2021-06-13 09:48:52,592 : SAVING MODEL: /repo/course/sem21_01/PCB-fault-classification/ckpt/model_2/model_ckpt_fold1_8.pth
+2021-06-13 09:48:52,710 : 
+===========================================================================
+    PHASE INFO
+        Current fold  : Fold (1)
+        Current phase : 9th epoch
+        Learning Rate : 0.001029
+---------------------------------------------------------------------------
+2021-06-13 09:50:07,129 : 
+---------------------------------------------------------------------------
+    SUMMARY
+        Finished phase  : 9th epoch
+        Time taken      : 1m 14.42s
+        Training Loss   : 0.084855  |  Training Acc   : 57.8588%
+        Validation Loss : 0.021424  |  Validation Acc : 59.0222%
+===========================================================================
+
+2021-06-13 09:50:07,130 : 
+===========================================================================
+    PHASE INFO
+        Current fold  : Fold (1)
+        Current phase : 10th epoch
+        Learning Rate : 0.001029
+---------------------------------------------------------------------------
+2021-06-13 09:51:21,718 : 
+---------------------------------------------------------------------------
+    SUMMARY
+        Finished phase  : 10th epoch
+        Time taken      : 1m 14.59s
+        Training Loss   : 0.084777  |  Training Acc   : 57.9608%
+        Validation Loss : 0.021492  |  Validation Acc : 58.3111%
+===========================================================================
+
+2021-06-13 09:51:21,718 : SAVING MODEL: /repo/course/sem21_01/PCB-fault-classification/ckpt/model_2/model_ckpt_fold1_10.pth

@@ -4,6 +4,7 @@ import pandas as pd
 import numpy as np
 import cv2
 from PIL import Image
+from torch.utils.data import Dataset, DataLoader
 from .imageprocess import image_transformer, tta_transformer, image_processor
 import IPython
 
@@ -24,11 +25,10 @@ class CustomDataLoader():
         # assert os.path.exists(img_dir) and os.path.exists(label_dir), "Path not exists."
         
         label_df = df
-
-        self.img_dir = df['file_name']
+        #IPython.embed(); exit()
         self.label_index = label_df.index[row_index]
-        # IPython.embed();exit(1);
         self.label_values = label_df.iloc[row_index, 1:-1].values
+        self.img_dir = df['file_name'][self.label_index]
         
         # Transformation
         self.train = train
@@ -51,6 +51,7 @@ class CustomDataLoader():
         Returned values are of torch.tensor type.
         """
         idx = item_index
+
         label = self.label_values[idx]
         # IPython.embed();exit(1);
         

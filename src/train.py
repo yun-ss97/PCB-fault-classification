@@ -79,14 +79,15 @@ def train_model(input_model, fold_k, model_save_path, args, logger, *loaders):
     train_loader = loaders[0]
     val_loader = loaders[1]
     
-    early_stopping = EarlyStopping(patience=args.patience, verbose=False, fold_k=fold_k, path=model_save_path)
+    #early_stopping = EarlyStopping(patience=args.patience, verbose=False, fold_k=fold_k, path=model_save_path)
     
+    # loss fucntion configure
     # loss_function = nn.MultiLabelSoftMarginLoss()
-    #loss_function = nn.BCEWithLogitsLoss()
+    loss_function = nn.BCEWithLogitsLoss()
     #loss_function = CustomSmoothedLoss()
-    loss_function = CustomLoss()
+    #loss_function = CustomLoss()
     
-    #optimizer = optim.Adam(model.parameters(), lr=lr)
+    #optimizer = optim.Adam(model.parameters(), lr=learning_rate)
     optimizer = RAdam(model.parameters(), lr=learning_rate, betas=(0.9, 0.999), weight_decay=1e-4)
     
     # -----------------
@@ -97,7 +98,7 @@ def train_model(input_model, fold_k, model_save_path, args, logger, *loaders):
     #model, optimizer = amp.initialize(model, optimizer, opt_level='01')
     
     # LERANING RATE SCHEDULER (WARMUP)
-    #decay_rate = 0.97
+    decay_rate = 0.97
 
     if args.lr_type == 'exp':
         lr_scheduler = torch.optim.lr_scheduler.ExponentialLR(optimizer=optimizer, gamma=decay_rate)
@@ -125,19 +126,19 @@ def train_model(input_model, fold_k, model_save_path, args, logger, *loaders):
 #                                                   gamma=0.7)
 
     logger.info(f"""
----------------------------------------------------------------------------
-    TRAINING INFO
-        Loss function : {loss_function}
-        Optimizer     : {optimizer}
-        LR_Scheduler  : {lr_scheduler}
----------------------------------------------------------------------------""")
+                    ---------------------------------------------------------------------------
+                        TRAINING INFO
+                            Loss function : {loss_function}
+                            Optimizer     : {optimizer}
+                            LR_Scheduler  : {lr_scheduler}
+                    ---------------------------------------------------------------------------""")
     
     # WARM-UP
     warmup_epochs = int(args.epochs * 0.15)
     
     # EF-b5
     # warmup_epochs = 10
-    lr_warmup = GradualWarmupScheduler(optimizer, multiplier=1, total_epoch=warmup_epochs, after_scheduler=lr_scheduler)
+    #lr_warmup = GradualWarmupScheduler(optimizer, multiplier=1, total_epoch=warmup_epochs, after_scheduler=lr_scheduler)
     
     train_tot_num = train_loader.dataset.__len__()
     val_tot_num = val_loader.dataset.__len__()
@@ -157,8 +158,8 @@ def train_model(input_model, fold_k, model_save_path, args, logger, *loaders):
         
         # warmup scheduler step / lr scheduler
         ### BASELINE은 없게
-        if epoch <= warmup_epochs:
-            lr_warmup.step()
+        #if epoch <= warmup_epochs:
+        #    lr_warmup.step()
         
         logger.info(f"""
 ===========================================================================
@@ -183,14 +184,13 @@ def train_model(input_model, fold_k, model_save_path, args, logger, *loaders):
             with amp.autocast():
                 train_pred = model(train_X)
                 train_loss = loss_function(train_pred, train_Y)
-            
+                
             scaler.scale(train_loss).backward()
             scaler.step(optimizer)
             scaler.update()
 
 #             train_loss.backward()
 #             optimizer.step()
-
             train_pred_label = train_pred > args.threshold
             train_corrects = (train_pred_label == train_Y).sum()
             train_corrects_sum += train_corrects.item()
@@ -250,12 +250,12 @@ def train_model(input_model, fold_k, model_save_path, args, logger, *loaders):
             torch.save(model.state_dict(), save_path)
             # IPython.embed();exit(1);
         
-        # EARLY STOPPER
-        early_stopping(val_loss, model)
-        if early_stopping.early_stop:
-            logger.info("Early stopping condition met --- TRAINING STOPPED")
-            logger.info(f"Best score: {early_stopping.best_score}")
-            break
+#         # EARLY STOPPER
+#         early_stopping(val_loss, model)
+#         if early_stopping.early_stop:
+#             logger.info("Early stopping condition met --- TRAINING STOPPED")
+#             logger.info(f"Best score: {early_stopping.best_score}")
+#             break
         
         # INITIALIZATION
         train_corrects_sum = 0

@@ -32,6 +32,16 @@ from utils.call_model import CallModel
 from tqdm import tqdm
 import logging
 
+# for oversampling train dataset
+from torchsampler import ImbalancedDatasetSampler
+
+# set seed
+def set_seed(seed):
+    random.seed(seed)
+    np.random.seed(seed)
+    torch.manual_seed(seed)
+    if torch.cuda.device_count() > 0:
+        torch.cuda.manual_seed_all(seed)
 
 # train/val splitting method
 def split_index(total_index, val_ratio):
@@ -43,27 +53,18 @@ def split_index(total_index, val_ratio):
     logger.info(f"Trainset length: {len(train_sampled)}, Valset length: {len(val_sampled)}")
     return train_sampled, val_sampled
 
-
+# split kfold
 def split_kfold(k, train_len=2000):    
     kfold = KFold(n_splits=k, shuffle=True)
     splitted = kfold.split(range(train_len))
     return splitted
 
-
-def set_seed(seed):
-    random.seed(seed)
-    np.random.seed(seed)
-    torch.manual_seed(seed)
-    if torch.cuda.device_count() > 0:
-        torch.cuda.manual_seed_all(seed)
-
-
+# load dataset
 def load_dataset(train_df, test_df, mode='train', **kwargs):
     device = kwargs['device']
     
-
     if mode=='train':
-        
+        # train w/o oversampling
         train_index = kwargs['train_index']
         val_index = kwargs['val_index']
         batch_size = kwargs['batch_size']
@@ -79,11 +80,56 @@ def load_dataset(train_df, test_df, mode='train', **kwargs):
             train=False,
             row_index=val_index,
             device=device)
-
+        
         train_loader = torch.utils.data.DataLoader(train_set, batch_size=batch_size, shuffle=True)
         val_loader = torch.utils.data.DataLoader(val_set, batch_size=32, shuffle=False)
 
         return train_loader, val_loader
+    
+    if mode=='train_ovr':
+        # train w/ oversampling
+        train_index = kwargs['train_index']
+        val_index = kwargs['val_index']
+        batch_size = kwargs['batch_size']
+
+#         train_set = CustomDataset(
+#                                     train_df,
+#                                     train=True,
+#                                     row_index=train_index,
+#                                     device=device
+#                                     )
+        
+#         val_set = CustomDataset(
+#                                     train_df,
+#                                     train=False,
+#                                     row_index=val_index,
+#                                     device=device
+#                                     )
+        
+#         # original
+        train_set = CustomDataLoader(
+                                    train_df,
+                                    train=True,
+                                    row_index=train_index,
+                                    device=device
+                                    )
+
+        val_set = CustomDataLoader(
+                                    train_df,
+                                    train=False,
+                                    row_index=val_index,
+                                    device=device
+                                    )
+
+        # use sampler to oversample
+        #IPython.embed(); exit()
+        train_loader = torch.utils.data.DataLoader(train_set,\
+                                                   sampler=ImbalancedDatasetSampler(train_set),\
+                                                   batch_size=batch_size)        
+        val_loader = torch.utils.data.DataLoader(val_set, batch_size=32)
+
+        return train_loader, val_loader
+
 
     else:
         test_index = kwargs['test_index']
@@ -118,12 +164,14 @@ def load_dataset(train_df, test_df, mode='train', **kwargs):
         return test_loader
 
 
-def load_trained_weight(model_input=None, model_index=0, model_type='early', fold_k=1, trained_weight_path='./ckpt'):
-
+def load_trained_weight(model_input=None, model_index=0, fold_k=1, trained_weight_path='./ckpt'):
+    
+    # model_type='early'
     assert model_index > 0
 
     model_name = f'early_stopped_fold{fold_k}.pth' if model_type == 'early' else f'model_ckpt_fold{fold_k}_{model_type}.pth'
     ckpt_path = os.path.join(trained_weight_path, f'model_{model_index}', model_name)
+    print(ckpt_path)
 
     trained_model = model_input
     trained_model.load_state_dict(torch.load(ckpt_path))
@@ -206,20 +254,20 @@ if __name__ == "__main__":
     # ARGUMENTS PARSER
     parser = argparse.ArgumentParser()
     parser.add_argument("--model_index", type=int, default=0, help='My model index. Integer type, and should be greater than 0')
-    parser.add_argument("--base_dir", type=str, default="/home/ys/repo/PCB-fault-classification", help='Base PATH of your work')
-    parser.add_argument("--label_dir", type=str, default="/home/ys/repo/PCB-fault-classification/label.csv", help='label PATH')
-    parser.add_argument("--mode", type=str, default="train", help='[train | test]')
+    parser.add_argument("--base_dir", type=str, default="/repo/course/sem21_01/PCB-fault-classification", help='Base PATH of your work')
+    parser.add_argument("--label_dir", type=str, default="/repo/course/sem21_01/PCB-fault-classification/label.csv", help='label PATH')
+    parser.add_argument("--mode", type=str, default="train", help='[train | train_ovr | test]')
     parser.add_argument("--data_type", type=str, default="original", help='[original | denoised]: default=denoised')
-    parser.add_argument("--ckpt_path", type=str, default="/home/ys/repo/PCB-fault-classification/ckpt", help='PATH to weights of ckpts.')
+    parser.add_argument("--ckpt_path", type=str, default="/repo/course/sem21_01/PCB-fault-classification/ckpt", help='PATH to weights of ckpts.')
     parser.add_argument("--base_model", type=str, default="plain_resnet50", help="[plain_resnet50, custom_resnet50, plain_efficientnetb4]")
     parser.add_argument("--pretrained", dest='pretrained', action='store_true', help='Default is false, so specify this argument to use pretrained model')
     parser.add_argument("--pretrained_weights_dir", type=str, default="/home/ys/repo/PCB-fault-classification/pretrained_model", help='PATH to weights of pretrained model')
     parser.add_argument("--cuda", dest='cuda', action='store_false', help='Whether to use CUDA: defuault is True, so specify this argument not to use CUDA')
     parser.add_argument("--device_index", type=int, default=0, help='Cuda device to use. Used for multiple gpu environment')
-    parser.add_argument("--batch_size", type=int, default=4, help='Batch size for train-loader for training phase')
-    parser.add_argument("--val_ratio", type=float, default=0.4, help='Ratio for validation set: default=0.1')
+    parser.add_argument("--batch_size", type=int, default=8, help='Batch size for train-loader for training phase')
+    parser.add_argument("--val_ratio", type=float, default=0.15, help='Ratio for validation set: default=0.1')
     parser.add_argument("--epochs", type=int, default=10, help='Epochs for training: default=100')
-    parser.add_argument("--learning_rate", type=float, default=0.0029, help='Learning rate for training: default=0.0029')
+    parser.add_argument("--learning_rate", type=float, default=0.003, help='Learning rate for training: default=0.0029')
     parser.add_argument("--lr_type", choices= ['exp','cos','multi'], help='Type of learing rate scheduler')
     parser.add_argument("--patience", type=int, default=10, help='Patience of the earlystopper: default=10')
     parser.add_argument("--verbose", type=int, default=100, help='Between batch range to print train accuracy: default=100')
@@ -232,15 +280,18 @@ if __name__ == "__main__":
     
     
     # ASSERT CONDITIONS
-    assert (args.model_index > 0) and (args.mode in ['train', 'test'])
+    # added train_ovr
+    # assert (args.model_index > 0) and (args.mode in ['train', 'train_ovr', 'test'])
     
     
     LOG_PATH = os.path.join(args.base_dir, 'logs')
+    
+    #IPython.embed();exit(1);
+    
     logger = logging.getLogger(__name__)
     logging.basicConfig(format="%(asctime)s : %(message)s", 
                         level=logging.INFO,
-                        handlers=[
-                            logging.FileHandler(os.path.join(LOG_PATH, f"log_model_{args.model_index}.txt")),
+                        handlers=[logging.FileHandler(os.path.join(LOG_PATH, f"log_model_{args.model_index}.txt")),
                             logging.StreamHandler()
                         ])
     logger.info("START")
@@ -269,7 +320,10 @@ if __name__ == "__main__":
     # -----------------------
     base_dir = args.base_dir
     ckpt_folder_path = os.path.join(args.ckpt_path, f'model_{args.model_index}')
-
+    
+    ###
+    #IPython.embed();exit(1);
+    
     try:
         os.mkdir(ckpt_folder_path)
     except FileExistsError:
@@ -281,9 +335,16 @@ if __name__ == "__main__":
     # -------------------
 
     label_df = pd.read_csv(args.label_dir)
-
-    train_df = label_df.iloc[:2000,:] # 2000 for train
-    test_df = label_df.iloc[2000:,:] # 1000 for test
+    
+    tot_num = 3000
+    train_sample_idx = random.sample(range(tot_num), 2500)
+    test_sample_idx = [idx for idx in range(tot_num) if idx not in train_sample_idx]
+    
+    train_df = label_df.iloc[train_sample_idx]
+    test_df = label_df.iloc[test_sample_idx]
+    
+    #train_df = label_df.iloc[:2500,:] # 2000 for train
+    #test_df = label_df.iloc[2500:,:] # 1000 for test
 
 
     if args.fold_k == 1:
@@ -343,7 +404,38 @@ if __name__ == "__main__":
             
             # Train model
             train_model(model_to_train, k, ckpt_folder_path, args, logger, train_loader, val_loader)
+
+    # --------------------
+    #  TRAIN - OverSampling
+    # --------------------
     
+    # Using https://github.com/ufoym/imbalanced-dataset-sampler
+    if args.mode == 'train_ovr':
+        
+        #  MAKE FOLDER for saving CHECKPOINTS
+        # if folder already exists, assert. Else, make folder.
+        # assert not os.path.exists(ckpt_folder_path), "Model checkpoint folder already exists."
+        # os.makedirs(ckpt_folder_path)
+        
+        for k in range(args.fold_k):
+            model_to_train = copy.deepcopy(model)
+
+            logger.info(f"Training on Fold ({k+1}/{args.fold_k})")
+
+            # Load trainset/valset
+            train_index = train_index_set[k]
+            val_index = val_index_set[k]
+
+            train_loader, val_loader = load_dataset(train_df, test_df,
+                                                    mode='train_ovr',
+                                                    batch_size=args.batch_size,
+                                                    train_index=train_index,
+                                                    val_index=val_index,
+                                                    device=global_device)
+
+            # Train model
+            train_model(model_to_train, k, ckpt_folder_path, args, logger, train_loader, val_loader)
+
     
     # --------------------
     #      INFERENCE
@@ -364,7 +456,7 @@ if __name__ == "__main__":
             model_inference = load_trained_weight(
                 model_input=model,
                 model_index=args.model_index,
-                model_type='early',
+                model_type=4,
                 fold_k=k+1).to(global_device)
         
             pred = make_inference(args, model_inference, test_loader)
