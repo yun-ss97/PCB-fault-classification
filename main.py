@@ -185,7 +185,7 @@ if __name__ == "__main__":
     parser.add_argument("--mode", type=str, default="train", help='[train | train_ovr | test]')
     parser.add_argument("--data_type", type=str, default="original", help='[original | denoised]: default=denoised')
     parser.add_argument("--ckpt_path", type=str, default="/repo/course/sem21_01/PCB-fault-classification/ckpt", help='PATH to weights of ckpts.')
-    parser.add_argument("--base_model", type=str, default="plain_resnet50", help="[plain_resnet50, custom_resnet50, plain_efficientnetb4]")
+    parser.add_argument("--base_model", type=str, default="plain_resnet50", help="[plain_resnet50, custom_resnet50, plain_efficientnetb4, plain_efficientnetb5, plain_efficientnetb7]")
     parser.add_argument("--pretrained", dest='pretrained', action='store_true', help='Default is false, so specify this argument to use pretrained model')
     parser.add_argument("--pretrained_weights_dir", type=str, default="/home/ys/repo/PCB-fault-classification/pretrained_model", help='PATH to weights of pretrained model')
     parser.add_argument("--cuda", dest='cuda', action='store_false', help='Whether to use CUDA: defuault is True, so specify this argument not to use CUDA')

@@ -88,7 +88,7 @@ class PlainEfficientnetB7(nn.Module):
     def __init__(self):
         super(PlainEfficientnetB7, self).__init__()
         
-        base_model = EfficientNet.from_pretrained('efficientnet-b7', num_classes=1)
+        base_model = EfficientNet.from_pretrained('efficientnet-b7', num_classes=6)
         self.block = nn.Sequential(
             base_model
         )
