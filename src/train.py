@@ -60,10 +60,6 @@ class CustomLoss:
         pred = torch.where(pred < 0.5, 0 ,1)
         loss3 = torch.mean(torch.sum(gt-pred, axis=-1))
 
-        # IPython.embed();exit(1);
-
-        # print(f'total loss: {loss1 + 0.1*loss2 + 1.1*loss3}')
-
         return loss1 + 0.1*loss2 + 0.3*loss3
     
 
@@ -80,23 +76,14 @@ def train_model(input_model, fold_k, model_save_path, args, logger, *loaders):
     val_loader = loaders[1]
     
     #early_stopping = EarlyStopping(patience=args.patience, verbose=False, fold_k=fold_k, path=model_save_path)
-    
-    # loss fucntion configure
-    # loss_function = nn.MultiLabelSoftMarginLoss()
     loss_function = nn.BCEWithLogitsLoss()
-    #loss_function = CustomSmoothedLoss()
-    #loss_function = CustomLoss()
-    
-    #optimizer = optim.Adam(model.parameters(), lr=learning_rate)
     optimizer = RAdam(model.parameters(), lr=learning_rate, betas=(0.9, 0.999), weight_decay=1e-4)
     
     # -----------------
     #   amp wrapping
     # -----------------
-
     scaler = amp.GradScaler()
-    #model, optimizer = amp.initialize(model, optimizer, opt_level='01')
-    
+
     # LERANING RATE SCHEDULER (WARMUP)
     decay_rate = 0.97
 
@@ -116,15 +103,11 @@ def train_model(input_model, fold_k, model_save_path, args, logger, *loaders):
                                                             ],
                                                             gamma=0.7)
 
-    # EF-b5
-#     lr_scheduler = torch.optim.lr_scheduler.MultiStepLR(optimizer=optimizer,
-#                                                         milestones=[15, 20],
-#                                                         gamma=0.5)
-
-#     lr_scheduler = torch.optim.lr_scheduler.StepLR(optimizer=optimizer,
-#                                                   step_size=10,
-#                                                   gamma=0.7)
-
+        
+        
+    train_loss_list, val_loss_list = [], []
+    train_acc_list, val_acc_list = [], []
+    
     logger.info(f"""
                     ---------------------------------------------------------------------------
                         TRAINING INFO
@@ -133,17 +116,9 @@ def train_model(input_model, fold_k, model_save_path, args, logger, *loaders):
                             LR_Scheduler  : {lr_scheduler}
                     ---------------------------------------------------------------------------""")
     
-    # WARM-UP
-    warmup_epochs = int(args.epochs * 0.15)
-    
-    # EF-b5
-    # warmup_epochs = 10
-    #lr_warmup = GradualWarmupScheduler(optimizer, multiplier=1, total_epoch=warmup_epochs, after_scheduler=lr_scheduler)
-    
     train_tot_num = train_loader.dataset.__len__()
     val_tot_num = val_loader.dataset.__len__()
-    # IPython.embed();exit(1);
-    
+
     train_corrects_sum = 0
     train_loss_sum = 0.0
     
@@ -180,7 +155,6 @@ def train_model(input_model, fold_k, model_save_path, args, logger, *loaders):
             train_tmp_num += len(train_Y)
             
             optimizer.zero_grad()
-            
             with amp.autocast():
                 train_pred = model(train_X)
                 train_loss = loss_function(train_pred, train_Y)
@@ -189,8 +163,6 @@ def train_model(input_model, fold_k, model_save_path, args, logger, *loaders):
             scaler.step(optimizer)
             scaler.update()
 
-#             train_loss.backward()
-#             optimizer.step()
             train_pred_label = train_pred > args.threshold
             train_corrects = (train_pred_label == train_Y).sum()
             train_corrects_sum += train_corrects.item()
@@ -202,16 +174,14 @@ def train_model(input_model, fold_k, model_save_path, args, logger, *loaders):
             
             # Check between batches
             verbose = args.verbose
-            
             if (idx+1) % verbose == 0:
-                print(f"-- ({str((idx+1)).zfill(4)} / {str(len(train_loader)).zfill(4)}) Train Loss: {train_tmp_loss_sum/train_tmp_num:.6f} | Train Acc: {train_tmp_corrects_sum/(train_tmp_num*6)*100:.4f}%")
+                print(f"-- ({str((idx+1)).zfill(4)} / {str(len(train_loader)).zfill(4)}) Train Loss: {train_tmp_loss_sum/(idx+1):.6f} | Train Acc: {train_tmp_corrects_sum/(train_tmp_num*6)*100:.4f}%")
                 
-                # initialization
-                train_tmp_num = 0
-                train_tmp_corrects_sum = 0
-                train_tmp_loss_sum = 0.0
-            
-        
+        # initialization
+        train_tmp_num = 0
+        train_tmp_corrects_sum = 0
+        train_tmp_loss_sum = 0.0
+
         with torch.no_grad():
             
             for idx, (val_X, val_Y) in enumerate(val_loader):
@@ -219,18 +189,17 @@ def train_model(input_model, fold_k, model_save_path, args, logger, *loaders):
                 with amp.autocast():
                     val_pred = model(val_X)
                     val_loss = loss_function(val_pred, val_Y)
-                
+
                 val_pred_label = val_pred > args.threshold
                 val_corrects = (val_pred_label == val_Y).sum()
                 val_corrects_sum += val_corrects.item()
-                
                 val_loss_sum += val_loss.item()
                 
         train_acc = train_corrects_sum/(train_tot_num*6)*100
-        train_loss = train_loss_sum/train_tot_num
+        train_loss = train_loss_sum/len(train_loader)
         
         val_acc = val_corrects_sum/(val_tot_num*6)*100
-        val_loss = val_loss_sum/val_tot_num
+        val_loss = val_loss_sum/len(val_loader)
         
         time_end = time()
         time_len_m, time_len_s = divmod(time_end - time_start, 60)
@@ -248,7 +217,6 @@ def train_model(input_model, fold_k, model_save_path, args, logger, *loaders):
             save_path = os.path.join(model_save_path, f'model_ckpt_fold{fold_k}_{epoch+1}.pth')
             logger.info(f"SAVING MODEL: {save_path}")
             torch.save(model.state_dict(), save_path)
-            # IPython.embed();exit(1);
         
 #         # EARLY STOPPER
 #         early_stopping(val_loss, model)
@@ -264,7 +232,13 @@ def train_model(input_model, fold_k, model_save_path, args, logger, *loaders):
         train_loss_sum = 0.0
         val_loss_sum = 0.0
   
+        # Save training result
+        train_loss_list.append(train_loss)
+        val_loss_list.append(val_loss)
+        train_acc_list.append(train_acc)
+        val_acc_list.append(val_acc)
+        
         # lr scheduler step
         lr_scheduler.step()
 
-    return model
+    return model, train_loss_list, val_loss_list, train_acc_list, val_acc_list
