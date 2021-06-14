@@ -26,6 +26,7 @@ from utils.EarlyStopping import EarlyStopping
 from utils.dataloader import CustomDataLoader
 from utils.radams import RAdam
 from utils.call_model import CallModel
+from utils.visualize import plot_result
 
 #from utils.pretrained_model import CustomModel, CallPretrainedModel
 
@@ -260,7 +261,7 @@ if __name__ == "__main__":
     
     train_num = int(tot_num*(1-args.test_ratio))
     test_num = tot_num - train_num
-    logger.info(f"Trainset length: {train_num}, Valset length: {test_num}")
+    logger.info(f"Trainset(train+val) length: {train_num}, Testset length: {test_num}")
     
     train_sample_idx = random.sample(range(tot_num), train_num)
     test_sample_idx = [idx for idx in range(tot_num) if idx not in train_sample_idx]
@@ -321,7 +322,16 @@ if __name__ == "__main__":
                                                      device=global_device)
             
             # Train model
-            train_model(model_to_train, k, ckpt_folder_path, args, logger, train_loader, val_loader)
+            _, train_loss_list, val_loss_list, train_acc_list, val_acc_list = train_model(model_to_train,
+                                                                                          k,
+                                                                                          ckpt_folder_path,
+                                                                                          args,
+                                                                                          logger,
+                                                                                          train_loader,
+                                                                                          val_loader)
+            
+            # Plot
+            plot_result(args.model_index, k+1, train_loss_list, train_acc_list, val_loss_list, val_acc_list)
 
             
     # --------------------
